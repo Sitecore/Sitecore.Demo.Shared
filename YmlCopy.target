@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="AfterSitecoreBuild">
+    <Message Importance="high" Text="Starting Yml Collect"/>
+
+    <!--<CallTarget Targets="CleanSerializationDatastore" />-->
+    <CallTarget Targets="CreateYmlRoots;CopyFiles"/>
+  
+  </Target>
+
+  <!--
+  <Target Name="CleanSerializationDatastore">
+    <PropertyGroup>
+      <SerializationFolder>../../serialization</SerializationFolder>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <FilesToDelete Include="$(SerializationFolder)\**\*.yml" />
+    </ItemGroup>
+
+    <Delete Files="@(FilesToDelete)" />
+  </Target>
+  -->
+  <Target Name="CreateYmlRoots">
+    <ItemGroup>
+      <YmlRoots Include="%(SitecoreItem.Identity)" Condition="'%(SitecoreItem.CodeGenData)'!=''">
+        <SrcFolder>%(SitecoreItem.RootDir)%(SitecoreItem.Directory)%(SitecoreItem.Filename)</SrcFolder>
+        <TargetFolder>%(SitecoreItem.CodeGenData)</TargetFolder>
+      </YmlRoots>
+    </ItemGroup>
+
+    <Message Importance="high" Text="Found Root: %(YmlRoots.Identity) at %(YmlRoots.SrcFolder)"/>
+  </Target>
+  
+  <Target Inputs="@(YmlRoots)" Outputs="%(YmlRoots.TargetFolder)\_" Name="CopyFiles">
+    <PropertyGroup>
+      <DestinationFolder>%(YmlRoots.TargetFolder)</DestinationFolder>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <FilesToCopy Include="%(YmlRoots.SrcFolder)\**\*.yml"/>
+    </ItemGroup>
+    
+    <Copy SourceFiles="@(FilesToCopy)" DestinationFiles="@(FilesToCopy->'$(DestinationFolder)\%(RecursiveDir)%(Filename)%(Extension)')"/>
+  </Target>
+</Project>
