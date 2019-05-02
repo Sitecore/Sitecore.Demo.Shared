@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Demo.Foundation.Workflow</id>
+    <version>1.0.0</version>
+    <description>Sitecore.Demo.Foundation.Workflow</description>
+    <authors>Sitecore Demo Team</authors>
+    <contentFiles>
+      <files include="any/any/App_Config/**/*.*" buildAction="Content" />
+      <files include="../yml/**/*.yml" buildAction="EmbeddedResource" />      
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="..\..\src\Foundation\Workflow\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib" />
+    <file src="..\..\src\Foundation\Workflow\code\App_Config\Include\Foundation\*.config" target="contentFiles\any\any\App_Config\Include\Foundation" />
+    <file src="..\..\src\Foundation\Workflow\serialization\**\*.yml" target="yml\Foundation\Workflow\serialization" />
+  </files>
+</package>
