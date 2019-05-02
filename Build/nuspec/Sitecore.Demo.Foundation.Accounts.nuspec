@@ -8,13 +8,13 @@
     <contentFiles>
       <files include="any/any/App_Config/**/*.*" buildAction="Content" />
       <files include="any/any/App_Data/**/*.*" buildAction="Content" />
-      <files include="../serialization/**/*.*" buildAction="EmbeddedResource" />      
+      <files include="../yml/**/*.*" buildAction="EmbeddedResource" />      
     </contentFiles>
   </metadata>
   <files>
     <file src="..\..\src\Foundation\Accounts\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib" />
     <file src="..\..\src\Foundation\Accounts\code\App_Config\Include\Foundation\*.config" target="contentfiles\any\any\App_Config\Include\Foundation" />
     <file src="..\..\src\Foundation\Accounts\code\App_Data\xConnectModels\*.json" target="contentfiles\any\any\App_Data\xConnectModels" />
-    <file src="..\..\src\Foundation\Accounts\serialization\**\*.yml" target="..\serialization" />
+    <file src="..\..\src\Foundation\Accounts\serialization\**\*.yml" target="yml\Foundation\Accounts\serialization" />
   </files>
 </package>

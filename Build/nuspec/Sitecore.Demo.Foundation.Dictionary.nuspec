@@ -7,12 +7,12 @@
     <authors>Sitecore Demo Team</authors>
     <contentFiles>
       <files include="any/any/App_Config/**/*.*" buildAction="Content" />
-      <files include="../serialization/**/*.yml" buildAction="EmbeddedResource" />      
+      <files include="../yml/**/*.yml" buildAction="EmbeddedResource" />      
     </contentFiles>
   </metadata>
   <files>
     <file src="..\..\src\Foundation\Dictionary\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib" />
     <file src="..\..\src\Foundation\Dictionary\code\App_Config\Include\Foundation\*.config" target="contentFiles\any\any\App_Config\Include\Foundation" />
-    <file src="..\..\src\Foundation\Dictionary\serialization\**\*.yml" target="..\serialization" />
+    <file src="..\..\src\Foundation\Dictionary\serialization\**\*.yml" target="yml\Foundation\Dictionary\serialization" />
   </files>
 </package>
