@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Demo.Foundation.Accounts</id>
+    <version>1.0.0</version>
+    <description>Sitecore.Demo.Foundation.Accounts</description>
+    <authors>Sitecore Demo Team</authors>
+    <contentFiles>
+      <files include="any/any/App_Config/**/*.*" buildAction="Content" />
+      <files include="any/any/App_Data/**/*.*" buildAction="Content" />
+      <files include="../serialization/**/*.*" buildAction="EmbeddedResource" />      
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="..\..\src\Foundation\Accounts\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib" />
+    <file src="..\..\src\Foundation\Accounts\code\App_Config\Include\Foundation\*.config" target="contentfiles\any\any\App_Config\Include\Foundation" />
+    <file src="..\..\src\Foundation\Accounts\code\App_Data\xConnectModels\*.json" target="contentfiles\any\any\App_Data\xConnectModels" />
+    <file src="..\..\src\Foundation\Accounts\serialization\**\*.yml" target="..\serialization" />
+  </files>
+</package>

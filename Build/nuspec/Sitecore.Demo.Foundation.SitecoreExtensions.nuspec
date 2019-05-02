@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Demo.Foundation.SitecoreExtensions</id>
+    <version>1.0.0</version>
+    <description>Sitecore.Demo.Foundation.SitecoreExtensions</description>
+    <authors>Sitecore Demo Team</authors>
+  </metadata>
+  <files>
+    <file src="..\..\src\Foundation\SitecoreExtensions\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib" />
+  </files>
+</package>

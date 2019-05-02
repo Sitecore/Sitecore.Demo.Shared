@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Demo.Foundation.Dictionary</id>
+    <version>1.0.0</version>
+    <description>Sitecore.Demo.Foundation.Dictionary</description>
+    <authors>Sitecore Demo Team</authors>
+    <contentFiles>
+      <files include="any/any/App_Config/**/*.*" buildAction="Content" />
+      <files include="../serialization/**/*.yml" buildAction="EmbeddedResource" />      
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="..\..\src\Foundation\Dictionary\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib" />
+    <file src="..\..\src\Foundation\Dictionary\code\App_Config\Include\Foundation\*.config" target="contentFiles\any\any\App_Config\Include\Foundation" />
+    <file src="..\..\src\Foundation\Dictionary\serialization\**\*.yml" target="..\serialization" />
+  </files>
+</package>

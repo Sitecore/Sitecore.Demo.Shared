@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Demo.Foundation.Cdn</id>
+    <version>1.0.0</version>
+    <description>Sitecore.Demo.Foundation.Cdn</description>
+    <authors>Sitecore Demo Team</authors>
+    <contentFiles>
+      <files include="any/any/App_Config/**/*.*" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="..\..\src\Foundation\CDN\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib" />
+    <file src="..\..\src\Foundation\CDN\code\App_Config\Include\Foundation\*.config" target="contentfiles\any\any\App_Config\Include\Foundation" />
+  </files>
+</package>
