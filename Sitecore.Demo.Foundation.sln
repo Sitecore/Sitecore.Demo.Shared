@@ -32,10 +32,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tds", ".tds", "{FDEF6BB7-0C47-4D44-83F8-7574E48ACB00}"
 	ProjectSection(SolutionItems) = preProject
 		TdsGlobal.config = TdsGlobal.config
-		YmlCopy.target = YmlCopy.target
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{6E859364-CC0C-4E8B-819D-72C08F2504F8}"
+	ProjectSection(SolutionItems) = preProject
+		Build\generate-nuget-packages.ps1 = Build\generate-nuget-packages.ps1
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CDN", "CDN", "{8CCE05AC-2A6C-4816-AD6C-68C679304A9E}"
 EndProject
@@ -54,6 +56,18 @@ EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Serialization.Master", "src\Foundation\Serialization\tds\Serialization.Master\Serialization.Master.scproj", "{AC135F78-3B9B-48F0-8BD4-9DD84F1A3F90}"
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Serialization.Core", "src\Foundation\Serialization\tds\Serialization.Core\Serialization.Core.scproj", "{312F77AF-A834-4A50-9C4F-1531339538A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{C511AB93-291F-4C99-847D-A875907FA35A}"
+	ProjectSection(SolutionItems) = preProject
+		Build\nuspec\Sitecore.Demo.Foundation.Accounts.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Accounts.nuspec
+		Build\nuspec\Sitecore.Demo.Foundation.Alerts.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Alerts.nuspec
+		Build\nuspec\Sitecore.Demo.Foundation.Cdn.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Cdn.nuspec
+		Build\nuspec\Sitecore.Demo.Foundation.DependencyInjection.nuspec = Build\nuspec\Sitecore.Demo.Foundation.DependencyInjection.nuspec
+		Build\nuspec\Sitecore.Demo.Foundation.Dictionary.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Dictionary.nuspec
+		Build\nuspec\Sitecore.Demo.Foundation.Serialization.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Serialization.nuspec
+		Build\nuspec\Sitecore.Demo.Foundation.SitecoreExtensions.nuspec = Build\nuspec\Sitecore.Demo.Foundation.SitecoreExtensions.nuspec
+		Build\nuspec\Sitecore.Demo.Foundation.Workflow.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Workflow.nuspec
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

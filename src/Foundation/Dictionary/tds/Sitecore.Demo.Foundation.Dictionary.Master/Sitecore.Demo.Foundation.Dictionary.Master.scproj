@@ -42,15 +42,22 @@
     <DisableFileDeployment>False</DisableFileDeployment>
     <LightningDeployMode>False</LightningDeployMode>
     <ConnectorTimeoutSeconds>120</ConnectorTimeoutSeconds>
-    <NuGetGenerateNuGetPackage>True</NuGetGenerateNuGetPackage>
-    <NuGetExePath>..\..\..\..\..\tools</NuGetExePath>
+    <NuGetGenerateNuGetPackage>False</NuGetGenerateNuGetPackage>
+    <NuGetExePath>
+    </NuGetExePath>
     <NuGetSummary />
-    <NuGetDescription>Sitecore.Demo.Foundation.Dictionary</NuGetDescription>
-    <NuGetTitle>Sitecore.Demo.Foundation.Dictionary</NuGetTitle>
-    <NuGetVersion>1.0</NuGetVersion>
-    <NuGetPackageId>Sitecore.Demo.Foundation.Dictionary</NuGetPackageId>
-    <NuGetAuthors>Sitecore Demo Team</NuGetAuthors>
-    <NuGetOwners>Sitecore</NuGetOwners>
+    <NuGetDescription>
+    </NuGetDescription>
+    <NuGetTitle>
+    </NuGetTitle>
+    <NuGetVersion>
+    </NuGetVersion>
+    <NuGetPackageId>
+    </NuGetPackageId>
+    <NuGetAuthors>
+    </NuGetAuthors>
+    <NuGetOwners>
+    </NuGetOwners>
     <NuGetCopyright />
     <NuGetLicenseUrl />
     <NuGetIconUrl />
@@ -88,5 +95,5 @@
     <SitecoreItem Include="sitecore\templates\Foundation\Sitecore Demo\Dictionary\DictionaryFolder\__Standard Values.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
-  <Import Project="$(SolutionDir)YmlCopy.Target" />
+  <Import Project="$(SolutionDir)\Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets" />
 </Project>
