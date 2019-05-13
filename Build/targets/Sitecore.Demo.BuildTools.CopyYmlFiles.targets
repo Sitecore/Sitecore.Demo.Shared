@@ -8,7 +8,7 @@
   
   </Target>
 
-  <!--
+  <!--todo: need to make sure /serialization folders are cleaned properly
   <Target Name="CleanSerializationDatastore">
     <PropertyGroup>
       <SerializationFolder>../../serialization</SerializationFolder>

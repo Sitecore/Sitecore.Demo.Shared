@@ -5,8 +5,20 @@
     <version>1.0.0</version>
     <description>Sitecore.Demo.Foundation.DependencyInjection</description>
     <authors>Sitecore Demo Team</authors>
+    <contentFiles>
+      <files include="any/any/App_Config/**/*.*" buildAction="Content" copyToOutput="true" />
+    </contentFiles>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Mvc" version="5.2.4" />
+      <dependency id="Microsoft.AspNet.Razor" version="3.2.4" />
+      <dependency id="Microsoft.AspNet.WebPages" version="3.2.4" />
+      <dependency id="Microsoft.Extensions.DependencyInjection" version="2.1.1" />
+      <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="2.1.1" />
+    </dependencies>
   </metadata>
   <files>
-    <file src="..\..\src\Foundation\DependencyInjection\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib" />
+    <file src="..\..\src\Foundation\DependencyInjection\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\any\any" />
+    <file src="..\..\src\Foundation\DependencyInjection\code\App_Config\Include\Foundation\*.config" target="contentfiles\any\any\App_Config\Include\Foundation" />
+    <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Foundation.DependencyInjection.targets" />
   </files>
 </package>

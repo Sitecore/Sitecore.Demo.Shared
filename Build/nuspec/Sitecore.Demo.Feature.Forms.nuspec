@@ -1,18 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Sitecore.Demo.Foundation.Workflow</id>
+    <id>Sitecore.Demo.Feature.Forms</id>
     <version>1.0.0</version>
-    <description>Sitecore.Demo.Foundation.Workflow</description>
+    <description>Sitecore.Demo.Feature.Forms</description>
     <authors>Sitecore Demo Team</authors>
     <contentFiles>
-      <files include="any/any/App_Config/**/*.*" buildAction="Content" />
+      <files include="any/any/App_Config/**/*.*" buildAction="Content" copyToOutput="true" />
+      <files include="any/any/Views/**/*.*" buildAction="Content" copyToOutput="true" />
+      <files include="any/any/Areas/**/*.*" buildAction="Content" copyToOutput="true" />
       <files include="../yml/**/*.yml" buildAction="EmbeddedResource" />      
     </contentFiles>
+    <dependencies>
+      <!--<dependency id="Sitecore.Analytics.Model" version="9.2.0" />
+      <dependency id="Sitecore.Analytics" version="9.2.0" />
+      <dependency id="Sitecore.ExperienceForms.Client" version="9.2.0" />
+      <dependency id="Sitecore.ExperienceForms.Mvc" version="9.2.0" />
+      <dependency id="Sitecore.ExperienceForms" version="9.2.0" />
+      <dependency id="Sitecore.ExperienceForms.SubmitActions" version="9.2.0" />
+      <dependency id="Sitecore.Kernel" version="9.2.0" />
+      <dependency id="Sitecore.Mvc" version="9.2.0" />-->
+    </dependencies>
   </metadata>
   <files>
-    <file src="..\..\src\Foundation\Workflow\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib" />
-    <file src="..\..\src\Foundation\Workflow\code\App_Config\Include\Foundation\*.config" target="contentFiles\any\any\App_Config\Include\Foundation" />
-    <file src="..\..\src\Foundation\Workflow\serialization\**\*.yml" target="yml\Foundation\Workflow\serialization" />
+    <file src="..\..\src\Feature\Forms\code\bin\Sitecore.Demo.Feature.*.dll" target="lib\any\any" />
+    <file src="..\..\src\Feature\Forms\code\App_Config\Include\Feature\*.config" target="contentFiles\any\any\App_Config\Include\Feature" />
+    <file src="..\..\src\Feature\Forms\code\Views\**\*.*" target="contentFiles\any\any\Views" />
+    <file src="..\..\src\Feature\Forms\code\Areas\Forms\Views\**\*.*" target="contentFiles\any\any\Areas\Forms\Views" />
+    <file src="..\..\src\Feature\Forms\serialization\**\*.yml" target="yml\Feature\Forms\serialization" />
+    <file src="..\..\build\targets\.gitignore" target="yml\Feature\Forms\serialization" />
+    <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Feature.Forms.targets" />
   </files>
 </package>

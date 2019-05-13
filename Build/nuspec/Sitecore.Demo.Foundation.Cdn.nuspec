@@ -6,11 +6,16 @@
     <description>Sitecore.Demo.Foundation.Cdn</description>
     <authors>Sitecore Demo Team</authors>
     <contentFiles>
-      <files include="any/any/App_Config/**/*.*" buildAction="Content" />
+      <files include="any/any/App_Config/**/*.*" buildAction="Content" copyToOutput="true" />
     </contentFiles>
+    <dependencies>
+      <!--<dependency id="Sitecore.Kernel" version="9.2.0" />-->
+      <dependency id="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" version="1.0.3" />
+    </dependencies>
   </metadata>
   <files>
-    <file src="..\..\src\Foundation\CDN\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib" />
+    <file src="..\..\src\Foundation\CDN\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\any\any" />
     <file src="..\..\src\Foundation\CDN\code\App_Config\Include\Foundation\*.config" target="contentfiles\any\any\App_Config\Include\Foundation" />
+    <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Foundation.Cdn.targets" />
   </files>
 </package>

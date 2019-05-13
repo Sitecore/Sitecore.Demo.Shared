@@ -89,8 +89,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <PackageReference Include="Kamsar.WebConsole" Version="2.0.1" />
-    <PackageReference Include="MicroCHAP" Version="1.2.2.2" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
   <ItemGroup>

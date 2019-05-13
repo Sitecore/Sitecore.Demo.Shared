@@ -6,14 +6,30 @@
     <description>Sitecore.Demo.Foundation.Serialization</description>
     <authors>Sitecore Demo Team</authors>
     <contentFiles>
-      <files include="any/any/App_Config/**/*.*" buildAction="Content" />
+      <files include="any/any/App_Config/**/*.*" buildAction="Content" copyToOutput="true" />
       <files include="../yml/**/*.*" buildAction="EmbeddedResource" />
     </contentFiles>
+    <dependencies>
+      <dependency id="Configy" version="1.0.0" />
+      <dependency id="Kamsar.WebConsole" version="2.0.1" />
+      <dependency id="MicroCHAP" version="1.2.2.2" />
+      <dependency id="Rainbow" version="2.0.6" />
+      <dependency id="Rainbow.Core" version="2.0.6" />
+      <dependency id="Rainbow.Storage.Sc" version="2.0.6" />
+      <dependency id="Rainbow.Storage.Yaml" version="2.0.6" />
+      <dependency id="Unicorn" version="4.0.8" />
+      <dependency id="Unicorn.Core" version="4.0.8" />
+      <dependency id="Unicorn.Roles" version="4.0.8" />
+      <dependency id="Unicorn.Roles.Core" version="4.0.8" />
+      <dependency id="Unicorn.Users" version="4.0.8" />
+      <dependency id="Unicorn.Users.Core" version="4.0.8" />
+    </dependencies>
   </metadata>
   <files>
-    <file src="..\..\src\Foundation\Serialization\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib" />
-    <file src="..\..\src\Foundation\Serialization\code\App_Config\Include\Foundation\*.config" target="contentFiles\any\any\App_Config\Include\Foundation" />
-    <file src="..\..\src\Foundation\Serialization\code\App_Config\Include\Unicorn.Helix.config" target="contentFiles\any\any\App_Config\Include" />
+    <file src="..\..\src\Foundation\Serialization\code\bin\*.dll" target="lib\any\any" />
+    <file src="..\..\src\Foundation\Serialization\code\App_Config\Include\**\*.config" target="contentFiles\any\any\App_Config\Include" />
     <file src="..\..\src\Foundation\Serialization\serialization\**\*.yml" target="yml\Foundation\Serialization\serialization" />
+    <file src="..\..\build\targets\.gitignore" target="yml\Foundation\Serialization\serialization" />
+    <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Foundation.Serialization.targets" />
   </files>
 </package>

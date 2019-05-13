@@ -120,5 +120,5 @@
     <SitecoreItem Include="sitecore\templates\Feature\Habitat Home\Email\Promo\Promo\Title.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
-  <Import Project="$(SolutionDir)YmlCopy.Target" />
+  <Import Project="$(SolutionDir)\Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets" />
 </Project>

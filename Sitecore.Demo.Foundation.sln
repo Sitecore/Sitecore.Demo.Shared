@@ -37,6 +37,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{6E859364-CC0C-4E8B-819D-72C08F2504F8}"
 	ProjectSection(SolutionItems) = preProject
 		Build\generate-nuget-packages.ps1 = Build\generate-nuget-packages.ps1
+		Build\nuspec\Sitecore.Demo.BuildTools.nuspec = Build\nuspec\Sitecore.Demo.BuildTools.nuspec
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CDN", "CDN", "{8CCE05AC-2A6C-4816-AD6C-68C679304A9E}"
@@ -67,6 +68,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{C511
 		Build\nuspec\Sitecore.Demo.Foundation.Serialization.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Serialization.nuspec
 		Build\nuspec\Sitecore.Demo.Foundation.SitecoreExtensions.nuspec = Build\nuspec\Sitecore.Demo.Foundation.SitecoreExtensions.nuspec
 		Build\nuspec\Sitecore.Demo.Foundation.Workflow.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Workflow.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".targets", ".targets", "{6C5027B7-88AE-4875-A74A-0D2F1DCFB73B}"
+	ProjectSection(SolutionItems) = preProject
+		Build\targets\.gitignore = Build\targets\.gitignore
+		Build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets = Build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets
+		Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets = Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets
 	EndProjectSection
 EndProject
 Global
@@ -195,6 +203,7 @@ Global
 		{22A2B11A-B41B-426C-9202-AEBB6C9B5CA6} = {4CAD1DC9-6B9C-41EC-95F9-0AD656C25C0D}
 		{AC135F78-3B9B-48F0-8BD4-9DD84F1A3F90} = {4CAD1DC9-6B9C-41EC-95F9-0AD656C25C0D}
 		{312F77AF-A834-4A50-9C4F-1531339538A6} = {4CAD1DC9-6B9C-41EC-95F9-0AD656C25C0D}
+		{6C5027B7-88AE-4875-A74A-0D2F1DCFB73B} = {6E859364-CC0C-4E8B-819D-72C08F2504F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2960B54B-FEEC-42B7-89C2-025528020F5C}

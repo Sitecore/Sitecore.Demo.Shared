@@ -35,6 +35,10 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Local' ">
     <OutputPath>.\bin\Local\</OutputPath>
+    <BuildWebDeploy>False</BuildWebDeploy>
+    <WebDeployPackageCodeAndItemOptions>ItemOnly</WebDeployPackageCodeAndItemOptions>
+    <WebDeployPackageName>Sitecore.Demo.Feature.Accounts.Master</WebDeployPackageName>
+    <WebDeployAppendDateAndTimeToPackageName>False</WebDeployAppendDateAndTimeToPackageName>
   </PropertyGroup>
   <ItemGroup>
     <AssemblyAttributes Include="AssemblyFileVersion">
@@ -83,5 +87,5 @@
     <SitecoreItem Include="sitecore\templates\Feature\Habitat Home\Accounts\Security Settings\__Standard Values.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
-  <Import Project="$(SolutionDir)YmlCopy.Target" />
+  <Import Project="$(SolutionDir)\Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets" />
 </Project>
