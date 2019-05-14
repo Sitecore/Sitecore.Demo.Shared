@@ -1,0 +1,99 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>38c7e88d-c219-4003-ac6c-d2ad4960dfac</ProjectGuid>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>Sitecore.Demo.Foundation.Accounts.Master</SingleAssemblyName>
+    <UseWebConfigReplacement>false</UseWebConfigReplacement>
+    <DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
+    <LegacyFileReplacement>false</LegacyFileReplacement>
+    <CompactSitecoreItemsInProjectFile>True</CompactSitecoreItemsInProjectFile>
+    <AssemblyName>Sitecore.Demo.Foundation.Accounts.Master</AssemblyName>
+    <Name>Sitecore.Demo.Foundation.Accounts.Master</Name>
+    <RootNamespace>Sitecore.Demo.Foundation.Accounts.Master</RootNamespace>
+    <ManageRoles>False</ManageRoles>
+    <SerializationFormat>YML</SerializationFormat>
+    <SitecoreDatabase>master</SitecoreDatabase>
+    <AssemblyStatus>Include</AssemblyStatus>
+    <SourceWebVirtualPath>/Sitecore.Demo.Foundation.Accounts.csproj</SourceWebVirtualPath>
+    <SourceWebProject>{ce34a3b7-b91a-41ba-8b16-c1e131e1c621}|src\Foundation\Accounts\code\Sitecore.Demo.Foundation.Accounts.csproj</SourceWebProject>
+    <SourceWebPhysicalPath>..\..\code</SourceWebPhysicalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Local' ">
+    <DebugSymbols>true</DebugSymbols>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <OutputPath>.\bin\Local\</OutputPath>
+    <NuGetGenerateNuGetPackage>False</NuGetGenerateNuGetPackage>
+    <NuGetExePath>
+    </NuGetExePath>
+    <NuGetSummary />
+    <NuGetDescription>
+    </NuGetDescription>
+    <NuGetTitle>
+    </NuGetTitle>
+    <NuGetVersion>
+    </NuGetVersion>
+    <NuGetPackageId>
+    </NuGetPackageId>
+    <NuGetAuthors>
+    </NuGetAuthors>
+    <NuGetOwners>
+    </NuGetOwners>
+    <NuGetCopyright />
+    <NuGetLicenseUrl />
+    <NuGetIconUrl />
+    <NuGetProjectUrl />
+    <NuGetTags />
+    <NuGetReleaseNotes />
+    <NuGetLanguage />
+    <NuGetRequireLicenseAcceptance>False</NuGetRequireLicenseAcceptance>
+    <NuGetDependencies />
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\code\Sitecore.Demo.Foundation.Accounts.csproj">
+      <Project>{ce34a3b7-b91a-41ba-8b16-c1e131e1c621}</Project>
+      <Name>Sitecore.Demo.Foundation.Accounts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ExcludedAssemblies Include="Sitecore.Demo.Foundation.%2a" />
+  </ItemGroup>
+  <ItemGroup>
+    <SitecoreItem Include="sitecore\system.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization><CodeGenData>../../serialization/Rules</CodeGenData></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Sitecore Demo Account.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Sitecore Demo Account\SportNameCondition.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Sitecore Demo Account\SportTypeCondition.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Sitecore Demo Account\Tags.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Sitecore Demo Account\Tags\Default.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Sitecore Demo Account\Visibility.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
+  <Import Project="$(SolutionDir)\Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets" />
+</Project>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Demo.Feature.Email</id>
+    <version>1.0.0</version>
+    <description>Sitecore.Demo.Feature.Email</description>
+    <authors>Sitecore Demo Team</authors>
+    <contentFiles>
+      <files include="any/any/App_Config/**/*.*" buildAction="Content" copyToOutput="true" />
+      <files include="any/any/Views/**/*.*" buildAction="Content" copyToOutput="true" />
+      <files include="../yml/**/*.yml" buildAction="EmbeddedResource" />      
+    </contentFiles>
+    <dependencies>
+      <!--<dependency id="Sitecore.Kernel" version="9.2.0" />
+      <dependency id="Sitecore.Mvc" version="9.2.0" />-->
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\src\Feature\Email\code\bin\Sitecore.Demo.Feature.*.dll" target="lib\any\any" />
+    <file src="..\..\src\Feature\Email\code\App_Config\Include\Feature\*.config" target="contentFiles\any\any\App_Config\Include\Feature" />
+    <file src="..\..\src\Feature\Email\code\Views\**\*.*" target="contentFiles\any\any\Views" />
+    <file src="..\..\src\Feature\Email\serialization\**\*.yml" target="yml\Feature\Email\serialization" />
+    <file src="..\..\build\targets\.gitignore" target="yml\Feature\Email\serialization" />
+    <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Feature.Email.targets" />
+  </files>
+</package>

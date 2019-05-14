@@ -1,0 +1,20 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="AfterBuild">
+    <Message Importance="high" Text="Collecting Package Yml Files"/>
+    <CallTarget Targets="CopyPackageYmlFiles"/>
+  </Target>
+
+  <Target Name="CopyPackageYmlFiles">
+    <ItemGroup>
+      <PackageReferenceSerializationFiles
+        Include="$(NugetPackageRoot)%(PackageReference.Identity)\%(PackageReference.Version)\yml\**\*.*" />
+    </ItemGroup>
+    
+    <Copy
+      SourceFiles="@(PackageReferenceSerializationFiles)"
+      DestinationFiles="@(PackageReferenceSerializationFiles->'$(ProjectDir)\..\..\src\%(RecursiveDir)%(Filename)%(Extension)')"
+    />
+  </Target>
+
+
+</Project>
