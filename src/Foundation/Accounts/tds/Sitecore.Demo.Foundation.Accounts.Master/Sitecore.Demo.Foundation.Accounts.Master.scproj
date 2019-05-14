@@ -23,6 +23,8 @@
     <SourceWebVirtualPath>/Sitecore.Demo.Foundation.Accounts.csproj</SourceWebVirtualPath>
     <SourceWebProject>{ce34a3b7-b91a-41ba-8b16-c1e131e1c621}|src\Foundation\Accounts\code\Sitecore.Demo.Foundation.Accounts.csproj</SourceWebProject>
     <SourceWebPhysicalPath>..\..\code</SourceWebPhysicalPath>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -94,6 +96,16 @@
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Sitecore Demo Account\Tags\Default.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Sitecore Demo Account\Visibility.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
   <Import Project="$(SolutionDir)\Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets" />
+  <Import Project="..\..\..\..\..\packages\HedgehogDevelopment.TDS.5.8.0.8\build\HedgehogDevelopment.TDS.targets" Condition="Exists('..\..\..\..\..\packages\HedgehogDevelopment.TDS.5.8.0.8\build\HedgehogDevelopment.TDS.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\..\..\packages\HedgehogDevelopment.TDS.5.8.0.8\build\HedgehogDevelopment.TDS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\packages\HedgehogDevelopment.TDS.5.8.0.8\build\HedgehogDevelopment.TDS.targets'))" />
+  </Target>
 </Project>
