@@ -114,8 +114,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Config\Include\Foundation\Foundation.Accounts.Serialization.config" />
-    <None Include="App_Config\Security\domains.azure.config.xdt" />
-    <None Include="App_Config\Security\domains.config.xdt" />
+    <Content Include="App_Data\xConnectModels\Sitecore.Demo.Foundation.Accounts.Models.AccountCollectionModel, 1.0.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

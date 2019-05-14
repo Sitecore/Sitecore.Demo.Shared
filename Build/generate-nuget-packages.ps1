@@ -5,7 +5,7 @@ param(
 )
 
 Get-ChildItem -Path (Resolve-Path $nuspecPath)| ForEach-Object { 	
-	& $nugetPath pack ($nuspecPath + "\" + $_.Name) -OutputDirectory $outputPath -Version "9.2.0" -Suffix "-l"
+	& $nugetPath pack ($nuspecPath + "\" + $_.Name) -OutputDirectory $outputPath -Version "9.2.0.123" 
 } 
 
 
