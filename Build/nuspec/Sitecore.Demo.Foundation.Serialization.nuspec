@@ -26,7 +26,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\..\src\Foundation\Serialization\code\bin\*.dll" target="lib\any\any" />
+    <file src="..\..\src\Foundation\Serialization\code\bin\*.dll" target="lib\net471" />
     <file src="..\..\src\Foundation\Serialization\code\App_Config\Include\**\*.config" target="contentFiles\any\any\App_Config\Include" />
     <file src="..\..\src\Foundation\Serialization\serialization\**\*.yml" target="yml\Foundation\Serialization\serialization" />
     <file src="..\..\build\targets\.gitignore" target="yml\Foundation\Serialization\serialization" />

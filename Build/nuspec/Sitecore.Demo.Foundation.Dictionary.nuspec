@@ -15,7 +15,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\..\src\Foundation\Dictionary\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\any\any" />
+    <file src="..\..\src\Foundation\Dictionary\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\net471" />
     <file src="..\..\src\Foundation\Dictionary\code\App_Config\Include\Foundation\*.config" target="contentFiles\any\any\App_Config\Include\Foundation" />
     <file src="..\..\src\Foundation\Dictionary\serialization\**\*.yml" target="yml\Foundation\Dictionary\serialization" />
     <file src="..\..\build\targets\.gitignore" target="yml\Foundation\Dictionary\serialization" />

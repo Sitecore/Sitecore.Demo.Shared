@@ -23,7 +23,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\..\src\Feature\Forms\code\bin\Sitecore.Demo.Feature.*.dll" target="lib\any\any" />
+    <file src="..\..\src\Feature\Forms\code\bin\Sitecore.Demo.Feature.*.dll" target="lib\net471" />
     <file src="..\..\src\Feature\Forms\code\App_Config\Include\Feature\*.config" target="contentFiles\any\any\App_Config\Include\Feature" />
     <file src="..\..\src\Feature\Forms\code\Views\**\*.*" target="contentFiles\any\any\Views" />
     <file src="..\..\src\Feature\Forms\code\Areas\Forms\Views\**\*.*" target="contentFiles\any\any\Areas\Forms\Views" />

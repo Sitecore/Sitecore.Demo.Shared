@@ -14,7 +14,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\..\src\Foundation\Workflow\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\any\any" />
+    <file src="..\..\src\Foundation\Workflow\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\net471" />
     <file src="..\..\src\Foundation\Workflow\code\App_Config\Include\Foundation\*.config" target="contentFiles\any\any\App_Config\Include\Foundation" />
     <file src="..\..\src\Foundation\Workflow\serialization\**\*.yml" target="yml\Foundation\Workflow\serialization" />
     <file src="..\..\build\targets\.gitignore" target="yml\Foundation\Workflow\serialization" />

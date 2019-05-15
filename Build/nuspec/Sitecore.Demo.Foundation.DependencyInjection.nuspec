@@ -17,7 +17,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\..\src\Foundation\DependencyInjection\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\any\any" />
+    <file src="..\..\src\Foundation\DependencyInjection\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\net471" />
     <file src="..\..\src\Foundation\DependencyInjection\code\App_Config\Include\Foundation\*.config" target="contentfiles\any\any\App_Config\Include\Foundation" />
     <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Foundation.DependencyInjection.targets" />
   </files>

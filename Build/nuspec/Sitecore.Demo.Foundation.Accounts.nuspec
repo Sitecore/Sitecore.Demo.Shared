@@ -25,7 +25,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\..\src\Foundation\Accounts\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\any\any" />
+    <file src="..\..\src\Foundation\Accounts\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\net471" />
     <file src="..\..\src\Foundation\Accounts\code\App_Config\Include\Foundation\*.config" target="contentfiles\any\any\App_Config\Include\Foundation" />
     <file src="..\..\src\Foundation\Accounts\code\App_Data\xConnectModels\*.json" target="contentfiles\any\any\App_Data\xConnectModels" />
     <file src="..\..\src\Foundation\Accounts\serialization\**\*.yml" target="yml\Foundation\Accounts\serialization" />

@@ -24,7 +24,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\..\src\Foundation\SitecoreExtensions\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\any\any" />
+    <file src="..\..\src\Foundation\SitecoreExtensions\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\net471" />
     <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Foundation.SitecoreExtensions.targets" />
   </files>
 </package>
