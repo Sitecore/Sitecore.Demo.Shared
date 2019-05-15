@@ -11,16 +11,16 @@
       <files include="../yml/**/*.yml" buildAction="EmbeddedResource" />      
     </contentFiles>
     <dependencies>
-      <dependency id="Sitecore.Demo.Foundation.Accounts" version="1.0.0" include="contentFiles, build" />
-      <dependency id="Sitecore.Demo.Foundation.Alerts" version="1.0.0" include="contentFiles, build" />
-      <dependency id="Sitecore.Demo.Foundation.DependencyInjection" version="1.0.0" include="contentFiles, build" />
-      <dependency id="Sitecore.Demo.Foundation.Dictionary" version="1.0.0" include="contentFiles, build" />
-      <dependency id="Sitecore.Demo.Foundation.SitecoreExtensions" version="1.0.0" include="contentFiles, build" />
+      <dependency id="Sitecore.Demo.Foundation.Accounts" version="9.2.0.*" include="contentFiles, build" />
+      <dependency id="Sitecore.Demo.Foundation.Alerts" version="9.2.0.*" include="contentFiles, build" />
+      <dependency id="Sitecore.Demo.Foundation.DependencyInjection" version="9.2.0.*" include="contentFiles, build" />
+      <dependency id="Sitecore.Demo.Foundation.Dictionary" version="9.2.0.*" include="contentFiles, build" />
+      <dependency id="Sitecore.Demo.Foundation.SitecoreExtensions" version="9.2.0.*" include="contentFiles, build" />
       <dependency id="Microsoft.AspNet.Mvc" version="5.2.4" include="build" />
       <dependency id="Microsoft.AspNet.Razor" version="3.2.4" include="build" />
       <dependency id="Microsoft.AspNet.WebPages" version="3.2.4" include="build" />
       <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="2.1.1" include="build" />
-      <!--<dependency id="Sitecore.Analytics.Core" version="9.2.0" />
+      <dependency id="Sitecore.Analytics.Core" version="9.2.0" />
       <dependency id="Sitecore.Analytics.Model" version="9.2.0" />
       <dependency id="Sitecore.Analytics" version="9.2.0" />
       <dependency id="Sitecore.Analytics.XConnect" version="9.2.0" />
@@ -43,7 +43,7 @@
       <dependency id="Sitecore.XConnect" version="9.2.0" />
       <dependency id="Sitecore.XConnect.Search" version="9.2.0" />
       <dependency id="Sitecore.Xdb.MarketingAutomation.Tracking" version="9.2.0" />
-      <dependency id="Sitecore.Cintel" version="9.2.0" />-->
+      <dependency id="Sitecore.Cintel" version="9.2.0" />
     </dependencies>
   </metadata>
   <files>

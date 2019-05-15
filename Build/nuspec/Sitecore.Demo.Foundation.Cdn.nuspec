@@ -9,7 +9,7 @@
       <files include="any/any/App_Config/**/*.*" buildAction="Content" copyToOutput="true" />
     </contentFiles>
     <dependencies>
-      <!--<dependency id="Sitecore.Kernel" version="9.2.0" />-->
+      <dependency id="Sitecore.Kernel" version="9.2.0" />
       <dependency id="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" version="1.0.3" />
     </dependencies>
   </metadata>

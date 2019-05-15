@@ -12,14 +12,14 @@
       <files include="../yml/**/*.yml" buildAction="EmbeddedResource" />      
     </contentFiles>
     <dependencies>
-      <!--<dependency id="Sitecore.Analytics.Model" version="9.2.0" />
+      <dependency id="Sitecore.Analytics.Model" version="9.2.0" />
       <dependency id="Sitecore.Analytics" version="9.2.0" />
       <dependency id="Sitecore.ExperienceForms.Client" version="9.2.0" />
       <dependency id="Sitecore.ExperienceForms.Mvc" version="9.2.0" />
       <dependency id="Sitecore.ExperienceForms" version="9.2.0" />
       <dependency id="Sitecore.ExperienceForms.SubmitActions" version="9.2.0" />
       <dependency id="Sitecore.Kernel" version="9.2.0" />
-      <dependency id="Sitecore.Mvc" version="9.2.0" />-->
+      <dependency id="Sitecore.Mvc" version="9.2.0" />
     </dependencies>
   </metadata>
   <files>

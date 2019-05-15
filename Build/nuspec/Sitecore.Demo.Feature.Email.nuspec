@@ -11,8 +11,8 @@
       <files include="../yml/**/*.yml" buildAction="EmbeddedResource" />      
     </contentFiles>
     <dependencies>
-      <!--<dependency id="Sitecore.Kernel" version="9.2.0" />
-      <dependency id="Sitecore.Mvc" version="9.2.0" />-->
+      <dependency id="Sitecore.Kernel" version="9.2.0" />
+      <dependency id="Sitecore.Mvc" version="9.2.0" />
     </dependencies>
   </metadata>
   <files>
