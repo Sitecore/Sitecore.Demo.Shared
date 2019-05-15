@@ -25,18 +25,18 @@
       <dependency id="Microsoft.Owin.Security.Cookies" version="4.0.0" include="build" />
       <dependency id="Microsoft.Owin.Security.Facebook" version="4.0.0" include="build" />
       <dependency id="Microsoft.Owin.Security.MicrosoftAccount" version="4.0.0" include="build" />
-      <dependency id="Sitecore.Analytics.Core" version="9.2.0" />
-      <dependency id="Sitecore.Analytics.Model" version="9.2.0" />
-      <dependency id="Sitecore.Analytics" version="9.2.0" />
-      <dependency id="Sitecore.ExperienceEditor.Speak" version="9.2.0" />
-      <dependency id="Sitecore.ExperienceEditor.Speak.Ribbon" version="9.2.0" />
-      <dependency id="Sitecore.ExperienceExplorer.Core" version="9.2.0" />
-      <dependency id="Sitecore.ExperienceExplorer.Web" version="9.2.0" />
-      <dependency id="Sitecore.Kernel" version="9.2.0" />
-      <dependency id="Sitecore.Mvc" version="9.2.0" />
-      <dependency id="Sitecore.Owin.Authentication" version="9.2.0" />
-      <dependency id="Sitecore.Owin" version="9.2.0" />
-      <dependency id="Sitecore.Speak.Client" version="9.2.0" />
+      <dependency id="Sitecore.Analytics.Core" version="9.2.0*" />
+      <dependency id="Sitecore.Analytics.Model" version="9.2.0*" />
+      <dependency id="Sitecore.Analytics" version="9.2.0*" />
+      <dependency id="Sitecore.ExperienceEditor.Speak" version="9.2.0*" />
+      <dependency id="Sitecore.ExperienceEditor.Speak.Ribbon" version="9.2.0*" />
+      <dependency id="Sitecore.ExperienceExplorer.Core" version="9.2.0*" />
+      <dependency id="Sitecore.ExperienceExplorer.Web" version="9.2.0*" />
+      <dependency id="Sitecore.Kernel" version="9.2.0*" />
+      <dependency id="Sitecore.Mvc" version="9.2.0*" />
+      <dependency id="Sitecore.Owin.Authentication" version="9.2.0*" />
+      <dependency id="Sitecore.Owin" version="9.2.0*" />
+      <dependency id="Sitecore.Speak.Client" version="9.2.0*" />
     </dependencies>
   </metadata>
   <files>

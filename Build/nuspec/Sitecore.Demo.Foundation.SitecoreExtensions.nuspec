@@ -6,18 +6,18 @@
     <description>Sitecore.Demo.Foundation.SitecoreExtensions</description>
     <authors>Sitecore Demo Team</authors>
     <dependencies>
-      <dependency id="Sitecore.Analytics.Core" version="9.2.0" />
-      <dependency id="Sitecore.Analytics.Model" version="9.2.0" />
-      <dependency id="Sitecore.Analytics" version="9.2.0" />
-      <dependency id="Sitecore.Analytics.XConnect" version="9.2.0" />
-      <dependency id="Sitecore.Client" version="9.2.0" />
-      <dependency id="Sitecore.Kernel" version="9.2.0" />
-      <dependency id="Sitecore.Marketing" version="9.2.0" />
-      <dependency id="Sitecore.Mvc" version="9.2.0" />
-      <dependency id="Sitecore.XConnect.Client.Configuration" version="9.2.0" />
-      <dependency id="Sitecore.XConnect.Client" version="9.2.0" />
-      <dependency id="Sitecore.XConnect.Collection.Model" version="9.2.0" />
-      <dependency id="Sitecore.XConnect" version="9.2.0" />
+      <dependency id="Sitecore.Analytics.Core" version="9.2.0*" />
+      <dependency id="Sitecore.Analytics.Model" version="9.2.0*" />
+      <dependency id="Sitecore.Analytics" version="9.2.0*" />
+      <dependency id="Sitecore.Analytics.XConnect" version="9.2.0*" />
+      <dependency id="Sitecore.Client" version="9.2.0*" />
+      <dependency id="Sitecore.Kernel" version="9.2.0*" />
+      <dependency id="Sitecore.Marketing" version="9.2.0*" />
+      <dependency id="Sitecore.Mvc" version="9.2.0*" />
+      <dependency id="Sitecore.XConnect.Client.Configuration" version="9.2.0*" />
+      <dependency id="Sitecore.XConnect.Client" version="9.2.0*" />
+      <dependency id="Sitecore.XConnect.Collection.Model" version="9.2.0*" />
+      <dependency id="Sitecore.XConnect" version="9.2.0*" />
       <dependency id="Microsoft.AspNet.Mvc" version="5.2.4" />
       <dependency id="Microsoft.AspNet.Razor" version="3.2.4" />
       <dependency id="Microsoft.AspNet.WebPages" version="3.2.4" />
