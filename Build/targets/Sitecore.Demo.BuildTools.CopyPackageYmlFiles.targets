@@ -5,14 +5,20 @@
   </Target>
 
   <Target Name="CopyPackageYmlFiles">
+    <PropertyGroup>
+      <CopySourceFolder>$(MSBuildThisFileDirectory)..\..\yml</CopySourceFolder>
+    </PropertyGroup>
+    
+    <Message Importance="high" Text="Source folder: $(CopySourceFolder)" />
+    
     <ItemGroup>
       <PackageReferenceSerializationFiles
-        Include="$(NugetPackageRoot)%(PackageReference.Identity)\%(PackageReference.Version)\yml\**\*.*" />
+        Include="$(CopySourceFolder)\**\*.*" />
     </ItemGroup>
     
     <Copy
       SourceFiles="@(PackageReferenceSerializationFiles)"
-      DestinationFiles="@(PackageReferenceSerializationFiles->'$(ProjectDir)\..\..\src\%(RecursiveDir)%(Filename)%(Extension)')"
+      DestinationFiles="@(PackageReferenceSerializationFiles->'$(ProjectDir)\..\..\..\%(RecursiveDir)%(Filename)%(Extension)')"
     />
   </Target>
 

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Demo.BuildTools.CopyYmlFiles</id>
+    <version>1.0.0</version>
+    <description>Sitecore.Demo.BuildTools.CopyYmlFiles</description>
+    <authors>Sitecore Demo Team</authors>
+  </metadata>
+  <files>
+    <file src="..\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets" target="build\netstandard2.0" />
+    <file src="..\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets" target="build\net471" />
+  </files>
+</package>
