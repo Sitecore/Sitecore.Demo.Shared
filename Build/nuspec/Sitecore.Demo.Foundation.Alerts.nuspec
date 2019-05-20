@@ -19,7 +19,9 @@
   </metadata>
   <files>
     <file src="..\..\src\Foundation\Alerts\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\net471" />
+    <file src="..\..\src\Foundation\Alerts\code\bin\Sitecore.Demo.Foundation.*.dll" target="lib\netstandard2.0" />
     <file src="..\..\src\Foundation\Alerts\code\Views\**\*.*" target="contentFiles\any\any\Views" />
     <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Foundation.Alerts.targets" />
+    <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\netstandard2.0\Sitecore.Demo.Foundation.Alerts.targets" />
   </files>
 </package>

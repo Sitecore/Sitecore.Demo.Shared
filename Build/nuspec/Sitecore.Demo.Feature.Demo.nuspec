@@ -48,10 +48,12 @@
   </metadata>
   <files>
     <file src="..\..\src\Feature\Demo\code\bin\Sitecore.Demo.Feature.*.dll" target="lib\net471" />
+    <file src="..\..\src\Feature\Demo\code\bin\Sitecore.Demo.Feature.*.dll" target="lib\netstandard2.0" />
     <file src="..\..\src\Feature\Demo\code\App_Config\Include\Feature\*.config" target="contentFiles\any\any\App_Config\Include\Feature" />
     <file src="..\..\src\Feature\Demo\code\Views\**\*.*" target="contentFiles\any\any\Views" />
     <file src="..\..\src\Feature\Demo\serialization\**\*.yml" target="yml\Feature\Demo\serialization" />
     <file src="..\..\build\targets\.gitignore" target="yml\Feature\Demo\serialization" />
     <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Feature.Demo.targets" />
+    <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\netstandard2.0\Sitecore.Demo.Feature.Demo.targets" />
   </files>
 </package>
