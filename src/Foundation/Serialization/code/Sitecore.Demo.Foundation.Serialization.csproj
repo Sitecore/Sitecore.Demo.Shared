@@ -123,6 +123,8 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.UI.DeployedContentEditorWarnings.config.disabled" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.UI.IdentityServer.config" />
     <Content Include="App_Config\Include\Foundation\Foundation.Serialization.config" />
+    <Content Include="App_Config\Include\Unicorn.SharedSecret.config" />
+    <Content Include="App_Config\Include\Unicorn.UI.DisableWarnings.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
