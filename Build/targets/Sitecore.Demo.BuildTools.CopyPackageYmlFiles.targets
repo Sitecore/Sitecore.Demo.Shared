@@ -12,12 +12,18 @@
 
     <ItemGroup>
       <PackageReferenceSerializationFiles
-        Include="%(PackageSourceFolder.Identity)\**\*.*" />
+        Include="%(PackageSourceFolder.Identity)\**\*.yml" />
+
+      <SerializationGitIgnoreFile Include="%(PackageSourceFolder.Identity)\**\.gitignore" />
     </ItemGroup>
-    
+
     <Copy
       SourceFiles="@(PackageReferenceSerializationFiles)"
       DestinationFiles="@(PackageReferenceSerializationFiles->'$(ProjectDir)\..\..\..\%(RecursiveDir)%(Filename)%(Extension)')"
+    />
+    <Copy
+      SourceFiles="@(SerializationGitIgnoreFile)"
+      DestinationFiles="@(SerializationGitIgnoreFile->'$(ProjectDir)\..\..\..\%(RecursiveDir)%(Filename)%(Extension)')"
     />
   </Target>
 
