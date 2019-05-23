@@ -22,6 +22,7 @@
     <AssemblyName>Sitecore.Demo.Feature.Demo.Master</AssemblyName>
     <Name>Sitecore.Demo.Feature.Demo.Master</Name>
     <RootNamespace>Sitecore.Demo.Feature.Demo.Master</RootNamespace>
+    <SitecoreDatabase>master</SitecoreDatabase>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -50,19 +51,19 @@
     <SitecoreItem Include="sitecore\layout.yml"><ItemDeployment>NeverDeploy</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Layouts.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Layouts\Feature.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Layouts\Feature\Habitat Home.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization><CodeGenData>../../serialization/Layouts</CodeGenData></SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Layouts\Feature\Habitat Home\Demo.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><CodeGenData></CodeGenData></SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Layouts\Feature\Habitat Home.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization><CodeGenData></CodeGenData></SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Layouts\Feature\Habitat Home\Demo.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><CodeGenData>../../serialization/Layouts</CodeGenData></SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Layouts\Feature\Habitat Home\Demo\EmptyLayout.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings\Feature.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Renderings\Feature\Habitat Home.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization><CodeGenData>../../serialization/Renderings</CodeGenData></SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Renderings\Feature\Habitat Home\Demo.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><CodeGenData></CodeGenData></SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Renderings\Feature\Habitat Home.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization><CodeGenData></CodeGenData></SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Renderings\Feature\Habitat Home\Demo.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><CodeGenData>../../serialization/Renderings</CodeGenData></SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings\Feature\Habitat Home\Demo\Demo Sidebar.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings\Feature\Habitat Home\Demo\DemoContent.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
     <SitecoreItem Include="sitecore\templates.yml"><ItemDeployment>NeverDeploy</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Feature.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Feature\Habitat Home.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization><CodeGenData>../../serialization/Templates</CodeGenData></SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Feature\Habitat Home\Demo.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Feature\Habitat Home.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization><CodeGenData></CodeGenData></SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Feature\Habitat Home\Demo.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><CodeGenData>../../serialization/Templates</CodeGenData></SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Feature\Habitat Home\Demo\_DemoContent.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Feature\Habitat Home\Demo\_DemoContent\Demo.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Feature\Habitat Home\Demo\_DemoContent\Demo\HTML Content.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>

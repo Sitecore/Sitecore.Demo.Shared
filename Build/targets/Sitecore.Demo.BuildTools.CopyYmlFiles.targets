@@ -25,8 +25,10 @@
   <Target Name="CreateYmlRoots">
     <ItemGroup>
       <YmlRoots Include="%(SitecoreItem.Identity)" Condition="'%(SitecoreItem.CodeGenData)'!=''">
-        <SrcFolder>%(SitecoreItem.RootDir)%(SitecoreItem.Directory)%(SitecoreItem.Filename)</SrcFolder>
-        <TargetFolder>%(SitecoreItem.CodeGenData)</TargetFolder>
+        <SrcFolder>%(SitecoreItem.RootDir)%(SitecoreItem.Directory)</SrcFolder>
+        <TargetParentFolder>%(SitecoreItem.CodeGenData)</TargetParentFolder>
+        <TargetFolder>%(SitecoreItem.CodeGenData)\%(SitecoreItem.Filename)</TargetFolder>
+        <SitecoreItemFilename>%(SitecoreItem.Filename)</SitecoreItemFilename>
       </YmlRoots>
     </ItemGroup>
 
@@ -36,12 +38,17 @@
   <Target Inputs="@(YmlRoots)" Outputs="%(YmlRoots.TargetFolder)\_" Name="CopyFiles">
     <PropertyGroup>
       <DestinationFolder>%(YmlRoots.TargetFolder)</DestinationFolder>
+      <DestinationParentFolder>%(YmlRoots.TargetParentFolder)</DestinationParentFolder>
     </PropertyGroup>
 
     <ItemGroup>
-      <FilesToCopy Include="%(YmlRoots.SrcFolder)\**\*.yml"/>
+      <ParentFileToCopy Include="%(YmlRoots.SrcFolder)\%(YmlRoots.SitecoreItemFilename).yml"/>
+    </ItemGroup>
+    <ItemGroup>
+      <FilesToCopy Include="%(YmlRoots.SrcFolder)\%(YmlRoots.SitecoreItemFilename)\**\*.yml"/>
     </ItemGroup>
 
+    <Copy SourceFiles="@(ParentFileToCopy)" DestinationFiles="@(ParentFileToCopy->'$(DestinationParentFolder)\%(RecursiveDir)%(Filename)%(Extension)')"/>
     <Copy SourceFiles="@(FilesToCopy)" DestinationFiles="@(FilesToCopy->'$(DestinationFolder)\%(RecursiveDir)%(Filename)%(Extension)')"/>
   </Target>
 </Project>
