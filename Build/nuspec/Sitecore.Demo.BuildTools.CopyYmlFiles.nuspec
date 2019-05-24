@@ -7,7 +7,6 @@
     <authors>Sitecore Demo Team</authors>
   </metadata>
   <files>
-    <file src="..\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets" target="build\netstandard2.0" />
-    <file src="..\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets" target="build\net471" />
+    <file src="..\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets" target="build" />
   </files>
 </package>
