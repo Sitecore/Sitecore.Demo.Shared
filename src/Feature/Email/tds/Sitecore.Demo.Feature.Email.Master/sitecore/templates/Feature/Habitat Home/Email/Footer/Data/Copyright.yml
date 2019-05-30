@@ -4,7 +4,6 @@ Parent: "af359b00-c547-4e9a-9e80-39d62f49ce5d"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Feature/Habitat Home/Email/Footer/Data/Copyright
 DB: master
-Created: 20190425T163440Z
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type

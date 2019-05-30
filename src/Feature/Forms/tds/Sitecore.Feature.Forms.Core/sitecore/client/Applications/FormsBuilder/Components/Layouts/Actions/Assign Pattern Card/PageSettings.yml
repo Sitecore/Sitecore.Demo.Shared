@@ -4,7 +4,6 @@ Parent: "337ddf68-a471-4675-b859-0da4f5c242e9"
 Template: "e35eaa2d-edea-431c-a9e6-488272b53782"
 Path: /sitecore/client/Applications/FormsBuilder/Components/Layouts/Actions/Assign Pattern Card/PageSettings
 DB: core
-Created: 20190425T163504Z
 Languages:
 - Language: da
   Fields:

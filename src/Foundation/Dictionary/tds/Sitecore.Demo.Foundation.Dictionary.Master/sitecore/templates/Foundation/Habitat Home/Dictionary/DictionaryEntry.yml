@@ -4,7 +4,6 @@ Parent: "4b333e08-bbb7-48ad-8150-8203be0cb77c"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: /sitecore/templates/Foundation/Habitat Home/Dictionary/DictionaryEntry
 DB: master
-Created: 20190425T160048Z
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon

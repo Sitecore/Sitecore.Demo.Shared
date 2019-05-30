@@ -4,7 +4,6 @@ Parent: "eb1e858c-f8d0-4bcf-b2d5-990df1485495"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/Habitat Home/Accounts/_FacebookUserProfile/Data
 DB: core
-Created: 20190425T160055Z
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder

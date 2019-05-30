@@ -4,7 +4,6 @@ Parent: "c341b656-5743-4a7f-86c7-8181f536d428"
 Template: "aa697a95-4189-4015-8a0b-da76d6a83589"
 Path: /sitecore/client/Applications/FormsBuilder/Components/Layouts/Actions/Assign Pattern Card/PageSettings/ItemTreeView
 DB: core
-Created: 20190425T163504Z
 SharedFields:
 - ID: "0cc7f24b-2013-46c6-8ae3-5233d094ff7c"
   Hint: StaticData

@@ -4,7 +4,6 @@ Parent: "13c17309-e935-40c5-b274-e37f9858af97"
 Template: "a60edcaf-1285-46b5-8380-d790bb8c8708"
 Path: /sitecore/system/Settings/Forms/Field Types/Custom/Non grouped Radio button list
 DB: master
-Created: 20190425T163505Z
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon

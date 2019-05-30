@@ -4,7 +4,6 @@ Parent: "8b463696-7cb4-44f4-a2e5-f02a37575962"
 Template: "f0d16eee-3a05-4e43-a082-795a32b873c0"
 Path: /sitecore/system/Settings/Rules/Definitions/Elements/Sitecore Demo Account/SportNameCondition
 DB: master
-Created: 20190425T160047Z
 SharedFields:
 - ID: "ab51c8b2-f0e1-4471-9aae-cc080d774923"
   Hint: Type

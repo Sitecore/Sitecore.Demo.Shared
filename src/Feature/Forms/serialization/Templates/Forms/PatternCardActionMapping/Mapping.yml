@@ -4,7 +4,6 @@ Parent: "4fded342-b304-42f7-8091-ae3eb660ba4c"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/Habitat Home/Forms/PatternCardActionMapping/Mapping
 DB: master
-Created: 20190425T163506Z
 Languages:
 - Language: en
   Versions:

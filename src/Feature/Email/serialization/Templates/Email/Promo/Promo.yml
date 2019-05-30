@@ -4,7 +4,6 @@ Parent: "7b14280b-f67b-43bf-a509-0fc4b1d74589"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/Habitat Home/Email/Promo/Promo
 DB: master
-Created: 20190425T163438Z
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon

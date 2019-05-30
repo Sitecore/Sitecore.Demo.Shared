@@ -4,7 +4,6 @@ Parent: "0c661b19-300e-44ac-a6a3-46ebe503e463"
 Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
 Path: /sitecore/system/Settings/Forms/Field Types/Custom
 DB: master
-Created: 20190425T163505Z
 Languages:
 - Language: en
   Versions:

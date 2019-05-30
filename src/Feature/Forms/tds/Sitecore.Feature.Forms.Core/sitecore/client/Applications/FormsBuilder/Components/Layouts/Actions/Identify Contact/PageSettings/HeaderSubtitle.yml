@@ -4,7 +4,6 @@ Parent: "38e17736-b801-49d2-9ea2-14cf167b05b6"
 Template: "46efcf7f-6ebb-4059-b9bf-8ef47c4f5e20"
 Path: /sitecore/client/Applications/FormsBuilder/Components/Layouts/Actions/Identify Contact/PageSettings/HeaderSubtitle
 DB: core
-Created: 20190425T163504Z
 Languages:
 - Language: da
   Fields:

@@ -4,7 +4,6 @@ Parent: "edba5537-18f9-4708-8784-842f64d38f3d"
 Template: "5c547d4e-7111-4995-95b0-6b561751bf2e"
 Path: "/sitecore/layout/Placeholder Settings/Feature/Habitat Home/Email/ec-main"
 DB: master
-Created: 20190425T163436Z
 SharedFields:
 - ID: "7256bdab-1fd2-49dd-b205-cb4873d2917c"
   Hint: Placeholder Key

@@ -4,7 +4,6 @@ Parent: "a3e5e09f-1422-4050-9414-dc959aa60d7b"
 Template: "5f2c442f-2554-4c80-b1d9-2195fa6168b1"
 Path: /sitecore/client/Applications/FormsBuilder/Components/Layouts/Actions/Assign Pattern Card
 DB: core
-Created: 20190425T163504Z
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder

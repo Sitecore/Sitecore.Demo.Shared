@@ -4,7 +4,6 @@ Parent: "872a22d8-312a-4115-a5c6-b6a46764bf46"
 Template: "d8ad4b81-9269-4868-949f-37d1c28687e5"
 Path: /sitecore/content/Email/Messages
 DB: master
-Created: 20190425T163443Z
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder

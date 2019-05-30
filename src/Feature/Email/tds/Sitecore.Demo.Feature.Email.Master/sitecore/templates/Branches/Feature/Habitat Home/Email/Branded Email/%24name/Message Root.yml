@@ -4,7 +4,6 @@ Parent: "e6267a85-945b-444b-b246-400d4522a380"
 Template: "3f12d78c-b7b7-4157-98fc-da3322ee1a5b"
 Path: /sitecore/templates/Branches/Feature/Habitat Home/Email/Branded Email/$name/Message Root
 DB: master
-Created: 20190425T163442Z
 SharedFields:
 - ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
   Hint: __Renderings

@@ -4,7 +4,6 @@ Parent: "e90d79a4-d827-4bb1-b4f8-0a8b1f4b9d68"
 Template: "bcbf635a-9c02-4efe-85fb-19358faeaab2"
 Path: /sitecore/system/Settings/Security/Profiles/Accounts/MicrosoftUserProfile
 DB: core
-Created: 20190425T160103Z
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon

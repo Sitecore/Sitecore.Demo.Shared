@@ -4,7 +4,6 @@ Parent: "d369fee5-9f71-4a85-be2d-263d50d4b259"
 Template: "7b14280b-f67b-43bf-a509-0fc4b1d74589"
 Path: /sitecore/templates/Branches/Feature/Habitat Home/Email/Branded Email/$name/Message Root/Promo
 DB: master
-Created: 20190425T163442Z
 Languages:
 - Language: en
   Versions:

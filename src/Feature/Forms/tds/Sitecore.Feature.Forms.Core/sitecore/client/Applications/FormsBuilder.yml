@@ -4,7 +4,6 @@ Parent: "9cbe9270-1377-48cc-87b6-263f4c705c7d"
 Template: "c776fcfe-ab2a-47a6-95d7-a922fc3f530f"
 Path: /sitecore/client/Applications/FormsBuilder
 DB: core
-Created: 20190424T151621Z
 SharedFields:
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder

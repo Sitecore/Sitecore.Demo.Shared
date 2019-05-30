@@ -4,7 +4,6 @@ Parent: "936350e1-6057-4250-986b-72be51833410"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
 Path: /sitecore/templates/Feature/Habitat Home/Demo/_ProfilingSettings
 DB: master
-Created: 20190425T160114Z
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon

@@ -4,7 +4,6 @@ Parent: "0b02637c-da0f-481c-98b0-9bb410ed8cb3"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
 Path: /sitecore/templates/Feature/Habitat Home/Forms/PatternCardActionMapping/Mapping/Mapped Value
 DB: master
-Created: 20190425T163506Z
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type

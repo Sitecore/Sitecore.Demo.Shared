@@ -4,7 +4,6 @@ Parent: "00ba46d4-b65b-45a0-a066-757ffb9085e8"
 Template: "0437fee2-44c9-46a6-abe9-28858d9fee8c"
 Path: /sitecore/templates/Foundation/Habitat Home/Workflow
 DB: master
-Created: 20190425T160039Z
 Languages:
 - Language: en
   Versions:

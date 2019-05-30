@@ -4,7 +4,6 @@ Parent: "cb2c27f8-01f4-48ff-82f5-5256f8b1fdc3"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/Habitat Home/Accounts/_Interest/Interest
 DB: master
-Created: 20190425T160101Z
 Languages:
 - Language: en
   Versions:

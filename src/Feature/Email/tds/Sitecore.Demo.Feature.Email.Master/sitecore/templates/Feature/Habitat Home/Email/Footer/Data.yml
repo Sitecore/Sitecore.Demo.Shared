@@ -4,7 +4,6 @@ Parent: "d7776780-d054-4c97-a12a-ef41c70cc8e2"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
 Path: /sitecore/templates/Feature/Habitat Home/Email/Footer/Data
 DB: master
-Created: 20190425T163437Z
 Languages:
 - Language: en
   Versions:

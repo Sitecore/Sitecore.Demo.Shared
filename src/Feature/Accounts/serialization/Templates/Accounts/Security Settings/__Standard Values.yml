@@ -4,7 +4,6 @@ Parent: "1e5bfa08-0e32-4156-927e-930392fdcb92"
 Template: "1e5bfa08-0e32-4156-927e-930392fdcb92"
 Path: /sitecore/templates/Feature/Habitat Home/Accounts/Security Settings/__Standard Values
 DB: master
-Created: 20190425T160103Z
 SharedFields:
 - ID: "fd4e2050-186c-4375-8b99-e8a85dd7436e"
   Hint: __Enable item fallback

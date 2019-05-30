@@ -4,7 +4,6 @@ Parent: "24dce03c-ae57-4b2c-90bc-f75e0f894bb3"
 Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
 Path: /sitecore/layout/Renderings/Feature/Habitat Home/Forms/FormWrapper
 DB: master
-Created: 20190425T163507Z
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon

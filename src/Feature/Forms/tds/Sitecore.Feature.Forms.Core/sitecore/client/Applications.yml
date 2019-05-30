@@ -4,7 +4,6 @@ Parent: "31056d46-2faa-4ea2-8759-be93eae10001"
 Template: "239f9cf4-e5a0-44e0-b342-0f32cd4c6d8b"
 Path: /sitecore/client/Applications
 DB: core
-Created: 20190424T151621Z
 Languages:
 - Language: en
   Versions:

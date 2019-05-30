@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "e11599a1-cc41-47d3-9bdc-f9f001c49ffa"
 Parent: "29886f29-88bd-4edd-ad4c-edbdb148d0b6"
 Template: "9c6fe1c6-12a5-4c17-84fa-eefa0e7da6d7"
@@ -28,7 +28,7 @@ Languages:
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: Connect für Salesforce Sammelmodell
+    Value: Connect f�r Salesforce Sammelmodell
   Versions:
   - Version: 1
     Fields:

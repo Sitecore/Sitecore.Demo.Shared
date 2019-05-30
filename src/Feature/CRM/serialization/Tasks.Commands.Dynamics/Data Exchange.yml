@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "b4f46720-5827-4f28-9a34-4712430754c8"
 Parent: "3ebec263-b57e-4a3c-a232-7c70519f9908"
 Template: "26bdbd0f-84ff-49ee-b528-80b4c99b2a41"
@@ -51,7 +51,7 @@ Languages:
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: データ交換
+    Value: ?????
   Versions:
   - Version: 1
     Fields:

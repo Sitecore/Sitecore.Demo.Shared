@@ -4,7 +4,6 @@ Parent: "8a05e0b1-f25b-4123-8275-6318b638f334"
 Template: "e35eaa2d-edea-431c-a9e6-488272b53782"
 Path: /sitecore/client/Applications/FormsBuilder/Components/Layouts/Actions/Identify Contact/PageSettings
 DB: core
-Created: 20190425T163504Z
 Languages:
 - Language: da
   Fields:

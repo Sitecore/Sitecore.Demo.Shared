@@ -4,7 +4,6 @@ Parent: "b18b9fd6-d43b-4a61-aac0-fc5e612d6bd4"
 Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
 Path: /sitecore/system/Settings/Forms/Value Providers/Contact Data
 DB: master
-Created: 20190425T163507Z
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon

@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "474a2a52-9bd6-438d-bcda-675065d602b5"
 Parent: "da61ad50-8fdb-4252-a68f-b4470b1c9fe8"
 Template: "7ee0975b-0698-493e-b3a2-0b2ef33d0522"
@@ -16,7 +16,7 @@ Languages:
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: Habitat サイト
+    Value: Habitat ???
   Versions:
   - Version: 1
     Fields:

@@ -1,4 +1,4 @@
-﻿---
+---
 ID: "ad71facc-3c23-4df8-a427-672020db5612"
 Parent: "bad98e0e-c1b5-4598-ac13-21b06218b30c"
 Template: "85adbf5b-e836-4932-a333-fe0f9fa1ed1e"
@@ -50,7 +50,7 @@ Languages:
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: 機能
+    Value: ??
   Versions:
   - Version: 1
     Fields:
@@ -65,7 +65,7 @@ Languages:
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: 特征
+    Value: ??
   Versions:
   - Version: 1
     Fields:
