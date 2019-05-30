@@ -12,7 +12,7 @@
     }
   ],
   "Types": {
-    "Sitecore.HabitatHome.Foundation.Accounts.Models.Facets.SportName": {
+    "Sitecore.Demo.Foundation.Accounts.Models.Facets.SportName": {
       "Type": "Facet",
       "BaseType": "Sitecore.XConnect.Facet",
       "ClrType": "Sitecore.Demo.Foundation.Accounts.Models.Facets.SportName, Sitecore.Demo.Foundation.Accounts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -22,7 +22,7 @@
         }
       }
     },
-    "Sitecore.HabitatHome.Foundation.Accounts.Models.Facets.SportType": {
+    "Sitecore.Demo.Foundation.Accounts.Models.Facets.SportType": {
       "Type": "Facet",
       "BaseType": "Sitecore.XConnect.Facet",
       "ClrType": "Sitecore.Demo.Foundation.Accounts.Models.Facets.SportType, Sitecore.Demo.Foundation.Accounts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
