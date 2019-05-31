@@ -1,5 +1,5 @@
 [Oo]bj/
-src/**/[Bb]in/
+/**/[Bb]in/
 .nuget/
 _ReSharper.*
 *.user
@@ -31,3 +31,4 @@ packages/
 /Azure/tools
 **/azure-user.config
 Azure/**/azureuser-config.json
+

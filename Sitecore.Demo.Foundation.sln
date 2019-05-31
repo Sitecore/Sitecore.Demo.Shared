@@ -60,6 +60,8 @@ Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Serialization.Core", "src\F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{C511AB93-291F-4C99-847D-A875907FA35A}"
 	ProjectSection(SolutionItems) = preProject
+		Build\nuspec\Sitecore.Demo.BuildTools.CopyYmlFiles.nuspec = Build\nuspec\Sitecore.Demo.BuildTools.CopyYmlFiles.nuspec
+		Build\nuspec\Sitecore.Demo.BuildTools.MergeXdtTransforms.nuspec = Build\nuspec\Sitecore.Demo.BuildTools.MergeXdtTransforms.nuspec
 		Build\nuspec\Sitecore.Demo.Foundation.Accounts.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Accounts.nuspec
 		Build\nuspec\Sitecore.Demo.Foundation.Alerts.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Alerts.nuspec
 		Build\nuspec\Sitecore.Demo.Foundation.Cdn.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Cdn.nuspec
@@ -75,7 +77,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".targets", ".targets", "{6C
 		Build\targets\.gitignore = Build\targets\.gitignore
 		Build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets = Build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets
 		Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets = Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets
+		Build\targets\Sitecore.Demo.BuildTools.MergeXdtTransforms.targets = Build\targets\Sitecore.Demo.BuildTools.MergeXdtTransforms.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.BuildTools", "Build\code\Sitecore.Demo.BuildTools.csproj", "{63FEC644-C069-4962-BB4E-B9C14475C5CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -177,6 +182,12 @@ Global
 		{312F77AF-A834-4A50-9C4F-1531339538A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{312F77AF-A834-4A50-9C4F-1531339538A6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{312F77AF-A834-4A50-9C4F-1531339538A6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{63FEC644-C069-4962-BB4E-B9C14475C5CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63FEC644-C069-4962-BB4E-B9C14475C5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63FEC644-C069-4962-BB4E-B9C14475C5CA}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{63FEC644-C069-4962-BB4E-B9C14475C5CA}.Local|Any CPU.Build.0 = Local|Any CPU
+		{63FEC644-C069-4962-BB4E-B9C14475C5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63FEC644-C069-4962-BB4E-B9C14475C5CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -204,6 +215,7 @@ Global
 		{AC135F78-3B9B-48F0-8BD4-9DD84F1A3F90} = {4CAD1DC9-6B9C-41EC-95F9-0AD656C25C0D}
 		{312F77AF-A834-4A50-9C4F-1531339538A6} = {4CAD1DC9-6B9C-41EC-95F9-0AD656C25C0D}
 		{6C5027B7-88AE-4875-A74A-0D2F1DCFB73B} = {6E859364-CC0C-4E8B-819D-72C08F2504F8}
+		{63FEC644-C069-4962-BB4E-B9C14475C5CA} = {6E859364-CC0C-4E8B-819D-72C08F2504F8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2960B54B-FEEC-42B7-89C2-025528020F5C}

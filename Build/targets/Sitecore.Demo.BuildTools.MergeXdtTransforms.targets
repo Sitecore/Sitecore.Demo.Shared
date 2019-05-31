@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+  <UsingTask AssemblyFile="$(MSBuildThisFileDirectory)Sitecore.Demo.BuildTools.dll" TaskName="Sitecore.Demo.BuildTools.Tasks.MergeXdtTransforms" />
+
+  <Target Name="CollectXdtTransforms" Condition="'$(SitecoreDatabase)' != ''" AfterTargets="AfterSitecoreBuild">
+    <Message Importance="high" Text="Collecting Config Transform Files..." />
+    <CallTarget Targets="
+                CollectConfigTransforms;
+                MergeConfigTransforms;
+                GenerateTransformsPayloadPackage"
+                />
+  </Target>
+
+  <Target Name="CollectConfigTransforms" Condition="'$(BuildWebDeploy)' == 'True'">
+    <ItemGroup>
+      <_OutputConfigTransforms Include="$(_OutputPath)\transforms\**\*.xdt" />
+      <_SolutionConfigTransforms Include="$(SolutionDir)\src\Foundation\**\code\**\*.xdt" />
+      <_SolutionConfigTransforms Include="$(SolutionDir)\src\Feature\**\code\**\*.xdt" />
+      <_SolutionConfigTransforms Include="$(SolutionDir)\src\Project\**\code\**\*.xdt" />
+    </ItemGroup>
+
+    <Message Importance="high" Text="Found file: %(_ConfigTransforms.Identity)" />
+
+    <PropertyGroup>
+      <_WebDeployFolder Condition="'$(OutDir)' != '$(OutputPath)' and '$(OutDir)' != ''">$(OutDir)_WebDeploy\$(MSBuildProjectName)\</_WebDeployFolder>
+      <_WebDeployFolder Condition="'$(OutDir)' == '$(OutputPath)' or '$(OutDir)' == ''">$(OutputPath)..\WebDeploy_$(Configuration)\</_WebDeployFolder>
+      <_ConfigTransformsSourceFolder>$(_WebDeployFolder)\XdtSource\</_ConfigTransformsSourceFolder>
+      <_ConfigTransformsPayloadFolder>$(_WebDeployFolder)\TransformsPayload\</_ConfigTransformsPayloadFolder>
+      <_ConfigTransformsTargetFolder>$(_ConfigTransformsPayloadFolder)\Xdts\</_ConfigTransformsTargetFolder>
+    </PropertyGroup>
+
+    <Copy
+     SourceFiles="@(_OutputConfigTransforms)"
+     DestinationFiles="@(_OutputConfigTransforms->'$(_ConfigTransformsSourceFolder)\transforms\%(RecursiveDir)%(Filename)%(Extension)')"
+    />
+    <Copy
+     SourceFiles="@(_SolutionConfigTransforms)"
+     DestinationFiles="@(_SolutionConfigTransforms->'$(_ConfigTransformsSourceFolder)\modules\%(RecursiveDir)%(Filename)%(Extension)')"
+    />
+  </Target>
+
+  <Target Name="MergeConfigTransforms" DependsOnTargets="$(MergeConfigDependsOn)" Condition="'$(BuildWebDeploy)' == 'True'">
+
+    <Message Importance="high" Text="Calling MergeConfigTransforms Task from: $(MSBuildThisFileDirectory) " />
+    <ItemGroup>
+      <_ConfigTransforms Include="$(_ConfigTransformsSourceFolder)\**\*.xdt" />
+    </ItemGroup>
+
+    <MergeXdtTransforms Transforms="@(_ConfigTransforms)" OutputPath="$(_ConfigTransformsTargetFolder)" />
+    <RemoveDir Directories="$(_ConfigTransformsSourceFolder)" />
+  </Target>
+
+  <Target Name="GenerateTransformsPayloadPackage" Condition="'$(BuildWebDeploy)' == 'True'">
+
+    <PropertyGroup>
+      <_TransformsPayloadPackageName Condition=" '$(_TransformsPayloadPackageName)' == '' ">$(MSBuildProjectName)</_TransformsPayloadPackageName>
+      <_TransformsPayloadPackageName Condition=" '$(WebDeployPackageName)' != '' ">$(WebDeployPackageName)</_TransformsPayloadPackageName>
+      <_TransformsPayloadPackageName>$(WebDeployPackageName).Transforms</_TransformsPayloadPackageName>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(WebDeployAppendDateAndTimeToPackageName)' == 'true' ">
+      <_PackageDateTimeFormat Condition=" '$(PackageDateTimeFormat)' == '' ">yyyyMMdd_HHmm</_PackageDateTimeFormat>
+      <_PackageDateTimeFormat Condition=" '$(PackageDateTimeFormat)' != '' ">$(PackageDateTimeFormat)</_PackageDateTimeFormat>
+      <_TransformsPayloadPackageName>$(_TransformsPayloadPackageName)_$([System.DateTime]::Now.ToString("$(_PackageDateTimeFormat)"))</_TransformsPayloadPackageName>
+    </PropertyGroup>
+
+    <ZipDirectory
+           SourceDirectory="$(_ConfigTransformsPayloadFolder)"
+           DestinationFile="$(_WebDeployFolder)\$(_TransformsPayloadPackageName).sccpl" />
+
+    <RemoveDir Directories="$(_ConfigTransformsPayloadFolder)" />
+
+  </Target>
+</Project>
