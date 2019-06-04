@@ -31,9 +31,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tds", ".tds", "{FDEF6BB7-0
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{6E859364-CC0C-4E8B-819D-72C08F2504F8}"
-	ProjectSection(SolutionItems) = preProject
-		Build\generate-nuget-packages.ps1 = Build\generate-nuget-packages.ps1
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CDN", "CDN", "{8CCE05AC-2A6C-4816-AD6C-68C679304A9E}"
 EndProject
