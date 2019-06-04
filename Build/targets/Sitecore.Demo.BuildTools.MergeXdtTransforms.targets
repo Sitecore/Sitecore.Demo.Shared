@@ -63,9 +63,12 @@
       <_PackageDateTimeFormat Condition=" '$(PackageDateTimeFormat)' == '' ">yyyyMMdd_HHmm</_PackageDateTimeFormat>
       <_PackageDateTimeFormat Condition=" '$(PackageDateTimeFormat)' != '' ">$(PackageDateTimeFormat)</_PackageDateTimeFormat>
       <_TransformsPayloadPackageName>$(_TransformsPayloadPackageName)_$([System.DateTime]::Now.ToString("$(_PackageDateTimeFormat)"))</_TransformsPayloadPackageName>
-      <_TransformsPayloadPackagePath>$(_WebDeployFolder)\$(_TransformsPayloadPackageName).sccpl</_TransformsPayloadPackagePath>
     </PropertyGroup>
 
+    <PropertyGroup>
+      <_TransformsPayloadPackagePath>$(_WebDeployFolder)\$(_TransformsPayloadPackageName).sccpl</_TransformsPayloadPackagePath>
+    </PropertyGroup>
+                
     <Delete Files="$(_TransformsPayloadPackagePath)" Condition="Exists('$(_TransformsPayloadPackagePath)')" />
     <ZipDirectory
            SourceDirectory="$(_ConfigTransformsPayloadFolder)"
