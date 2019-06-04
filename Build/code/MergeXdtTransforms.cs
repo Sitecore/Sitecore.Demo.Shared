@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Sitecore.Demo.BuildTools.Tasks
+namespace Sitecore.Demo.BuildTools
 {
     public class MergeXdtTransforms : Task
     {
@@ -58,11 +58,6 @@ namespace Sitecore.Demo.BuildTools.Tasks
                     var targetTransform = XmlUtility.Merge(sourceTransforms);
                     string fileOutput = string.Format("{0}{1}", OutputPath, set.Key);
 
-                    if (!Directory.Exists(fileOutput))
-                    {
-                        Directory.CreateDirectory(fileOutput);
-                    }
-
                     targetTransform.Save(fileOutput);
                 }
 
@@ -105,7 +100,15 @@ namespace Sitecore.Demo.BuildTools.Tasks
                 var match = Regex.Match(relativePath, pattern);
                 if (match.Success)
                 {
-                    groupKey = string.Format("{0}{1}", match.Groups[1].Value, groupKey);
+                    string targetPath = match.Groups[1].Value;
+                    groupKey = string.Format("{0}{1}", targetPath, groupKey);
+
+                    // ensure directory structure is created
+                    string targetDir = string.Format("{0}{1}", OutputPath, targetPath);
+                    if (!Directory.Exists(targetDir))
+                    {
+                        Directory.CreateDirectory(targetDir);
+                    }
                 }
             }
 

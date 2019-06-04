@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <UsingTask AssemblyFile="$(MSBuildThisFileDirectory)Sitecore.Demo.BuildTools.dll" TaskName="Sitecore.Demo.BuildTools.Tasks.MergeXdtTransforms" />
+  <UsingTask AssemblyFile="$(MSBuildThisFileDirectory)Sitecore.Demo.BuildTools.dll" TaskName="Sitecore.Demo.BuildTools.MergeXdtTransforms" />
 
   <Target Name="CollectXdtTransforms" Condition="'$(SitecoreDatabase)' != ''" AfterTargets="AfterSitecoreBuild">
     <Message Importance="high" Text="Collecting Config Transform Files..." />
@@ -56,20 +56,27 @@
     <PropertyGroup>
       <_TransformsPayloadPackageName Condition=" '$(_TransformsPayloadPackageName)' == '' ">$(MSBuildProjectName)</_TransformsPayloadPackageName>
       <_TransformsPayloadPackageName Condition=" '$(WebDeployPackageName)' != '' ">$(WebDeployPackageName)</_TransformsPayloadPackageName>
-      <_TransformsPayloadPackageName>$(WebDeployPackageName).Transforms</_TransformsPayloadPackageName>
+      <_TransformsPayloadPackageName>$(_TransformsPayloadPackageName).Transforms</_TransformsPayloadPackageName>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(WebDeployAppendDateAndTimeToPackageName)' == 'true' ">
       <_PackageDateTimeFormat Condition=" '$(PackageDateTimeFormat)' == '' ">yyyyMMdd_HHmm</_PackageDateTimeFormat>
       <_PackageDateTimeFormat Condition=" '$(PackageDateTimeFormat)' != '' ">$(PackageDateTimeFormat)</_PackageDateTimeFormat>
       <_TransformsPayloadPackageName>$(_TransformsPayloadPackageName)_$([System.DateTime]::Now.ToString("$(_PackageDateTimeFormat)"))</_TransformsPayloadPackageName>
+      <_TransformsPayloadPackagePath>$(_WebDeployFolder)\$(_TransformsPayloadPackageName).sccpl</_TransformsPayloadPackagePath>
     </PropertyGroup>
 
+    <Delete Files="$(_TransformsPayloadPackagePath)" Condition="Exists('$(_TransformsPayloadPackagePath)')" />
     <ZipDirectory
            SourceDirectory="$(_ConfigTransformsPayloadFolder)"
-           DestinationFile="$(_WebDeployFolder)\$(_TransformsPayloadPackageName).sccpl" />
+           DestinationFile="$(_TransformsPayloadPackagePath)" />
 
     <RemoveDir Directories="$(_ConfigTransformsPayloadFolder)" />
 
   </Target>
+
+  <Target AfterTargets="AfterWebDeployPackage" Name="GenerateSCWebDeployPackage" >
+    <Message Importance="high" Text="Generating SC Web Deploy package.." />
+  </Target>
+  
 </Project>

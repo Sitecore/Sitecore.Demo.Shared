@@ -52,7 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tasks\MergeXdtTransforms.cs" />
+    <Compile Include="MergeXdtTransforms.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\XmlUtility.cs" />
   </ItemGroup>
