@@ -35,6 +35,24 @@
     <DebugSymbols>false</DebugSymbols>
     <OutputPath>.\bin\Release\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <NuGetGenerateNuGetPackage>True</NuGetGenerateNuGetPackage>
+    <NuGetExePath>..\..\..\..\..\Build\tools</NuGetExePath>
+    <NuGetSummary />
+    <NuGetDescription>TDS NuGet package, containing master database items for the Sitecore.Demo.Feature.Demo layer</NuGetDescription>
+    <NuGetTitle>Sitecore.Demo.Feature.Demo.Master.Items</NuGetTitle>
+    <NuGetVersion>9.2.0.1</NuGetVersion>
+    <NuGetPackageId>Sitecore.Demo.Feature.Demo.Master.Items</NuGetPackageId>
+    <NuGetAuthors>Sitecore Demo Team</NuGetAuthors>
+    <NuGetOwners />
+    <NuGetCopyright />
+    <NuGetLicenseUrl />
+    <NuGetIconUrl />
+    <NuGetProjectUrl />
+    <NuGetTags />
+    <NuGetReleaseNotes />
+    <NuGetLanguage />
+    <NuGetRequireLicenseAcceptance>False</NuGetRequireLicenseAcceptance>
+    <NuGetDependencies />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Local' ">
     <OutputPath>.\bin\Local\</OutputPath>
