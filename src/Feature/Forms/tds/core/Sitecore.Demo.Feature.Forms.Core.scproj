@@ -34,6 +34,24 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Local' ">
     <OutputPath>.\bin\Local\</OutputPath>
+    <NuGetGenerateNuGetPackage>True</NuGetGenerateNuGetPackage>
+    <NuGetExePath>..\..\..\..\..\Build\tools</NuGetExePath>
+    <NuGetSummary />
+    <NuGetDescription>TDS NuGet package, containing core database items for the Sitecore.Demo.Feature.Forms layer</NuGetDescription>
+    <NuGetTitle>Sitecore.Demo.Feature.Forms.Core.Items</NuGetTitle>
+    <NuGetVersion>9.2.0</NuGetVersion>
+    <NuGetPackageId>Sitecore.Demo.Feature.Forms.Core.Items</NuGetPackageId>
+    <NuGetAuthors>Sitecore Demo Team</NuGetAuthors>
+    <NuGetOwners />
+    <NuGetCopyright />
+    <NuGetLicenseUrl />
+    <NuGetIconUrl />
+    <NuGetProjectUrl />
+    <NuGetTags />
+    <NuGetReleaseNotes />
+    <NuGetLanguage />
+    <NuGetRequireLicenseAcceptance>False</NuGetRequireLicenseAcceptance>
+    <NuGetDependencies />
   </PropertyGroup>
   <ItemGroup>
     <AssemblyAttributes Include="AssemblyFileVersion">

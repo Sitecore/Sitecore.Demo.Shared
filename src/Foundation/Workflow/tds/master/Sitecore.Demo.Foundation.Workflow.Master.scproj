@@ -34,9 +34,45 @@
     <DebugSymbols>false</DebugSymbols>
     <OutputPath>.\bin\Release\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <NuGetGenerateNuGetPackage>True</NuGetGenerateNuGetPackage>
+    <NuGetExePath>..\..\..\..\..\Build\tools</NuGetExePath>
+    <NuGetSummary />
+    <NuGetDescription>TDS NuGet package, containing items for the Sitecore.Demo.Foundation.Workflow layer</NuGetDescription>
+    <NuGetTitle>Sitecore.Demo.Foundation.Workflow.Master.Items</NuGetTitle>
+    <NuGetVersion>9.2.0.1</NuGetVersion>
+    <NuGetPackageId>Sitecore.Demo.Foundation.Workflow.Master.Items</NuGetPackageId>
+    <NuGetAuthors>Sitecore Demo Team</NuGetAuthors>
+    <NuGetOwners />
+    <NuGetCopyright />
+    <NuGetLicenseUrl />
+    <NuGetIconUrl />
+    <NuGetProjectUrl />
+    <NuGetTags />
+    <NuGetReleaseNotes />
+    <NuGetLanguage />
+    <NuGetRequireLicenseAcceptance>False</NuGetRequireLicenseAcceptance>
+    <NuGetDependencies />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Local' ">
     <OutputPath>.\bin\Local\</OutputPath>
+    <NuGetGenerateNuGetPackage>True</NuGetGenerateNuGetPackage>
+    <NuGetExePath>..\..\..\..\..\Build\tools</NuGetExePath>
+    <NuGetSummary />
+    <NuGetDescription>TDS NuGet package, containing items for the Sitecore.Demo.Foundation.Workflow layer</NuGetDescription>
+    <NuGetTitle>Sitecore.Demo.Foundation.Workflow.Master.Items</NuGetTitle>
+    <NuGetVersion>9.2.0</NuGetVersion>
+    <NuGetPackageId>Sitecore.Demo.Foundation.Workflow.Master.Items</NuGetPackageId>
+    <NuGetAuthors>Sitecore Demo Team</NuGetAuthors>
+    <NuGetOwners />
+    <NuGetCopyright />
+    <NuGetLicenseUrl />
+    <NuGetIconUrl />
+    <NuGetProjectUrl />
+    <NuGetTags />
+    <NuGetReleaseNotes />
+    <NuGetLanguage />
+    <NuGetRequireLicenseAcceptance>False</NuGetRequireLicenseAcceptance>
+    <NuGetDependencies />
   </PropertyGroup>
   <ItemGroup>
     <AssemblyAttributes Include="AssemblyFileVersion">

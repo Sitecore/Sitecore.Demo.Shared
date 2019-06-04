@@ -35,25 +35,37 @@
     <DebugSymbols>false</DebugSymbols>
     <OutputPath>.\bin\Release\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <NuGetGenerateNuGetPackage>True</NuGetGenerateNuGetPackage>
+    <NuGetExePath>..\..\..\..\..\Build\tools</NuGetExePath>
+    <NuGetSummary />
+    <NuGetDescription>TDS NuGet package, containing items for the Sitecore.Demo.Foundation.Accounts layer</NuGetDescription>
+    <NuGetTitle>Sitecore.Demo.Foundation.Accounts.Master.Items</NuGetTitle>
+    <NuGetVersion>9.2.0.1</NuGetVersion>
+    <NuGetPackageId>Sitecore.Demo.Foundation.Accounts.Master.Items</NuGetPackageId>
+    <NuGetAuthors>Sitecore Demo Team</NuGetAuthors>
+    <NuGetOwners />
+    <NuGetCopyright />
+    <NuGetLicenseUrl />
+    <NuGetIconUrl />
+    <NuGetProjectUrl />
+    <NuGetTags />
+    <NuGetReleaseNotes />
+    <NuGetLanguage />
+    <NuGetRequireLicenseAcceptance>False</NuGetRequireLicenseAcceptance>
+    <NuGetDependencies />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Local' ">
     <DebugSymbols>true</DebugSymbols>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
     <OutputPath>.\bin\Local\</OutputPath>
-    <NuGetGenerateNuGetPackage>False</NuGetGenerateNuGetPackage>
-    <NuGetExePath>
-    </NuGetExePath>
+    <NuGetGenerateNuGetPackage>True</NuGetGenerateNuGetPackage>
+    <NuGetExePath>..\..\..\..\..\Build\tools</NuGetExePath>
     <NuGetSummary />
-    <NuGetDescription>
-    </NuGetDescription>
-    <NuGetTitle>
-    </NuGetTitle>
-    <NuGetVersion>
-    </NuGetVersion>
-    <NuGetPackageId>
-    </NuGetPackageId>
-    <NuGetAuthors>
-    </NuGetAuthors>
+    <NuGetDescription>TDS NuGet package, containing items for the Sitecore.Demo.Foundation.Accounts layer</NuGetDescription>
+    <NuGetTitle>Sitecore.Demo.Foundation.Accounts.Master.Items</NuGetTitle>
+    <NuGetVersion>9.2.0</NuGetVersion>
+    <NuGetPackageId>Sitecore.Demo.Foundation.Accounts.Master.Items</NuGetPackageId>
+    <NuGetAuthors>Sitecore Demo Team</NuGetAuthors>
     <NuGetOwners>
     </NuGetOwners>
     <NuGetCopyright />

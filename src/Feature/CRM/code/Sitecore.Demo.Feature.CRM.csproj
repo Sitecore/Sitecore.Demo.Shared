@@ -215,6 +215,8 @@
     <Compile Include="ExperienceProfile\ExperienceProfileSalesforceXdbContactService.cs" />
     <Compile Include="Pipelines\SyncToSalesforceCrmOnSessionEnd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubmitActions\Models\SyncToSalesforceCrmActionData.cs" />
+    <Compile Include="SubmitActions\SyncToSalesforceCrmAction.cs" />
     <Compile Include="TriggerDefPipelineBatch\SyncToSalesforceCrm.cs" />
   </ItemGroup>
   <ItemGroup />

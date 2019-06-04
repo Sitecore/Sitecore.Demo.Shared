@@ -42,6 +42,24 @@
     <WebDeployPackageCodeAndItemOptions>ItemOnly</WebDeployPackageCodeAndItemOptions>
     <WebDeployPackageName>Sitecore.Demo.Feature.Accounts.Master</WebDeployPackageName>
     <WebDeployAppendDateAndTimeToPackageName>False</WebDeployAppendDateAndTimeToPackageName>
+    <NuGetGenerateNuGetPackage>True</NuGetGenerateNuGetPackage>
+    <NuGetExePath>..\..\..\..\..\Build\tools</NuGetExePath>
+    <NuGetSummary />
+    <NuGetDescription>TDS NuGet package, containing master database items for the Sitecore.Demo.Feature.Accounts layer</NuGetDescription>
+    <NuGetTitle>Sitecore.Demo.Feature.Accounts.Master.Items</NuGetTitle>
+    <NuGetVersion>9.2.0</NuGetVersion>
+    <NuGetPackageId>Sitecore.Demo.Feature.Accounts.Master.Items</NuGetPackageId>
+    <NuGetAuthors>Sitecore Demo Team</NuGetAuthors>
+    <NuGetOwners />
+    <NuGetCopyright />
+    <NuGetLicenseUrl />
+    <NuGetIconUrl />
+    <NuGetProjectUrl />
+    <NuGetTags />
+    <NuGetReleaseNotes />
+    <NuGetLanguage />
+    <NuGetRequireLicenseAcceptance>False</NuGetRequireLicenseAcceptance>
+    <NuGetDependencies />
   </PropertyGroup>
   <ItemGroup>
     <AssemblyAttributes Include="AssemblyFileVersion">
