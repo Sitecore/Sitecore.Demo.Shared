@@ -24,7 +24,7 @@ namespace Sitecore.Demo.BuildTools
         {
             if (Transforms == null || Transforms.Length == 0)
             {
-                Log.LogError("No transforms were supplied");
+                Log.LogMessage("No transforms were supplied");
                 return false;
             }
 
