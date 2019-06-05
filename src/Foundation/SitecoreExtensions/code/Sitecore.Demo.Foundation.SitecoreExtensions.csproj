@@ -138,16 +138,19 @@
   <ItemGroup>
     <Compile Include="Attributes\SkipAnalyticsTrackingAttribute.cs" />
     <Compile Include="Attributes\ValidateRenderingIdAttribute.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Controls\EditFrameRendering.cs" />
     <Compile Include="Controls\ExtendedGeneralLink.cs" />
     <Compile Include="Controls\RelativePathForm.cs" />
     <Compile Include="Extensions\FieldExtensions.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\ItemExtensions.cs" />
+    <Compile Include="Extensions\RenderingExtensions.cs" />
     <Compile Include="Extensions\SessionExtensions.cs" />
     <Compile Include="Extensions\SitecoreHelperExtensions.cs" />
     <Compile Include="Extensions\SiteExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Forms\ValidateFormHandler.cs" />
     <Compile Include="Models\ItemBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\FieldRendererService.cs" />
