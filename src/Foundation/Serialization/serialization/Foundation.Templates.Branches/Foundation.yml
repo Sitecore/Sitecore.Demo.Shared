@@ -1,4 +1,4 @@
----
+﻿---
 ID: "e24c4a00-08d6-41c8-b60e-e7990b21697a"
 Parent: "bad98e0e-c1b5-4598-ac13-21b06218b30c"
 Template: "85adbf5b-e836-4932-a333-fe0f9fa1ed1e"
@@ -53,7 +53,7 @@ Languages:
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: ????????
+    Value: ファンデーション
   Versions:
   - Version: 1
     Fields:
@@ -68,7 +68,7 @@ Languages:
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
     Hint: __Display name
-    Value: ??
+    Value: 基础
   Versions:
   - Version: 1
     Fields:
