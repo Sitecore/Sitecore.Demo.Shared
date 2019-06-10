@@ -71,7 +71,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".scripts", ".scripts", "{2B967A89-6E33-4146-B6C6-3FC96919D791}"
 	ProjectSection(SolutionItems) = preProject
 		Build\generate-nuget-packages.ps1 = Build\generate-nuget-packages.ps1
-		Build\update-wdp-package.ps1 = Build\update-wdp-package.ps1
 	EndProjectSection
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Sitecore.Demo.Foundation.Accounts.Master", "src\Foundation\Accounts\tds\master\Sitecore.Demo.Foundation.Accounts.Master.scproj", "{38C7E88D-C219-4003-AC6C-D2AD4960DFAC}"

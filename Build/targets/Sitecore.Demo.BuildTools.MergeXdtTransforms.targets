@@ -84,21 +84,18 @@
     <PropertyGroup>
       <_WebDeployPackageSourceFile>$(_WebDeployFolder)\$(WebDeployPackageName).wdp.zip</_WebDeployPackageSourceFile>
       <_WebDeploySitecorePackageTargetFile>$(_WebDeployFolder)\$(WebDeployPackageName).Base.scwdp.zip</_WebDeploySitecorePackageTargetFile>
+      <_WebDeployUpdatedSitecorePackageFolder>$(_WebDeployFolder)\$(WebDeployPackageName)\</_WebDeployUpdatedSitecorePackageFolder>
       <_WebDeployUpdatedSitecorePackageTargetFile>$(_WebDeployFolder)\$(WebDeployPackageName).scwdp.zip</_WebDeployUpdatedSitecorePackageTargetFile>
     </PropertyGroup>
-
-    <Delete Files="$(_WebDeploySitecorePackageTargetFile)" Condition="Exists('$(_WebDeploySitecorePackageTargetFile)')" />
-    <Copy SourceFiles="$(_WebDeployPackageSourceFile)" DestinationFiles="$(_WebDeploySitecorePackageTargetFile)"/>
-
+  
     <Message Importance="high" Text="Generating Sitecore Web Deploy package with embedded transforms.." />
 
-    <PropertyGroup>
-      <_UpdateWDPScriptLocation>$(MSBuildThisFileDirectory)update-wdp-package.ps1</_UpdateWDPScriptLocation>
-      <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
-    </PropertyGroup>
-
-    <Exec Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp;{ &amp;&apos;$(_UpdateWDPScriptLocation)&apos; &apos;$(_WebDeploySitecorePackageTargetFile)&apos; &apos;$(_WebDeployUpdatedSitecorePackageTargetFile)&apos; &apos;$(_TransformsPayloadPackagePath)&apos;}&quot;" />
-
+    <Delete Files="$(_WebDeploySitecorePackageTargetFile)" Condition="Exists('$(_WebDeploySitecorePackageTargetFile)')" />
+    <Unzip SourceFiles="$(_WebDeployPackageSourceFile)" DestinationFolder="$(_WebDeployUpdatedSitecorePackageFolder)" OverwriteReadOnlyFiles="true" ContinueOnError="true" />
+    <Copy SourceFiles="$(_TransformsPayloadPackagePath)" DestinationFolder="$(_WebDeployUpdatedSitecorePackageFolder)\Content\Website\App_Data\Transforms\" />
+    <ZipDirectory SourceDirectory="$(_WebDeployUpdatedSitecorePackageFolder)" DestinationFile="$(_WebDeployUpdatedSitecorePackageTargetFile)" />
+    
+    <RemoveDir Directories="$(_WebDeployUpdatedSitecorePackageFolder)" /> 
   </Target>
 
 </Project>

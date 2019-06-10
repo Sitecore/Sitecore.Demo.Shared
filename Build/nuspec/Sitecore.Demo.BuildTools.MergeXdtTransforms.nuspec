@@ -9,6 +9,5 @@
   <files>
     <file src="..\targets\Sitecore.Demo.BuildTools.MergeXdtTransforms.targets" target="build" />
     <file src="..\code\bin\Sitecore.Demo.BuildTools.dll" target="build" />
-    <file src="..\update-wdp-package.ps1" target="build" />
   </files>
 </package>
