@@ -74,14 +74,26 @@ namespace Sitecore.Demo.BuildTools
         {
             string filename = transform.GetMetadata("Filename");
             string extension = transform.GetMetadata("Extension");
+            string targetFilename = string.Empty;
 
             //known filename formats
             // [name].config.xdt
             // [name].sc-internal.config.xdt
             // [name].azure.config.xdt
+            // [name].config.[layer].[module].xdt
+            // [name].sc-internal.config.[layer].[module].xdt
+            // [name].azure.config.[layer].[module].xdt
 
-            filename = filename.Replace(".sc-internal", string.Empty).Replace(".azure", string.Empty);
-            string groupKey = string.Format("{0}{1}", filename, extension);
+            string filenamePattern = @"(.*\.config)\.?(.*)";
+            var filenameMatch = Regex.Match(filename, filenamePattern);
+
+            if (filenameMatch.Success)
+            {
+                targetFilename = filenameMatch.Groups[1].Value;
+            }
+
+            targetFilename = targetFilename.Replace(".sc-internal", string.Empty).Replace(".azure", string.Empty);
+            string groupKey = string.Format("{0}{1}", targetFilename, extension);
 
             string relativePath = transform.GetMetadata("RelativeDir");
             Log.LogMessage(string.Format("Relative Path {0}", relativePath));
