@@ -83,9 +83,9 @@
 
     <PropertyGroup>
       <_WebDeployPackageSourceFile>$(_WebDeployFolder)\$(WebDeployPackageName).wdp.zip</_WebDeployPackageSourceFile>
-      <_WebDeploySitecorePackageTargetFile>$(_WebDeployFolder)\$(WebDeployPackageName).Base.scwdp.zip</_WebDeploySitecorePackageTargetFile>
+      <_WebDeploySitecorePackageTargetFile>$(_WebDeployFolder)\$(WebDeployPackageName).scwdp.zip</_WebDeploySitecorePackageTargetFile>
       <_WebDeployUpdatedSitecorePackageFolder>$(_WebDeployFolder)\$(WebDeployPackageName)\</_WebDeployUpdatedSitecorePackageFolder>
-      <_WebDeployUpdatedSitecorePackageTargetFile>$(_WebDeployFolder)\$(WebDeployPackageName).scwdp.zip</_WebDeployUpdatedSitecorePackageTargetFile>
+      <_WebDeployUpdatedSitecorePackageTargetFile>$(_WebDeployFolder)\$(WebDeployPackageName)-defaults.scwdp.zip</_WebDeployUpdatedSitecorePackageTargetFile>
     </PropertyGroup>
   
     <Message Importance="high" Text="Generating Sitecore Web Deploy package with embedded transforms.." />
