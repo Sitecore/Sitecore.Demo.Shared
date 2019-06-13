@@ -29,7 +29,7 @@
     <file src="..\..\src\Project\Website\code\App_Config\**\*.config" target="contentFiles\any\any\App_Config" />
     <file src="..\..\src\Project\Website\code\Utilities\**\*.*" target="contentFiles\any\any\Utilities" />
     <file src="..\..\src\Project\Website\code\**\*.xdt" target="contentFiles\any\any\transforms" />
-    <file src="..\..\src\Project\Website\serialization\**\*.yml" target="yml\Feature\Accounts\serialization" />
+    <file src="..\..\src\Project\Website\serialization\**\*.yml" target="yml\Project\Website\serialization" />
     <file src="..\..\build\targets\.gitignore" target="yml\Project\Website\serialization" />
     <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Project.Website.targets" />
     <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\netstandard2.0\Sitecore.Demo.Project.Website.targets" />
