@@ -10,10 +10,6 @@
       <files include="any/any/Views/**/*.*" buildAction="Content" copyToOutput="true" />
       <files include="../yml/**/*.yml" buildAction="EmbeddedResource" />      
     </contentFiles>
-    <dependencies>
-      <dependency id="Sitecore.Kernel" version="9.2.0-*" />
-      <dependency id="Sitecore.Mvc" version="9.2.0-*" />
-    </dependencies>
   </metadata>
   <files>
     <file src="..\..\src\Feature\Email\code\bin\Sitecore.Demo.*.dll" target="lib\net471" />

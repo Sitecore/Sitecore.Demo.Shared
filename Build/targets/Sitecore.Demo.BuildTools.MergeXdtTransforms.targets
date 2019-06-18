@@ -78,27 +78,4 @@
 
   </Target>
 
-  <Target AfterTargets="AfterWebDeployPackage" Name="GenerateSCWebDeployPackage" Condition="'$(BuildWebDeploy)' == 'True'">
-    <Message Importance="high" Text="Generating Sitecore Web Deploy Base package.." />
-
-    <PropertyGroup>
-      <_WebDeployPackageSourceFile>$(_WebDeployFolder)\$(WebDeployPackageName).wdp.zip</_WebDeployPackageSourceFile>
-      <_WebDeploySitecorePackageTargetFile>$(_WebDeployFolder)\$(WebDeployPackageName).scwdp.zip</_WebDeploySitecorePackageTargetFile>
-      <_WebDeployUpdatedSitecorePackageFolder>$(_WebDeployFolder)\$(WebDeployPackageName)\</_WebDeployUpdatedSitecorePackageFolder>
-      <_WebDeployUpdatedSitecorePackageTargetFile>$(_WebDeployFolder)\$(WebDeployPackageName)-defaults.scwdp.zip</_WebDeployUpdatedSitecorePackageTargetFile>
-    </PropertyGroup>
-  
-    <Message Importance="high" Text="Generating Sitecore Web Deploy package with embedded transforms.." />
-
-    <Delete Files="$(_WebDeploySitecorePackageTargetFile)" Condition="Exists('$(_WebDeploySitecorePackageTargetFile)')" />
-    <Delete Files="$(_WebDeployUpdatedSitecorePackageTargetFile)" Condition="Exists('$(_WebDeployUpdatedSitecorePackageTargetFile)')" />
-
-    <Copy SourceFiles="$(_WebDeployPackageSourceFile)" DestinationFiles="$(_WebDeploySitecorePackageTargetFile)"/>
-    <Unzip SourceFiles="$(_WebDeployPackageSourceFile)" DestinationFolder="$(_WebDeployUpdatedSitecorePackageFolder)" OverwriteReadOnlyFiles="true" ContinueOnError="true" />
-    <Copy SourceFiles="$(_TransformsPayloadPackagePath)" DestinationFolder="$(_WebDeployUpdatedSitecorePackageFolder)\Content\Website\App_Data\Transforms\" />
-    <ZipDirectory SourceDirectory="$(_WebDeployUpdatedSitecorePackageFolder)" DestinationFile="$(_WebDeployUpdatedSitecorePackageTargetFile)" />
-    
-    <RemoveDir Directories="$(_WebDeployUpdatedSitecorePackageFolder)" /> 
-  </Target>
-
 </Project>

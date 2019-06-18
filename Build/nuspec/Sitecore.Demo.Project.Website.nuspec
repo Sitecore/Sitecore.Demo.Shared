@@ -14,13 +14,6 @@
     <dependencies>
       <dependency id="Microsoft.Extensions.DependencyInjection" version="2.1.1" />
       <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="2.1.1" />
-      <dependency id="Sitecore.ContentSearch" version="9.2.0-*" />
-      <dependency id="Sitecore.Kernel" version="9.2.0-*" />
-      <dependency id="Sitecore.Logging" version="9.2.0-*" />
-      <dependency id="Sitecore.Marketing" version="9.2.0-*" />
-      <dependency id="Sitecore.Marketing.xMgmt" version="9.2.0-*" />
-      <dependency id="Sitecore.Update" version="9.2.0-*" />
-      <dependency id="Sitecore.Zip" version="9.2.0-*" />
     </dependencies>
   </metadata>
   <files>
