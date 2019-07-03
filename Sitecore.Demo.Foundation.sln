@@ -47,7 +47,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{C511AB93-291F-4C99-847D-A875907FA35A}"
 	ProjectSection(SolutionItems) = preProject
 		Build\nuspec\Sitecore.Demo.BuildTools.CopyYmlFiles.nuspec = Build\nuspec\Sitecore.Demo.BuildTools.CopyYmlFiles.nuspec
-		Build\nuspec\Sitecore.Demo.BuildTools.MergeXdtTransforms.nuspec = Build\nuspec\Sitecore.Demo.BuildTools.MergeXdtTransforms.nuspec
+		Build\nuspec\Sitecore.Demo.BuildTools.Packaging.nuspec = Build\nuspec\Sitecore.Demo.BuildTools.Packaging.nuspec
 		Build\nuspec\Sitecore.Demo.Foundation.Accounts.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Accounts.nuspec
 		Build\nuspec\Sitecore.Demo.Foundation.Alerts.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Alerts.nuspec
 		Build\nuspec\Sitecore.Demo.Foundation.Cdn.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Cdn.nuspec
@@ -63,7 +63,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".targets", ".targets", "{6C
 		Build\targets\.gitignore = Build\targets\.gitignore
 		Build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets = Build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets
 		Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets = Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets
-		Build\targets\Sitecore.Demo.BuildTools.MergeXdtTransforms.targets = Build\targets\Sitecore.Demo.BuildTools.MergeXdtTransforms.targets
+		Build\targets\Sitecore.Demo.BuildTools.Packaging.targets = Build\targets\Sitecore.Demo.BuildTools.Packaging.targets
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.BuildTools", "Build\code\Sitecore.Demo.BuildTools.csproj", "{63FEC644-C069-4962-BB4E-B9C14475C5CA}"

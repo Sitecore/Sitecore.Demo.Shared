@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Sitecore.Demo.BuildTools.MergeXdtTransforms</id>
-    <version>9.2.0.6</version>
-    <description>Sitecore.Demo.BuildTools.MergeXdtTransforms</description>
+    <id>Sitecore.Demo.BuildTools.Packaging</id>
+    <version>9.2.0.1</version>
+    <description>Sitecore.Demo.BuildTools.Packaging</description>
     <authors>Sitecore Demo Team</authors>
   </metadata>
   <files>
-    <file src="..\targets\Sitecore.Demo.BuildTools.MergeXdtTransforms.targets" target="build" />
+    <file src="..\targets\Sitecore.Demo.BuildTools.Packaging.targets" target="build" />
     <file src="..\code\bin\Sitecore.Demo.BuildTools.dll" target="build" />
   </files>
 </package>

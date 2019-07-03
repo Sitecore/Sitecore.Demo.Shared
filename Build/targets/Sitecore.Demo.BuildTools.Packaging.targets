@@ -6,10 +6,31 @@
   <Target Name="CollectXdtTransforms" Condition="'$(SitecoreDatabase)' != ''" AfterTargets="AfterSitecoreBuild">
     <Message Importance="high" Text="Collecting Config Transform Files..." />
     <CallTarget Targets="
+                FilterContentFilesFromBin;
                 CollectConfigTransforms;
                 MergeConfigTransforms;
                 GenerateTransformsPayloadPackage"
                 />
+  </Target>
+
+  <Target Name="FilterContentFilesFromBin">
+    <PropertyGroup>
+      <_OutputPath Condition="'$(OutDir)' != '$(OutputPath)' and '$(OutDir)' != '' and '$(SourceWebProject)' != ''">$(OutDir)_PublishedWebsites\$(MSBuildProjectName)</_OutputPath>
+      <_OutputPath Condition="'$(OutDir)' == '$(OutputPath)' or '$(OutDir)' == ''">$(OutputPath)</_OutputPath>
+    </PropertyGroup>
+
+    <Message Importance="high" Text="Removing content files from $(_OutputPath)" />
+
+    <ItemGroup>
+      <FilesToDelete Include="$(_OutputPath)\bin\**\*.*" Exclude="$(_OutputPath)\bin\**\*.dll;$(_OutputPath)\bin\**\*.dll.config" />
+    </ItemGroup>
+    <Delete Files="@(FilesToDelete)" />
+
+    <ItemGroup>
+      <_FoldersToDelete Include="$([System.IO.Directory]::GetDirectories(&quot;$(_OutputPath)\bin&quot;))" />
+    </ItemGroup>
+    <RemoveDir Directories="@(_FoldersToDelete)" />
+
   </Target>
 
   <Target Name="CollectConfigTransforms" Condition="'$(BuildWebDeploy)' == 'True'">
