@@ -5,12 +5,6 @@
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b9192d80-60d1-4f1a-b979-c61be8adae2d</ProjectGuid>
-    <SourceWebPhysicalPath>
-    </SourceWebPhysicalPath>
-    <SourceWebProject>
-    </SourceWebProject>
-    <SourceWebVirtualPath>
-    </SourceWebVirtualPath>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <EnableUpdateable>true</EnableUpdateable>
     <UseMerge>true</UseMerge>
@@ -25,6 +19,11 @@
     <SitecoreDatabase>master</SitecoreDatabase>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <SourceWebVirtualPath>/Sitecore.Demo.Feature.Accounts.csproj</SourceWebVirtualPath>
+    <SourceWebProject>{b4a56d7d-ddbb-494b-a05a-26974fb7eeb1}|src\Feature\Accounts\code\Sitecore.Demo.Feature.Accounts.csproj</SourceWebProject>
+    <SourceWebPhysicalPath>..\..\code</SourceWebPhysicalPath>
+    <ManageRoles>False</ManageRoles>
+    <AssemblyStatus>Exclude</AssemblyStatus>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -127,6 +126,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\code\Sitecore.Demo.Feature.Accounts.csproj">
+      <Project>{b4a56d7d-ddbb-494b-a05a-26974fb7eeb1}</Project>
+      <Name>Sitecore.Demo.Feature.Accounts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
   <Import Project="$(SolutionDir)\Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets" />
