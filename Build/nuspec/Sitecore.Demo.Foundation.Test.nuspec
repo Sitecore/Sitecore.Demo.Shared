@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Demo.Foundation.Test</id>
+    <version>$version$</version>
+    <description>Sitecore.Demo.Foundation.Test</description>
+    <authors>Sitecore Demo Team</authors>
+    <contentFiles>
+      <files include="any/any/App_Config/**/*.*" buildAction="Content" copyToOutput="true" />
+      <files include="../yml/**/*.*" buildAction="EmbeddedResource" />
+    </contentFiles>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="11.0.2" />
+      <dependency id="NUnit" version="3.11.-" />
+      <dependency id="NUnit3TestAdapter" version="3.10.0" />
+      <dependency id="Selenium.Chrome.WebDriver" version="2.43.0" />
+      <dependency id="Selenium.WebDriver" version="3.14.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\src\Foundation\Test\code\bin\*.dll" target="lib\net471" />
+    <file src="..\..\src\Foundation\Test\code\bin\*.dll" target="lib\netstandard2.0" />
+    <file src="..\..\src\Foundation\Test\code\App_Config\Include\**\*.config" target="contentFiles\any\any\App_Config\Include" />
+    <file src="..\..\src\Foundation\Test\serialization\**\*.yml" target="yml\Foundation\Serialization\serialization" />    
+    <file src="..\..\build\targets\.gitignore" target="yml\Foundation\Test\serialization" />
+    <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Foundation.Test.targets" />
+    <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\netstandard2.0\Sitecore.Demo.Foundation.Test.targets" />
+  </files>
+</package>
