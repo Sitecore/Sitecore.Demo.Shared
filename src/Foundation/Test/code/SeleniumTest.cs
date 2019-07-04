@@ -395,5 +395,22 @@ namespace Sitecore.Demo.Foundation.Test
                 return text.ToUpper();
             return text.Substring(0, 1).ToUpper() + text.Substring(1);
         }
+
+        protected static char? GetUserNameDelimiter(string name)
+        {
+            char? delimiter = null;
+            foreach (var c in "._-")
+            {
+                if (!name.Contains(c))
+                {
+                    continue;
+                }
+
+                delimiter = c;
+                break;
+            }
+
+            return delimiter;
+        }
     }
 }
