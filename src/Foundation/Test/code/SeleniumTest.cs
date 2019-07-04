@@ -387,5 +387,13 @@ namespace Sitecore.Demo.Foundation.Test
                 }
             });
         }
+        protected static string Capitalize(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+                return text;
+            if (text.Length == 1)
+                return text.ToUpper();
+            return text.Substring(0, 1).ToUpper() + text.Substring(1);
+        }
     }
 }
