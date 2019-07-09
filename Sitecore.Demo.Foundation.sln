@@ -55,6 +55,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{C511
 		Build\nuspec\Sitecore.Demo.Foundation.Dictionary.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Dictionary.nuspec
 		Build\nuspec\Sitecore.Demo.Foundation.Serialization.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Serialization.nuspec
 		Build\nuspec\Sitecore.Demo.Foundation.SitecoreExtensions.nuspec = Build\nuspec\Sitecore.Demo.Foundation.SitecoreExtensions.nuspec
+		Build\nuspec\Sitecore.Demo.Foundation.Test.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Test.nuspec
 		Build\nuspec\Sitecore.Demo.Foundation.Workflow.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Workflow.nuspec
 	EndProjectSection
 EndProject
@@ -78,6 +79,10 @@ EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Sitecore.Demo.Foundation.Dictionary.Master", "src\Foundation\Dictionary\tds\master\Sitecore.Demo.Foundation.Dictionary.Master.scproj", "{1B1694BD-A87C-48A9-98DD-17D9425656FD}"
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Sitecore.Demo.Foundation.Workflow.Master", "src\Foundation\Workflow\tds\master\Sitecore.Demo.Foundation.Workflow.Master.scproj", "{D3581599-242B-493B-8C1E-7A5DC91EFFAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{302FD026-BA29-4692-960E-9FD125054E34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Foundation.Test", "src\Foundation\Test\code\Sitecore.Demo.Foundation.Test.csproj", "{7CBAD942-9C88-46AE-AF30-86A2C70B7A25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -167,6 +172,12 @@ Global
 		{D3581599-242B-493B-8C1E-7A5DC91EFFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3581599-242B-493B-8C1E-7A5DC91EFFAE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D3581599-242B-493B-8C1E-7A5DC91EFFAE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7CBAD942-9C88-46AE-AF30-86A2C70B7A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CBAD942-9C88-46AE-AF30-86A2C70B7A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CBAD942-9C88-46AE-AF30-86A2C70B7A25}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{7CBAD942-9C88-46AE-AF30-86A2C70B7A25}.Local|Any CPU.Build.0 = Local|Any CPU
+		{7CBAD942-9C88-46AE-AF30-86A2C70B7A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CBAD942-9C88-46AE-AF30-86A2C70B7A25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -194,6 +205,8 @@ Global
 		{38C7E88D-C219-4003-AC6C-D2AD4960DFAC} = {59A4327E-8D06-48F9-8169-5A01185AB253}
 		{1B1694BD-A87C-48A9-98DD-17D9425656FD} = {CF815713-2426-4151-886E-54CC4DDA9493}
 		{D3581599-242B-493B-8C1E-7A5DC91EFFAE} = {CCF7E642-0355-4468-B7E2-229807890B9F}
+		{302FD026-BA29-4692-960E-9FD125054E34} = {FDBFE0CC-75CE-4004-9790-D37BAE38873E}
+		{7CBAD942-9C88-46AE-AF30-86A2C70B7A25} = {302FD026-BA29-4692-960E-9FD125054E34}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2960B54B-FEEC-42B7-89C2-025528020F5C}
