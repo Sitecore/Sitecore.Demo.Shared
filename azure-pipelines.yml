@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'DEVDEMO1US1'
+  name: 'DEVDEMO1US1'
 
 variables:
   solution: '**/Sitecore.Demo.Foundation.sln'
