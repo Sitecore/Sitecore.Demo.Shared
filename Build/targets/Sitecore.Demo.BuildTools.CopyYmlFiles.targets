@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="CopyYmlFiles" Condition="'$(SitecoreDatabase)' != ''" AfterTargets="AfterSitecoreBuild">
+    <Message Importance="high" Text="Starting Serialization datastore clean"/>
+    <CallTarget Targets="CleanSerializationDatastore" />
+
+    <Message Importance="high" Text="Starting Yml Collect"/>
+    <CallTarget Targets="CreateYmlRoots;CopyFiles"/>
+
+  </Target>
+
+  <Target Name="CleanSerializationDatastore">
+    <PropertyGroup>
+      <SerializationFolder>../../serialization</SerializationFolder>
+    </PropertyGroup>
+
+    <Message Importance="high" Text="Cleaning $(SerializationFolder)/$(SitecoreDatabase)" />
+    <ItemGroup>
+      <FilesToDelete Include="$(SerializationFolder)\$(SitecoreDatabase)\**\*.yml" />
+    </ItemGroup>
+
+    <Delete Files="@(FilesToDelete)" />
+  </Target>
+
+  <Target Name="CreateYmlRoots">
+    <ItemGroup>
+      <YmlRoots Include="%(SitecoreItem.Identity)" Condition="'%(SitecoreItem.CodeGenData)'!=''">
+        <SrcFolder>%(SitecoreItem.RootDir)%(SitecoreItem.Directory)</SrcFolder>
+        <TargetParentFolder>%(SitecoreItem.CodeGenData)</TargetParentFolder>
+        <TargetFolder>%(SitecoreItem.CodeGenData)\%(SitecoreItem.Filename)</TargetFolder>
+        <SitecoreItemFilename>%(SitecoreItem.Filename)</SitecoreItemFilename>
+      </YmlRoots>
+    </ItemGroup>
+
+    <Message Importance="high" Text="Found Root: %(YmlRoots.Identity) at %(YmlRoots.SrcFolder)"/>
+  </Target>
+
+  <Target Inputs="@(YmlRoots)" Outputs="%(YmlRoots.TargetFolder)\_" Name="CopyFiles">
+    <PropertyGroup>
+      <DestinationFolder>%(YmlRoots.TargetFolder)</DestinationFolder>
+      <DestinationParentFolder>%(YmlRoots.TargetParentFolder)</DestinationParentFolder>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ParentFileToCopy Include="%(YmlRoots.SrcFolder)\%(YmlRoots.SitecoreItemFilename).yml"/>
+    </ItemGroup>
+    <ItemGroup>
+      <FilesToCopy Include="%(YmlRoots.SrcFolder)\%(YmlRoots.SitecoreItemFilename)\**\*.yml"/>
+    </ItemGroup>
+
+    <Copy SourceFiles="@(ParentFileToCopy)" DestinationFiles="@(ParentFileToCopy->'$(DestinationParentFolder)\%(RecursiveDir)%(Filename)%(Extension)')"/>
+    <Copy SourceFiles="@(FilesToCopy)" DestinationFiles="@(FilesToCopy->'$(DestinationFolder)\%(RecursiveDir)%(Filename)%(Extension)')"/>
+  </Target>
+</Project>
