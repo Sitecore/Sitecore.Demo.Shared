@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Demo.Feature.Account</id>
+    <version>$version$</version>
+    <description>Sitecore.Demo.Feature.Account</description>
+    <authors>Sitecore Demo Team</authors>
+    <contentFiles>
+      <files include="any/any/App_Config/**/*.*" buildAction="Content" copyToOutput="true" />
+      <files include="any/any/Scripts/**/*.*" buildAction="Content" copyToOutput="true" />
+      <files include="any/any/Views/**/*.*" buildAction="Content" copyToOutput="true" />
+      <files include="any/any/transforms/**/*.xdt" buildAction="Content" copyToOutput="true" />
+      <files include="../yml/**/*.yml" buildAction="EmbeddedResource" />      
+    </contentFiles>
+    <dependencies>
+      <dependency id="Sitecore.Demo.Foundation.Accounts" version="9.2.0.*" />
+      <dependency id="Sitecore.Demo.Foundation.Alerts" version="9.2.0.*" />
+      <dependency id="Sitecore.Demo.Foundation.DependencyInjection" version="9.2.0.*" />
+      <dependency id="Sitecore.Demo.Foundation.Dictionary" version="9.2.0.*" />
+      <dependency id="Sitecore.Demo.Foundation.SitecoreExtensions" version="9.2.0.*" />
+      <dependency id="Microsoft.AspNet.Mvc" version="5.2.4" />
+      <dependency id="Microsoft.AspNet.Razor" version="3.2.4" />
+      <dependency id="Microsoft.AspNet.WebPages" version="3.2.4" />
+      <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="2.1.1" />
+      <dependency id="Microsoft.Owin.Security.Cookies" version="4.0.0" />
+      <dependency id="Microsoft.Owin.Security.Facebook" version="4.0.0" />
+      <dependency id="Microsoft.Owin.Security.MicrosoftAccount" version="4.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\src\Feature\Accounts\code\bin\Sitecore.Demo.*.dll" target="lib\net471" />
+    <file src="..\..\src\Feature\Accounts\code\bin\Sitecore.Demo.*.dll" target="lib\netstandard2.0" />
+    <file src="..\..\src\Feature\Accounts\code\App_Config\Include\Feature\*.config" target="contentFiles\any\any\App_Config\Include\Feature" />
+    <file src="..\..\src\Feature\Accounts\code\Scripts\**\*.*" target="contentFiles\any\any\Scripts" />
+    <file src="..\..\src\Feature\Accounts\code\Views\**\*.*" target="contentFiles\any\any\Views" />
+    <file src="..\..\src\Feature\Accounts\code\**\*.xdt" target="contentFiles\any\any\transforms" />
+    <file src="..\..\src\Feature\Accounts\serialization\**\*.yml" target="yml\Feature\Accounts\serialization" />
+    <file src="..\..\build\targets\.gitignore" target="yml\Feature\Accounts\serialization" />
+    <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Feature.Account.targets" />
+    <file src="..\..\build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets" target="build\netstandard2.0\Sitecore.Demo.Feature.Account.targets" />
+  </files>
+</package>
