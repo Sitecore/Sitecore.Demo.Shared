@@ -48,13 +48,10 @@ namespace Sitecore.Demo.Foundation.Accounts.Services
         {
             ContactFacetData data = new ContactFacetData();
 
-            var id = this.GetContactId();
+            var contactReference = this.GetContactId();
 
-            if (id != null)
+            if (contactReference != null)
             {
-
-                var contactReference = new IdentifiedContactReference(id.Source, id.Identifier);
-
                 using (var client = SitecoreXConnectClientConfiguration.GetClient())
                 {
                     try
@@ -108,13 +105,11 @@ namespace Sitecore.Demo.Foundation.Accounts.Services
 
         public void UpdateContactFacets(ContactFacetData data)
         {
-            var id = this.GetContactId();
-            if (id == null)
+            var contactReference = this.GetContactId();
+            if (contactReference == null)
             {
                 return;
             }
-
-            var contactReference = new IdentifiedContactReference(id.Source, id.Identifier);
 
             using (var client = SitecoreXConnectClientConfiguration.GetClient())
             {
@@ -147,13 +142,11 @@ namespace Sitecore.Demo.Foundation.Accounts.Services
         
         public string ExportContactData()
         {
-            var id = this.GetContactId();
-            if (id == null)
+            var contactReference = this.GetContactId();
+            if (contactReference == null)
             {
                 return string.Empty;
             }
-
-            var contactReference = new IdentifiedContactReference(id.Source, id.Identifier);
 
             using (var client = SitecoreXConnectClientConfiguration.GetClient())
             {
@@ -205,13 +198,11 @@ namespace Sitecore.Demo.Foundation.Accounts.Services
 
         public bool DeleteContact()
         {
-            var id = this.GetContactId();
-            if (id == null)
+            var contactReference = this.GetContactId();
+            if (contactReference == null)
             {
                 return false;
             }
-
-            var contactReference = new IdentifiedContactReference(id.Source, id.Identifier);
 
             using (var client = SitecoreXConnectClientConfiguration.GetClient())
             {
@@ -429,18 +420,28 @@ namespace Sitecore.Demo.Foundation.Accounts.Services
             return true;
         }
 
-        private Analytics.Model.Entities.ContactIdentifier GetContactId()
+        private IdentifiedContactReference GetContactId()
         {
             if (Tracker.Current?.Contact == null)
             {
                 return null;
             }
+
             if (Tracker.Current.Contact.IsNew)
             {
                 Tracker.Current.Contact.ContactSaveMode = ContactSaveMode.AlwaysSave;
                 this.contactManager.SaveContactToCollectionDb(Tracker.Current.Contact);
+                return new IdentifiedContactReference(Sitecore.Analytics.XConnect.DataAccess.Constants.IdentifierSource, Sitecore.Analytics.Tracker.Current.Contact.ContactId.ToString("N"));
             }
-            return Tracker.Current.Contact.Identifiers.FirstOrDefault();
+
+            var id = Tracker.Current.Contact.Identifiers.FirstOrDefault();
+
+            if (id == null)
+            {
+                return null;
+            }
+
+            return new IdentifiedContactReference(id.Source, id.Identifier);
         }
 
         private void UpdateTracker()
