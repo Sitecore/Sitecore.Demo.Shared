@@ -10,7 +10,6 @@ pool:
   name: 'DEVDEMO1US1'
 
 variables:
-  solution: '**/Sitecore.Demo.Foundation.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
@@ -20,13 +19,41 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
-    restoreSolution: '$(solution)'
+    restoreSolution: '**/Sitecore.Demo.Foundation.sln'
     feedsToUse: 'config'
     nugetConfigPath: 'nuget-sc-internal.config'
     versioningScheme: 'off'
 
 - task: VSBuild@1
   inputs:
-    solution: '$(solution)'
+    solution: '**/Sitecore.Demo.Foundation.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/Sitecore.Demo.Feature.sln'
+    feedsToUse: 'config'
+    nugetConfigPath: 'nuget-sc-internal.config'
+    versioningScheme: 'off'
+
+- task: VSBuild@1
+  inputs:
+    solution: '**/Sitecore.Demo.Feature.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/Sitecore.Demo.Project.sln'
+    feedsToUse: 'config'
+    nugetConfigPath: 'nuget-sc-internal.config'
+    versioningScheme: 'off'
+
+- task: VSBuild@1
+  inputs:
+    solution: '**/Sitecore.Demo.Project.sln'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
