@@ -15,10 +15,9 @@ When you are working on a project that consumes the public Sitecore.Demo.Shared 
 ### Generating the Packages
 
 1. Open a PowerShell prompt as adminstrator in the `\Build` folder.
-2. Run the `.\generate-nuget-packages.ps1 -version <version>` command.
-	- where version is a high number such as 9.2.0.999 
-
-By default, the packages are saved in `C:\sc_demo`
+2. Run the `.\generate-nuget-packages.ps1` command as is or with optional parameters:
+    - `-version <version>`: Generated packages version. Should be a high number. Default value is using 999 for the last digit (e.g.: 9.2.0.999).
+    - `-outputPath <path>`: Location where the packages are saved. Default value is `C:\sc_demo`
 
 ## Consuming Local NuGet Packages
 
