@@ -7,28 +7,28 @@
     </assemblyBinding>
   </runtime>
   <appSettings>
-    <!-- SUPPORTED ENVIRONMENTS                  
+    <!-- SUPPORTED ENVIRONMENTS
          Local
-         Production                                   
+         Production
     Default value: Local
     -->
     <add key="env:define" value="Production" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
 
-    <!-- UNICORN MODE SUPPORTED VALUES                 
+    <!-- UNICORN MODE SUPPORTED VALUES
          On
-         Off                                   
+         Off
     Default value: On
     -->
     <add key="unicorn:define" value="Off" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
 
-    <!-- THIRD PARTY INTEGRATIONS: SUPPORTED VALUES                 
+    <!-- THIRD PARTY INTEGRATIONS: SUPPORTED VALUES
          None (disables all)
          Dynamics (CRM integration with Data Exchange Framework)
          Facebook (Fed Auth with Facebook)
-         MS (Fed Auth with Microsoft)        
-         
-         example: <add key="integrations:define" value="Dynamics,Salesforce,Facebook,MS" />  
-   
+         MS (Fed Auth with Microsoft)
+
+         example: <add key="integrations:define" value="Dynamics,Salesforce,Facebook,MS" />
+
    Default value: None
     -->
     <add key="integrations:define" value="None" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)" />

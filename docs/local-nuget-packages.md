@@ -12,16 +12,11 @@ When you are working on a project that consumes the public Sitecore.Demo.Shared 
     3. `Sitecore.Demo.Project.sln`
 2. Build the solutions.
 
-### Editing the Version Number
-
-1. Edit the `\Build\generate-nuget-packages.ps1` file.
-2. Change the version to a very high number like `9.2.0.999`.
-3. Save the file.
-
 ### Generating the Packages
 
 1. Open a PowerShell prompt as adminstrator in the `\Build` folder.
-2. Run the `.\generate-nuget-packages.ps1` command.
+2. Run the `.\generate-nuget-packages.ps1 -version <version>` command.
+	- where version is a high number such as 9.2.0.999 
 
 By default, the packages are saved in `C:\sc_demo`
 
