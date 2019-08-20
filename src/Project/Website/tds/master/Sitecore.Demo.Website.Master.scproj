@@ -97,7 +97,7 @@
     <ExcludedAssemblies Include="Sitecore.Demo.%2a" />
   </ItemGroup>
   <ItemGroup>
-    <SitecoreItem Include="sitecore\system.yml"><ItemDeployment>NeverDeploy</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\system.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
     <SitecoreItem Include="sitecore\system\Languages.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization><CodeGenData>../../serialization/Languages</CodeGenData></SitecoreItem>
     <SitecoreItem Include="sitecore\system\Languages\en.yml"><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
     <SitecoreItem Include="sitecore\system\Languages\fr-CA.yml"><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
