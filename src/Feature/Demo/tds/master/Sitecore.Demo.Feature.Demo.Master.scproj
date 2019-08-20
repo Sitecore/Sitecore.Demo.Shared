@@ -83,7 +83,7 @@
     </AssemblyAttributes>
   </ItemGroup>
   <ItemGroup>
-    <SitecoreItem Include="sitecore\layout.yml"><ItemDeployment>NeverDeploy</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\layout.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Layouts.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Layouts\Feature.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Layouts\Feature\Habitat Home.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization><CodeGenData></CodeGenData></SitecoreItem>
@@ -95,7 +95,7 @@
     <SitecoreItem Include="sitecore\layout\Renderings\Feature\Habitat Home\Demo.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><CodeGenData>../../serialization/Renderings</CodeGenData></SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings\Feature\Habitat Home\Demo\Demo Sidebar.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings\Feature\Habitat Home\Demo\DemoContent.yml"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
-    <SitecoreItem Include="sitecore\templates.yml"><ItemDeployment>NeverDeploy</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\templates.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Feature.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Feature\Habitat Home.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization><CodeGenData></CodeGenData></SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Feature\Habitat Home\Demo.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><CodeGenData>../../serialization/Templates</CodeGenData></SitecoreItem>

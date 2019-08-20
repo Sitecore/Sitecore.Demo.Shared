@@ -83,7 +83,7 @@
     </AssemblyAttributes>
   </ItemGroup>
   <ItemGroup>
-    <SitecoreItem Include="sitecore\templates.yml"><ItemDeployment>NeverDeploy</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
+    <SitecoreItem Include="sitecore\templates.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Foundation.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization></SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Foundation\Habitat Home.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization><CodeGenData></CodeGenData></SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Foundation\Habitat Home\Workflow.yml"><ItemDeployment>DeployOnce</ItemDeployment><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><CodeGenData>../../serialization/Templates</CodeGenData></SitecoreItem>
