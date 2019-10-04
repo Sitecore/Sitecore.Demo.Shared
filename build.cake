@@ -11,11 +11,11 @@ var configJsonFile = "cake-config.json";
 
 Setup(context =>
 {
-	cakeConsole.ForegroundColor = ConsoleColor.Yellow;
-	PrintHeader(ConsoleColor.DarkGreen);
+  cakeConsole.ForegroundColor = ConsoleColor.Yellow;
+  PrintHeader(ConsoleColor.DarkGreen);
 
-	var configFile = new FilePath(configJsonFile);
-	configuration = DeserializeJsonFromFile<Configuration>(configFile);
+  var configFile = new FilePath(configJsonFile);
+  configuration = DeserializeJsonFromFile<Configuration>(configFile);
 });
 
 Task("Default")
@@ -25,30 +25,40 @@ Task("Default")
 .IsDependentOn("Build-Solution");
 
 Task("CleanBuildFolders").Does(() => {
-	// Clean project build folders
-	CleanDirectories($"{configuration.SourceFolder}/**/obj");
-	CleanDirectories($"{configuration.SourceFolder}/**/bin");
+  // Clean project build folders
+  CleanDirectories($"{configuration.SourceFolder}/**/obj");
+  CleanDirectories($"{configuration.SourceFolder}/**/bin");
 });
 
 Task("Copy-Sitecore-Lib")
-	.WithCriteria(()=>(configuration.BuildConfiguration == "Local"))
-	.Does(()=> {
-		var files = GetFiles($"{configuration.SitecoreLibFolder}/Sitecore*.dll");
-		var destination = "./lib";
-		EnsureDirectoryExists(destination);
-		CopyFiles(files, destination);
+  .WithCriteria(()=>(configuration.BuildConfiguration == "Local"))
+  .Does(()=> {
+    var files = GetFiles($"{configuration.SitecoreLibFolder}/Sitecore*.dll");
+    var destination = "./lib";
+    EnsureDirectoryExists(destination);
+    CopyFiles(files, destination);
 });
 
 Task("Build-Solution")
 .IsDependentOn("Copy-Sitecore-Lib")
+.IsDependentOn("Restore-TDS-NuGetPackages")
 .Does(() => {
-	var solutionFiles = new string[] {"Sitecore.Demo.Foundation.sln","Sitecore.Demo.Feature.sln","Sitecore.Demo.Project.sln"};
+  var solutionFiles = new string[] {"Sitecore.Demo.Foundation.sln","Sitecore.Demo.Feature.sln","Sitecore.Demo.Project.sln"};
 
-	Information($"Solutions:{solutionFiles}");
-	foreach (var solution in solutionFiles) {
-		Information($"Solution:{solution}");
-		MSBuild(solution, cfg => InitializeMSBuildSettings(cfg));
-	}
+  Information($"Solutions:{solutionFiles}");
+  foreach (var solution in solutionFiles) {
+    Information($"Solution:{solution}");
+    MSBuild(solution, cfg => InitializeMSBuildSettings(cfg));
+  }
 });
 
+Task("Restore-TDS-NuGetPackages").Does(()=>{
+  var solutionFiles = new string[] {"Sitecore.Demo.Foundation.sln","Sitecore.Demo.Feature.sln","Sitecore.Demo.Project.sln"};
+
+  Information($"Solutions:{solutionFiles}");
+  foreach (var solution in solutionFiles) {
+    Information($"Restoring packages for :{solution}");
+    NuGetRestore(solution);
+  }
+});
 RunTarget(target);
