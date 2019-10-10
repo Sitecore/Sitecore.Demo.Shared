@@ -1,0 +1,7 @@
+{
+  "ProjectFolder": "C:\\projects\\Sitecore.Demo.Shared",
+  "BuildConfiguration": "NoDeploy",
+  "BuildToolVersions": "VS2019",
+	"RunCleanBuilds": false,
+	"SitecoreLibFolder":"c:\\sitecorelib"
+}
