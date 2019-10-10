@@ -43,19 +43,17 @@ Task("Build-Solution")
 .IsDependentOn("Copy-Sitecore-Lib")
 .IsDependentOn("Restore-TDS-NuGetPackages")
 .Does(() => {
-  var solutionFiles = new string[] {"Sitecore.Demo.Foundation.sln","Sitecore.Demo.Feature.sln","Sitecore.Demo.Project.sln"};
+  var solutionFiles = new string[] {"Sitecore.Demo.Shared.sln"};
 
-  Information($"Solutions:{solutionFiles}");
   foreach (var solution in solutionFiles) {
-    Information($"Solution:{solution}");
+    Information($"Building :{solution}");
     MSBuild(solution, cfg => InitializeMSBuildSettings(cfg));
   }
 });
 
 Task("Restore-TDS-NuGetPackages").Does(()=>{
-  var solutionFiles = new string[] {"Sitecore.Demo.Foundation.sln","Sitecore.Demo.Feature.sln","Sitecore.Demo.Project.sln"};
+  var solutionFiles = new string[] {"Sitecore.Demo.Shared.sln"};
 
-  Information($"Solutions:{solutionFiles}");
   foreach (var solution in solutionFiles) {
     Information($"Restoring packages for :{solution}");
     NuGetRestore(solution);
