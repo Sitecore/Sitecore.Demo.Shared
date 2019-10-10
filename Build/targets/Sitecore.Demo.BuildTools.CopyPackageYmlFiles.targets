@@ -18,11 +18,11 @@
     </ItemGroup>
     <Copy
       SourceFiles="@(PackageReferenceSerializationFiles)"
-      DestinationFiles="@(PackageReferenceSerializationFiles->'$(SolutionDir)\items\s\%(RecursiveDir)%(Filename)%(Extension)'-> Replace('serialization\','')-> Replace('Foundation\','fo\')-> Replace('Feature\','fe\')-> Replace('Project\','p\'))"
+      DestinationFiles="@(PackageReferenceSerializationFiles->'$(ProjectDir)\..\..\..\..\items\s\%(RecursiveDir)%(Filename)%(Extension)'-> Replace('serialization\','')-> Replace('Foundation\','fo\')-> Replace('Feature\','fe\')-> Replace('Project\','p\'))"
     />
     <Copy
       SourceFiles="@(SerializationGitIgnoreFile)"
-      DestinationFiles="@(SerializationGitIgnoreFile->'$(SolutionDir)\items\s\%(RecursiveDir)%(Filename)%(Extension)'-> Replace('serialization\','')-> Replace('Foundation\','fo\')-> Replace('Feature\','fe\')-> Replace('Project\','p\'))"
+      DestinationFiles="@(SerializationGitIgnoreFile->'$(ProjectDir)\..\..\..\..\items\s\%(RecursiveDir)%(Filename)%(Extension)'-> Replace('serialization\','')-> Replace('Foundation\','fo\')-> Replace('Feature\','fe\')-> Replace('Project\','p\'))"
     />
   </Target>
 
