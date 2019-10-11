@@ -18,11 +18,11 @@
     </ItemGroup>
     <Copy
       SourceFiles="@(PackageReferenceSerializationFiles)"
-      DestinationFiles="@(PackageReferenceSerializationFiles->'$(ProjectDir)\..\..\..\..\items\s\%(RecursiveDir)%(Filename)%(Extension)'-> Replace('serialization\','')-> Replace('Foundation\','fo\')-> Replace('Feature\','fe\')-> Replace('Project\','p\'))"
+      DestinationFiles="@(PackageReferenceSerializationFiles->'$(ProjectDir)\..\..\..\..\items\Shared\%(RecursiveDir)%(Filename)%(Extension)'-> Replace('serialization\',''))"
     />
     <Copy
       SourceFiles="@(SerializationGitIgnoreFile)"
-      DestinationFiles="@(SerializationGitIgnoreFile->'$(ProjectDir)\..\..\..\..\items\s\%(RecursiveDir)%(Filename)%(Extension)'-> Replace('serialization\','')-> Replace('Foundation\','fo\')-> Replace('Feature\','fe\')-> Replace('Project\','p\'))"
+      DestinationFiles="@(SerializationGitIgnoreFile->'$(ProjectDir)\..\..\..\..\items\Shared\%(RecursiveDir)%(Filename)%(Extension)'-> Replace('serialization\',''))"
     />
   </Target>
 
