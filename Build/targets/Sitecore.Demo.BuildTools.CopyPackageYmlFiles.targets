@@ -2,7 +2,7 @@
   <ItemGroup>
     <PackageSourceFolder Include="$(MSBuildThisFileDirectory)..\..\yml" />
   </ItemGroup>
-  
+
   <Target Name="AfterBuild">
     <Message Importance="high" Text="Collecting Package Yml Files"/>
     <CallTarget Targets="CopyPackageYmlFiles"/>
@@ -16,16 +16,14 @@
 
       <SerializationGitIgnoreFile Include="%(PackageSourceFolder.Identity)\**\.gitignore" />
     </ItemGroup>
-
     <Copy
       SourceFiles="@(PackageReferenceSerializationFiles)"
-      DestinationFiles="@(PackageReferenceSerializationFiles->'$(ProjectDir)\..\..\..\%(RecursiveDir)%(Filename)%(Extension)')"
+      DestinationFiles="@(PackageReferenceSerializationFiles->'$(ProjectDir)\..\..\..\..\items\Shared\%(RecursiveDir)%(Filename)%(Extension)'-> Replace('serialization\',''))"
     />
     <Copy
       SourceFiles="@(SerializationGitIgnoreFile)"
-      DestinationFiles="@(SerializationGitIgnoreFile->'$(ProjectDir)\..\..\..\%(RecursiveDir)%(Filename)%(Extension)')"
+      DestinationFiles="@(SerializationGitIgnoreFile->'$(ProjectDir)\..\..\..\..\items\Shared\%(RecursiveDir)%(Filename)%(Extension)'-> Replace('serialization\',''))"
     />
   </Target>
-
 
 </Project>
