@@ -78,6 +78,24 @@
     <DebugSymbols>true</DebugSymbols>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
     <OutputPath>bin\</OutputPath>
+    <NuGetGenerateNuGetPackage>True</NuGetGenerateNuGetPackage>
+    <NuGetExePath>..\..\..\..\..\Build\tools</NuGetExePath>
+    <NuGetSummary />
+    <NuGetDescription>TDS NuGet package</NuGetDescription>
+    <NuGetTitle>Sitecore.Demo.Feature.Demo.Master.Items</NuGetTitle>
+    <NuGetVersion>9.2.0.4</NuGetVersion>
+    <NuGetPackageId>Sitecore.Demo.Feature.Demo.Master.Items</NuGetPackageId>
+    <NuGetAuthors>Sitecore Demo Team</NuGetAuthors>
+    <NuGetOwners />
+    <NuGetCopyright />
+    <NuGetLicenseUrl />
+    <NuGetIconUrl />
+    <NuGetProjectUrl />
+    <NuGetTags />
+    <NuGetReleaseNotes />
+    <NuGetLanguage />
+    <NuGetRequireLicenseAcceptance>False</NuGetRequireLicenseAcceptance>
+    <NuGetDependencies />
   </PropertyGroup>
   <ItemGroup>
     <AssemblyAttributes Include="AssemblyFileVersion">
@@ -139,11 +157,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
   <Import Project="$(SolutionDir)\Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets" />
-  <Import Project="..\..\..\..\..\packages\HedgehogDevelopment.TDS.6.0.0.1\build\HedgehogDevelopment.TDS.targets" Condition="Exists('..\..\..\..\..\packages\HedgehogDevelopment.TDS.6.0.0.1\build\HedgehogDevelopment.TDS.targets')" />
+  <Import Project="..\..\..\..\..\packages\HedgehogDevelopment.TDS.6.0.0.5\build\HedgehogDevelopment.TDS.targets" Condition="Exists('..\..\..\..\..\packages\HedgehogDevelopment.TDS.6.0.0.5\build\HedgehogDevelopment.TDS.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\..\..\..\packages\HedgehogDevelopment.TDS.6.0.0.1\build\HedgehogDevelopment.TDS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\packages\HedgehogDevelopment.TDS.6.0.0.1\build\HedgehogDevelopment.TDS.targets'))" />
+    <Error Condition="!Exists('..\..\..\..\..\packages\HedgehogDevelopment.TDS.6.0.0.5\build\HedgehogDevelopment.TDS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\packages\HedgehogDevelopment.TDS.6.0.0.5\build\HedgehogDevelopment.TDS.targets'))" />
   </Target>
 </Project>
