@@ -11,7 +11,7 @@ pool:
 
 variables:
   buildPlatform: 'Any CPU'
-  buildConfiguration: 'NoDeploy'
+  buildConfiguration: 'Debug'
 
 steps:
 - task: NuGetToolInstaller@0

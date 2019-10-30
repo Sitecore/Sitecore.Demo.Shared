@@ -41,7 +41,6 @@ Task("Copy-Sitecore-Lib")
 
 Task("Build-Solution")
 .IsDependentOn("Copy-Sitecore-Lib")
-.IsDependentOn("Restore-TDS-NuGetPackages")
 .Does(() => {
   var solutionFiles = new string[] {"Sitecore.Demo.Shared.sln"};
 
@@ -51,12 +50,4 @@ Task("Build-Solution")
   }
 });
 
-Task("Restore-TDS-NuGetPackages").Does(()=>{
-  var solutionFiles = new string[] {"Sitecore.Demo.Shared.sln"};
-
-  foreach (var solution in solutionFiles) {
-    Information($"Restoring packages for :{solution}");
-    NuGetRestore(solution);
-  }
-});
 RunTarget(target);
