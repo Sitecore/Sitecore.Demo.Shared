@@ -14,7 +14,7 @@
             {
                 User = user,
                 Source = user.GetDomainName(),
-                UserName = user.Name,
+                UserName = user.LocalName,
                 ContactId = Tracker.Current?.Contact?.ContactId
             };
             CorePipeline.Run("accounts.loggedIn", args);
