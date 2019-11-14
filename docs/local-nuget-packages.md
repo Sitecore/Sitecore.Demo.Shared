@@ -6,11 +6,9 @@ When you are working on a project that consumes the public Sitecore.Demo.Shared 
 
 ### Building the Solutions
 
-1. Open the 3 solutions:
-    1. `Sitecore.Demo.Foundation.sln`
-    2. `Sitecore.Demo.Feature.sln`
-    3. `Sitecore.Demo.Project.sln`
-2. Build the solutions.
+1. Adjust the values in the `cake-config.json` file if needed.
+2. Open a PowerShell prompt as adminstrator.
+3. Run the `.\build.ps1` command.
 
 ### Generating the Packages
 
