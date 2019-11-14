@@ -112,21 +112,6 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>11.0.2</Version>
     </PackageReference>
-    <PackageReference Include="Sitecore.Demo.Foundation.Accounts">
-      <Version>9.2.0.*</Version>
-    </PackageReference>
-    <PackageReference Include="Sitecore.Demo.Foundation.Alerts">
-      <Version>9.2.0.*</Version>
-    </PackageReference>
-    <PackageReference Include="Sitecore.Demo.Foundation.DependencyInjection">
-      <Version>9.2.0.*</Version>
-    </PackageReference>
-    <PackageReference Include="Sitecore.Demo.Foundation.Dictionary">
-      <Version>9.2.0.*</Version>
-    </PackageReference>
-    <PackageReference Include="Sitecore.Demo.Foundation.SitecoreExtensions">
-      <Version>9.2.0.*</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -234,7 +219,28 @@
     <Compile Include="Services\UserProfileService.cs" />
     <Compile Include="Templates.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\Accounts\code\Sitecore.Demo.Foundation.Accounts.csproj">
+      <Project>{ce34a3b7-b91a-41ba-8b16-c1e131e1c621}</Project>
+      <Name>Sitecore.Demo.Foundation.Accounts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Alerts\code\Sitecore.Demo.Foundation.Alerts.csproj">
+      <Project>{33130b84-7456-4b2e-9ea6-cf27a273e918}</Project>
+      <Name>Sitecore.Demo.Foundation.Alerts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\DependencyInjection\code\Sitecore.Demo.Foundation.DependencyInjection.csproj">
+      <Project>{fa1eee78-e6d6-4b63-a126-5f470624efee}</Project>
+      <Name>Sitecore.Demo.Foundation.DependencyInjection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\Dictionary\code\Sitecore.Demo.Foundation.Dictionary.csproj">
+      <Project>{0d6ba4d8-c469-4ae9-9ebb-93bdf7d7e78f}</Project>
+      <Name>Sitecore.Demo.Foundation.Dictionary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\SitecoreExtensions\code\Sitecore.Demo.Foundation.SitecoreExtensions.csproj">
+      <Project>{1c7b40c7-aea6-4038-9d45-0f5440908929}</Project>
+      <Name>Sitecore.Demo.Foundation.SitecoreExtensions</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -248,6 +254,7 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />

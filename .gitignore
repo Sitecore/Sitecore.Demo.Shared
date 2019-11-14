@@ -20,9 +20,8 @@ lib/Modules/*
 packages/
 *.bak
 /.github
-**/tools/*
-!**/tools/nuget.exe
-!**/tools/packages.config
+tools/*
+!tools/packages.config
 /lib
 **/backstop/*.json
 **/backstop_data/bitmaps_test
@@ -31,4 +30,4 @@ packages/
 /Azure/tools
 **/azure-user.config
 Azure/**/azureuser-config.json
-
+*metaproj*

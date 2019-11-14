@@ -47,16 +47,16 @@
     <PackageReference Include="Configy" Version="1.0.0" />
     <PackageReference Include="Kamsar.WebConsole" Version="2.0.1" />
     <PackageReference Include="MicroCHAP" Version="1.2.2.2" />
-    <PackageReference Include="Rainbow" Version="2.0.6" />
-    <PackageReference Include="Rainbow.Core" Version="2.0.6" />
-    <PackageReference Include="Rainbow.Storage.Sc" Version="2.0.6" />
-    <PackageReference Include="Rainbow.Storage.Yaml" Version="2.0.6" />
-    <PackageReference Include="Unicorn" Version="4.0.8" />
-    <PackageReference Include="Unicorn.Core" Version="4.0.8" />
-    <PackageReference Include="Unicorn.Roles" Version="4.0.8" />
-    <PackageReference Include="Unicorn.Roles.Core" Version="4.0.8" />
-    <PackageReference Include="Unicorn.Users" Version="4.0.8" />
-    <PackageReference Include="Unicorn.Users.Core" Version="4.0.8" />
+    <PackageReference Include="Rainbow" Version="2.1.1" />
+    <PackageReference Include="Rainbow.Core" Version="2.1.1" />
+    <PackageReference Include="Rainbow.Storage.Sc" Version="2.1.1" />
+    <PackageReference Include="Rainbow.Storage.Yaml" Version="2.1.1" />
+    <PackageReference Include="Unicorn" Version="4.1.1" />
+    <PackageReference Include="Unicorn.Core" Version="4.1.1" />
+    <PackageReference Include="Unicorn.Roles" Version="4.1.1" />
+    <PackageReference Include="Unicorn.Roles.Core" Version="4.1.1" />
+    <PackageReference Include="Unicorn.Users" Version="4.1.1" />
+    <PackageReference Include="Unicorn.Users.Core" Version="4.1.1" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -152,6 +152,7 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
