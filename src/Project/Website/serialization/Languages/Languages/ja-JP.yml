@@ -14,6 +14,9 @@ SharedFields:
 - ID: "8728d8ff-66d9-40c2-8b34-c4fc1466942e"
   Hint: Encoding
   Value: "utf-8"
+- ID: "892975ac-496f-4ac9-8826-087095c68e1d"
+  Hint: Fallback Language
+  Value: en
 - ID: "990596ce-0024-43f3-bf4c-a991bfa69b45"
   Hint: Code page
   Value: 65001
@@ -34,11 +37,11 @@ Languages:
         sitecore\admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8c753db2-a309-4598-b296-2a83957b313a"
+      Value: "59744600-5bef-4e4d-be0b-c451a118d40c"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\unicorn
+        sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20190530T151404Z
+      Value: 20191007T180053Z
