@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Sitecore.Demo.BuildTools.CopyYmlFiles</id>
-    <version>9.2.0.6</version>
+    <version>9.3.0.6</version>
     <description>Sitecore.Demo.BuildTools.CopyYmlFiles</description>
     <authors>Sitecore Demo Team</authors>
   </metadata>

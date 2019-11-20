@@ -11,7 +11,7 @@
       <files include="../yml/**/*.*" buildAction="EmbeddedResource" />      
     </contentFiles>
     <dependencies>
-      <dependency id="Sitecore.Demo.Foundation.DependencyInjection" version="9.2.0.*" />
+      <dependency id="Sitecore.Demo.Foundation.DependencyInjection" version="9.3.0.*" />
       <dependency id="Newtonsoft.Json" version="11.0.2" />
     </dependencies>
   </metadata>
