@@ -427,18 +427,19 @@ namespace Sitecore.Demo.Foundation.Accounts.Services
                 return null;
             }
 
+            var trackerIdentifier = new IdentifiedContactReference(Analytics.XConnect.DataAccess.Constants.IdentifierSource, Tracker.Current.Contact.ContactId.ToString("N"));
+
             if (Tracker.Current.Contact.IsNew)
             {
                 Tracker.Current.Contact.ContactSaveMode = ContactSaveMode.AlwaysSave;
                 this.contactManager.SaveContactToCollectionDb(Tracker.Current.Contact);
-                return new IdentifiedContactReference(Sitecore.Analytics.XConnect.DataAccess.Constants.IdentifierSource, Sitecore.Analytics.Tracker.Current.Contact.ContactId.ToString("N"));
+                return trackerIdentifier;
             }
 
             var id = Tracker.Current.Contact.Identifiers.FirstOrDefault();
-
             if (id == null)
             {
-                return null;
+                return trackerIdentifier;
             }
 
             return new IdentifiedContactReference(id.Source, id.Identifier);
