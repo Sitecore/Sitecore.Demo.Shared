@@ -71,14 +71,14 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <PackageReference Include="Sitecore.Analytics.Model" Version="9.2.0-*" />
-        <PackageReference Include="Sitecore.Analytics" Version="9.2.0-*" />
-        <PackageReference Include="Sitecore.ExperienceForms.Client" Version="9.2.0-*" />
-        <PackageReference Include="Sitecore.ExperienceForms.Mvc" Version="9.2.0-*" />
-        <PackageReference Include="Sitecore.ExperienceForms" Version="9.2.0-*" />
-        <PackageReference Include="Sitecore.ExperienceForms.SubmitActions" Version="9.2.0-*" />
-        <PackageReference Include="Sitecore.Kernel" Version="9.2.0-*" />
-        <PackageReference Include="Sitecore.Mvc" Version="9.2.0-*" />
+        <PackageReference Include="Sitecore.Analytics.Model" Version="9.3.0-*" />
+        <PackageReference Include="Sitecore.Analytics" Version="9.3.0-*" />
+        <PackageReference Include="Sitecore.ExperienceForms.Client" Version="9.3.0-*" />
+        <PackageReference Include="Sitecore.ExperienceForms.Mvc" Version="9.3.0-*" />
+        <PackageReference Include="Sitecore.ExperienceForms" Version="9.3.0-*" />
+        <PackageReference Include="Sitecore.ExperienceForms.SubmitActions" Version="9.3.0-*" />
+        <PackageReference Include="Sitecore.Kernel" Version="9.3.0-*" />
+        <PackageReference Include="Sitecore.Mvc" Version="9.3.0-*" />
       </ItemGroup>
     </Otherwise>
   </Choose>
