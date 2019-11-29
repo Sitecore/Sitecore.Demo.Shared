@@ -13,11 +13,11 @@
       <files include="../yml/**/*.yml" buildAction="EmbeddedResource" />      
     </contentFiles>
     <dependencies>
-      <dependency id="Sitecore.Demo.Foundation.Accounts" version="9.2.0.*" />
-      <dependency id="Sitecore.Demo.Foundation.Alerts" version="9.2.0.*" />
-      <dependency id="Sitecore.Demo.Foundation.DependencyInjection" version="9.2.0.*" />
-      <dependency id="Sitecore.Demo.Foundation.Dictionary" version="9.2.0.*" />
-      <dependency id="Sitecore.Demo.Foundation.SitecoreExtensions" version="9.2.0.*" />
+      <dependency id="Sitecore.Demo.Foundation.Accounts" version="9.3.0.*" />
+      <dependency id="Sitecore.Demo.Foundation.Alerts" version="9.3.0.*" />
+      <dependency id="Sitecore.Demo.Foundation.DependencyInjection" version="9.3.0.*" />
+      <dependency id="Sitecore.Demo.Foundation.Dictionary" version="9.3.0.*" />
+      <dependency id="Sitecore.Demo.Foundation.SitecoreExtensions" version="9.3.0.*" />
       <dependency id="Microsoft.AspNet.Mvc" version="5.2.4" />
       <dependency id="Microsoft.AspNet.Razor" version="3.2.4" />
       <dependency id="Microsoft.AspNet.WebPages" version="3.2.4" />

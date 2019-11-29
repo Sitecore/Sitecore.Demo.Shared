@@ -1,0 +1,114 @@
+trigger:
+- master
+
+pool:
+  name: 'DEVDEMO1US1'
+
+variables:
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  prerelease: true
+  version: 9.3.0
+
+steps:
+- task: NuGetToolInstaller@0
+
+- task: CopyFiles@2
+  displayName: 'Copying custom nuget.config'
+  inputs:
+    SourceFolder: 'c:\assets'
+    Contents: 'nuget.config'
+    TargetFolder: '$(Build.SourcesDirectory)'
+    OverWrite: true
+  condition: eq(variables['prerelease'], true)
+- task: replacetokens@3
+  displayName: 'Updating version number in nuget.config'
+  inputs:
+    rootDirectory: '$(Build.SourcesDirectory)'
+    targetFiles: 'nuget.config'
+    encoding: 'auto'
+    writeBOM: true
+    actionOnMissing: 'warn'
+    keepToken: false
+    tokenPrefix: '#{'
+    tokenSuffix: '}#'
+  condition: eq(variables['prerelease'], true)
+
+- task: NuGetCommand@2
+  displayName: 'Restoring Foundation nuget packages'
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/Sitecore.Demo.Foundation.sln'
+    feedsToUse: 'config'
+    nugetConfigPath: 'nuget.config'
+    versioningScheme: 'off'
+  condition: eq(variables['prerelease'], false)
+- task: NuGetCommand@2
+  displayName: 'Restoring Foundation nuget packages'
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/Sitecore.Demo.Foundation.sln'
+    feedsToUse: 'config'
+    nugetConfigPath: 'nuget.config'
+    versioningScheme: 'off'
+    externalFeedCredentials: 'vsts-sc-demo-packages'
+  condition: eq(variables['prerelease'], true)
+- task: VSBuild@1
+  displayName: 'Building Foundation Solution'
+  inputs:
+    solution: '**/Sitecore.Demo.Foundation.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  displayName: 'Restoring Feature nuget packages'
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/Sitecore.Demo.Feature.sln'
+    feedsToUse: 'config'
+    nugetConfigPath: 'nuget.config'
+    versioningScheme: 'off'
+  condition: eq(variables['prerelease'], false)
+- task: NuGetCommand@2
+  displayName: 'Restoring Feature nuget packages'
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/Sitecore.Demo.Feature.sln'
+    feedsToUse: 'config'
+    nugetConfigPath: 'nuget.config'
+    versioningScheme: 'off'
+    externalFeedCredentials: 'vsts-sc-demo-packages'
+  condition: eq(variables['prerelease'], true)
+
+- task: VSBuild@1
+  displayName: 'Building Feature Solution'
+  inputs:
+    solution: '**/Sitecore.Demo.Feature.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  displayName: 'Restoring Project nuget packages'
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/Sitecore.Demo.Project.sln'
+    feedsToUse: 'config'
+    nugetConfigPath: 'nuget.config'
+    versioningScheme: 'off'
+  condition: eq(variables['prerelease'], false)
+- task: NuGetCommand@2
+  displayName: 'Restoring Project nuget packages'
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/Sitecore.Demo.Project.sln'
+    feedsToUse: 'config'
+    nugetConfigPath: 'nuget.config'
+    versioningScheme: 'off'
+    externalFeedCredentials: 'vsts-sc-demo-packages'
+  condition: eq(variables['prerelease'], true)
+- task: VSBuild@1
+  displayName: 'Building Project Solution'
+  inputs:
+    solution: '**/Sitecore.Demo.Project.sln'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
