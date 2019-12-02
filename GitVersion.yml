@@ -24,7 +24,7 @@ branches:
     is-mainline: false
     pre-release-weight: 0
   master:
-    mode: ContinuousDelivery
+    mode: ContinuousDeployment
     tag: ''
     increment: None
     prevent-increment-of-merged-branch-version: true
@@ -38,7 +38,7 @@ branches:
     is-mainline: true
     pre-release-weight: 55000
   release:
-    mode: ContinuousDelivery
+    mode: ContinuousDeployment
     tag: beta
     increment: None
     prevent-increment-of-merged-branch-version: true
@@ -54,7 +54,7 @@ branches:
     is-mainline: false
     pre-release-weight: 30000
   feature:
-    mode: ContinuousDelivery
+    mode: ContinuousDeployment
     tag: pre
     increment: Inherit
     prevent-increment-of-merged-branch-version: false
@@ -71,7 +71,7 @@ branches:
     is-mainline: false
     pre-release-weight: 30000
   pull-request:
-    mode: ContinuousDelivery
+    mode: ContinuousDeployment
     tag: pull
     increment: Inherit
     prevent-increment-of-merged-branch-version: false
@@ -89,34 +89,6 @@ branches:
     is-release-branch: false
     is-mainline: false
     pre-release-weight: 30000
-  hotfix:
-    mode: ContinuousDelivery
-    tag: beta
-    increment: Patch
-    prevent-increment-of-merged-branch-version: false
-    track-merge-target: false
-    regex: ^hotfix(es)?[/-]
-    source-branches:
-    - develop
-    - master
-    - support
-    tracks-release-branches: false
-    is-release-branch: false
-    is-mainline: false
-    pre-release-weight: 30000
-  support:
-    mode: ContinuousDelivery
-    tag: ''
-    increment: Patch
-    prevent-increment-of-merged-branch-version: true
-    track-merge-target: false
-    regex: ^support[/-]
-    source-branches:
-    - master
-    tracks-release-branches: false
-    is-release-branch: false
-    is-mainline: true
-    pre-release-weight: 55000
 ignore:
   sha: []
 commit-date-format: yyyy-MM-dd
