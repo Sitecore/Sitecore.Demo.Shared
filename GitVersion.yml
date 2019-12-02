@@ -13,7 +13,7 @@ commit-message-incrementing: Enabled
 branches:
   develop:
     mode: ContinuousDeployment
-    tag: alpha
+    tag: beta
     increment: Patch
     prevent-increment-of-merged-branch-version: false
     track-merge-target: true
@@ -21,8 +21,22 @@ branches:
     source-branches: []
     tracks-release-branches: true
     is-release-branch: false
-    is-mainline: false
+    is-mainline: true
     pre-release-weight: 0
+  testmaster:
+    mode: ContinuousDeployment
+    tag: ''
+    increment: None
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    regex: ^test-master$
+    source-branches:
+    - develop
+    - release
+    tracks-release-branches: false
+    is-release-branch: false
+    is-mainline: true
+    pre-release-weight: 55000
   master:
     mode: ContinuousDeployment
     tag: ''
@@ -35,11 +49,11 @@ branches:
     - release
     tracks-release-branches: false
     is-release-branch: false
-    is-mainline: true
+    is-mainline: false
     pre-release-weight: 55000
   release:
     mode: ContinuousDeployment
-    tag: beta
+    tag: rc
     increment: None
     prevent-increment-of-merged-branch-version: true
     track-merge-target: false
@@ -47,7 +61,6 @@ branches:
     source-branches:
     - develop
     - master
-    - support
     - release
     tracks-release-branches: false
     is-release-branch: true
@@ -55,7 +68,7 @@ branches:
     pre-release-weight: 30000
   feature:
     mode: ContinuousDeployment
-    tag: pre
+    tag: alpha
     increment: Inherit
     prevent-increment-of-merged-branch-version: false
     tag-number-pattern: '[/-](?<number>\d+)'
@@ -72,7 +85,7 @@ branches:
     pre-release-weight: 30000
   pull-request:
     mode: ContinuousDeployment
-    tag: pull
+    tag: alpha2
     increment: Inherit
     prevent-increment-of-merged-branch-version: false
     tag-number-pattern: '[/-](?<number>\d+)'
@@ -83,8 +96,6 @@ branches:
     - master
     - release
     - feature
-    - support
-    - hotfix
     tracks-release-branches: false
     is-release-branch: false
     is-mainline: false
