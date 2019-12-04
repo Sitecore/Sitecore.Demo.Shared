@@ -1,6 +1,7 @@
 trigger:
 - master
 - develop
+- release/*
 
 pool:
   name: 'DEVDEMO1US1'
@@ -63,7 +64,7 @@ steps:
     verbosityPush: 'Normal'
 - task: NuGetCommand@2
   displayName: 'NuGet push to sc-demo-packages (not yet)'
-  condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.SourceBranch'], 'refs/heads/develop')))
+  condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.SourceBranch'], 'refs/heads/develop'), startsWith(variables['Build.SourceBranch'], 'refs/heads/release/')))
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
