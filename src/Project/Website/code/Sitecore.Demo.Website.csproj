@@ -143,6 +143,7 @@
     <Content Include="Utilities\Installation\poststeps\3_Index_Rebuild.poststep" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\z.Feature.Overrides\z.SPE.Sync.Enabler.Gulp.config" />
     <None Include="web.azure.config.project.website.xdt" />
     <Content Include="web.config.project.website.appsettings.xdt" />
     <Content Include="web.config.project.website.assembly.xdt" />
@@ -156,7 +157,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
     <OutputPath>bin\</OutputPath>
   </PropertyGroup>
-  
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
