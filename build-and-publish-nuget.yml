@@ -18,6 +18,7 @@ steps:
   inputs:
     runtime: 'full'
     configFilePath: 'GitVersion.yml'
+    updateAssemblyInfo: true
 - task: NuGetToolInstaller@0
   inputs:
     versionSpec: '4.4.1'
@@ -30,16 +31,6 @@ steps:
     feedsToUse: 'config'
     nugetConfigPath: 'nuget.config'
   condition: eq(variables['prerelease'], false)
-# - task: NuGetCommand@2
-#   displayName: 'Restoring Foundation nuget packages'
-#   inputs:
-#     command: 'restore'
-#     restoreSolution: '**/Sitecore.Demo.Foundation.sln'
-#     feedsToUse: 'config'
-#     nugetConfigPath: 'nuget.config'
-#     versioningScheme: 'off'
-#     externalFeedCredentials: 'vsts-sc-demo-packages'
-#   condition: eq(variables['prerelease'], true)
 - task: VSBuild@1
   displayName: 'Building Shared Solution'
   inputs:
@@ -61,10 +52,31 @@ steps:
     versioningScheme: byEnvVar
     versionEnvVar: GitVersion.SemVer
     verbosityPack: Normal
-# - task: NuGetCommand@2
-#   displayName: 'NuGet push'
-#   inputs:
-#     command: push
-#     nuGetFeedType: external
-#     publishFeedCredentials: 'nuget-external'
-#     verbosityPush: Normal
+- task: NuGetCommand@2
+  displayName: 'NuGet push to sc-demo-packages-dev'
+  condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: 'f9b5d027-f29c-449f-826c-d7bb655b30f4/a5b4dbc0-611c-4ba4-b55c-b95a2a249dac'
+    verbosityPush: 'Normal'
+- task: NuGetCommand@2
+  displayName: 'NuGet push to sc-demo-packages (not yet)'
+  condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.SourceBranch'], 'refs/heads/develop')))
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '6dbcd6d3-0de9-4da6-b48c-b699ab8f1c24'
+    verbosityPush: 'Normal'
+- task: NuGetCommand@2
+  displayName: 'NuGet push to MyGet (public!) feed (not yet)'
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['prerelease'], false))
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: external
+    publishFeedCredentials: 'nuget-external'
+    verbosityPush: 'Normal'
+  enabled: false
