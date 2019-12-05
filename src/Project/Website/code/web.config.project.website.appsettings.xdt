@@ -15,7 +15,14 @@
     -->
     <add key="unicorn:define" value="Off" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
 
-    <!-- THIRD PARTY INTEGRATIONS: SUPPORTED VALUES
+     <!-- PUBLISHING SERVICE MODE SUPPORTED VALUES
+         On
+         Off
+    Default value: Off
+    -->
+     <add key="publishingservice:define" value="Off" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
+
+     <!-- THIRD PARTY INTEGRATIONS: SUPPORTED VALUES
          None (disables all)
          Dynamics (CRM integration with Data Exchange Framework)
          Salesforce (CRM integration with Data Exchange Framework)

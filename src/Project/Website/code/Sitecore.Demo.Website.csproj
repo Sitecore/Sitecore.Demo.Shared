@@ -144,6 +144,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\z.Feature.Overrides\z.SPE.Sync.Enabler.Gulp.config" />
+    <Content Include="App_Config\Include\zzz.Unicorn.AutoPublish.config" />
+    <Content Include="App_Config\Modules\PublishingService\Sitecore.Publishing.Service.config" />
     <None Include="web.azure.config.project.website.xdt" />
     <Content Include="web.config.project.website.appsettings.xdt" />
     <Content Include="web.config.project.website.assembly.xdt" />
