@@ -25,4 +25,5 @@ branches:
     mode: ContinuousDeployment
     tag: rc
     is-release-branch: true
+    increment: Inherit
 merge-message-formats: {}
