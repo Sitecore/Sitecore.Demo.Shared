@@ -13,14 +13,14 @@
          Off
     Default value: On
     -->
-    <add key="unicorn:define" value="Off" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
+    <add key="unicorn:define" value="Disabled" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
 
      <!-- PUBLISHING SERVICE MODE SUPPORTED VALUES
          On
          Off
     Default value: Off
     -->
-     <add key="publishingservice:define" value="Off" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
+     <add key="publishingservice:define" value="Disabled" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
 
      <!-- THIRD PARTY INTEGRATIONS: SUPPORTED VALUES
          None (disables all)
