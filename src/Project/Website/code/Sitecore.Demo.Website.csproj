@@ -148,8 +148,6 @@
     <Content Include="App_Config\Modules\PublishingService\Sitecore.Publishing.Service.config" />
     <None Include="web.azure.config.project.website.xdt" />
     <Content Include="web.config.project.website.appsettings.xdt" />
-    <Content Include="web.config.project.website.assembly.xdt" />
-    <Content Include="web.config.project.website.envvars.xdt" />
     <Content Include="web.config.project.website.ssl.xdt" />
   </ItemGroup>
   <PropertyGroup>
