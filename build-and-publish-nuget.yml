@@ -62,7 +62,7 @@ steps:
     publishVstsFeed: 'f9b5d027-f29c-449f-826c-d7bb655b30f4/a5b4dbc0-611c-4ba4-b55c-b95a2a249dac'
     verbosityPush: 'Normal'
 - task: NuGetCommand@2
-  displayName: 'NuGet push to sc-demo-packages (not yet)'
+  displayName: 'NuGet push to sc-demo-packages'
   condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.SourceBranch'], 'refs/heads/develop'), startsWith(variables['Build.SourceBranch'], 'refs/heads/release/')))
   inputs:
     command: 'push'
@@ -71,7 +71,7 @@ steps:
     publishVstsFeed: '6dbcd6d3-0de9-4da6-b48c-b699ab8f1c24'
     verbosityPush: 'Normal'
 - task: NuGetCommand@2
-  displayName: 'NuGet push to MyGet (public!) feed (not yet)'
+  displayName: 'NuGet push to MyGet (public!) feed'
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['prerelease'], false))
   inputs:
     command: 'push'
@@ -79,4 +79,4 @@ steps:
     nuGetFeedType: external
     publishFeedCredentials: 'nuget-external'
     verbosityPush: 'Normal'
-  enabled: false
+  enabled: true
