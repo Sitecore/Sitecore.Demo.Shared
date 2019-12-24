@@ -218,7 +218,7 @@ namespace Cake.SitecoreDemo
             };
 
             var unicornAppSettingXPath = "configuration/appSettings/add[@key='unicorn:define']/@value";
-            context.XmlPoke(webConfigFile, unicornAppSettingXPath, "On", xmlSetting);
+            context.XmlPoke(webConfigFile, unicornAppSettingXPath, "Enabled", xmlSetting);
         }
 
         [CakeMethodAlias]
