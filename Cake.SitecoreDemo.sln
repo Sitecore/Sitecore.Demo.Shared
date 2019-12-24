@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.SitecoreDemo", "src\Cake\code\Cake.SitecoreDemo.csproj", "{BDFC376C-F019-4D74-B5A2-69EE8FAED4D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDFC376C-F019-4D74-B5A2-69EE8FAED4D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDFC376C-F019-4D74-B5A2-69EE8FAED4D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDFC376C-F019-4D74-B5A2-69EE8FAED4D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDFC376C-F019-4D74-B5A2-69EE8FAED4D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5F95DC0-C85A-4EA7-8140-E4242EB39265}
+	EndGlobalSection
+EndGlobal

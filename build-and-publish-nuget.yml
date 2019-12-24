@@ -27,14 +27,14 @@ steps:
   displayName: 'Restoring NuGet packages'
   inputs:
     command: 'restore'
-    restoreSolution: '**/Sitecore.Demo.Shared.sln'
+    restoreSolution: '**/*.sln'
     feedsToUse: 'config'
     nugetConfigPath: 'nuget.config'
   condition: eq(variables['prerelease'], false)
 - task: VSBuild@1
   displayName: 'Building Shared Solution'
   inputs:
-    solution: '**/Sitecore.Demo.Shared.sln'
+    solution: '**/*.sln'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 - task: CopyFiles@2
