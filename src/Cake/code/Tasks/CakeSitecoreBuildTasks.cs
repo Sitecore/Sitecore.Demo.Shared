@@ -37,11 +37,7 @@ namespace Cake.SitecoreDemo
         public static void PublishFrontEndProject(this ICakeContext context, bool publishLocal, Configuration config)
         {
             var source = $"{config.ProjectFolder}\\FrontEnd\\**\\*";
-            var destination = config.WebsiteRoot;
-            if (publishLocal)
-            {
-                destination = config.PublishWebFolder;
-            }
+            var destination = GetDestination(publishLocal, config);
 
             destination = $"{destination}\\App_Data\\FrontEnd\\";
             context.EnsureDirectoryExists(destination);
@@ -56,21 +52,15 @@ namespace Cake.SitecoreDemo
         [CakeMethodAlias]
         public static void PublishSourceProjects(this ICakeContext context, bool publishLocal, string srcFolder, Configuration config)
         {
-            string destination = GetDestination(publishLocal, config);
+            var destination = GetDestination(publishLocal, config);
             context.PublishProjects(srcFolder, destination, config);
         }
 
         [CakeMethodAlias]
         public static void PublishCoreProject(this ICakeContext context, string projectFile, bool publishLocal, Configuration config)
         {
-            string destination = GetDestination(publishLocal, config);
-
-            context.Log.Information("Destination: " + destination);
-
             var publishFolder = $"{config.PublishTempFolder}";
-
             DotNetCoreRestore(context, config, projectFile);
-
             DotNetCorePublish(context, config, projectFile, publishFolder);
         }
 
@@ -131,8 +121,7 @@ namespace Cake.SitecoreDemo
         [CakeMethodAlias]
         public static void CopyToDestination(this ICakeContext context, bool publishLocal, Configuration config)
         {
-            // Must not use GetDestination() as it has different meaning: final destination / web folder, not intermediate/temp folder.
-            string destination = publishLocal ? config.PublishWebFolder : config.WebsiteRoot;
+            string destination = GetDestination(publishLocal, config);
             var publishFolder = $"{config.PublishTempFolder}";
             context.Log.Information("Destination: " + destination);
 
@@ -347,10 +336,9 @@ namespace Cake.SitecoreDemo
         private static string GetDestination(bool publishLocal, Configuration config)
         {
             var destination = config.WebsiteRoot;
-
             if (publishLocal)
             {
-                destination = config.PublishTempFolder;
+                destination = config.PublishWebFolder;
             }
 
             return destination;
