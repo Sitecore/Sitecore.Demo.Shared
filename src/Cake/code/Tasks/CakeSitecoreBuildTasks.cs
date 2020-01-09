@@ -36,17 +36,14 @@ namespace Cake.SitecoreDemo
         [CakeMethodAlias]
         public static void PublishFrontEndProject(this ICakeContext context, bool publishLocal, Configuration config)
         {
-            var source = $"{config.ProjectFolder}\\FrontEnd\\**\\*";
+            var source = $"{config.ProjectFolder}\\FrontEnd";
             var destination = GetDestination(publishLocal, config);
 
             destination = $"{destination}\\App_Data\\FrontEnd\\";
             context.EnsureDirectoryExists(destination);
             context.Log.Information("Source: " + source);
             context.Log.Information("Destination: " + destination);
-
-            var contentFiles = context.GetFiles(source)
-                .Where(file => !file.FullPath.ToLower().Contains("node_modules"));
-            context.CopyFiles(contentFiles, destination, preserveFolderStructure: true);
+            context.CopyDirectory(source, destination);
         }
 
         [CakeMethodAlias]
