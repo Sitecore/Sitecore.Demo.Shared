@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Web.Security;
+using Sitecore.Demo.Shared.Feature.Accounts.Models;
+using Sitecore.Demo.Shared.Feature.Accounts.Services;
+using Sitecore.Demo.Shared.Foundation.Accounts.Pipelines;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
 using Sitecore.Diagnostics;
-using Sitecore.Demo.Feature.Accounts.Services;
-using Sitecore.Demo.Foundation.Accounts.Pipelines;
-using Sitecore.Demo.Foundation.DependencyInjection;
 using Sitecore.Security.Accounts;
 using Sitecore.Security.Authentication;
-using Sitecore.Demo.Feature.Accounts.Models;
 
-namespace Sitecore.Demo.Feature.Accounts.Repositories
+namespace Sitecore.Demo.Shared.Feature.Accounts.Repositories
 {
     [Service(typeof(IAccountRepository))]
     public class AccountRepository : IAccountRepository

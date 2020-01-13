@@ -2,10 +2,10 @@
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Web;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Models;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Models;
 using Sitecore.Mvc.Helpers;
 
-namespace Sitecore.Demo.Foundation.SitecoreExtensions.Extensions
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions
 {
     public static class SitecoreHelperExtensions
     {

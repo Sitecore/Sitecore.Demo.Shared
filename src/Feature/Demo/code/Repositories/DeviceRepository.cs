@@ -1,12 +1,12 @@
-namespace Sitecore.Demo.Feature.Demo.Repositories
-{
-    using Microsoft.Extensions.DependencyInjection;
-    using Sitecore.Analytics;
-    using Sitecore.CES.DeviceDetection;
-    using Sitecore.Demo.Feature.Demo.Models;
-    using Sitecore.Demo.Foundation.DependencyInjection;
-    using Sitecore.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
+using Sitecore.Analytics;
+using Sitecore.CES.DeviceDetection;
+using Sitecore.Demo.Shared.Feature.Demo.Models;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.DependencyInjection;
 
+namespace Sitecore.Demo.Shared.Feature.Demo.Repositories
+{
     [Service]
     public class DeviceRepository
     {

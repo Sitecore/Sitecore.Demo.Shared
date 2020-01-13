@@ -1,12 +1,12 @@
-﻿using Sitecore.Demo.Feature.Accounts.Models;
-using Sitecore.Demo.Foundation.Accounts.Models;
-using Sitecore.Demo.Foundation.Accounts.Services;
-using Sitecore.Demo.Foundation.DependencyInjection;
+﻿using System.Collections.Generic;
+using Sitecore.Demo.Shared.Feature.Accounts.Models;
+using Sitecore.Demo.Shared.Foundation.Accounts.Models;
+using Sitecore.Demo.Shared.Foundation.Accounts.Services;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
 using Sitecore.Security;
 using Sitecore.Security.Accounts;
-using System.Collections.Generic;
 
-namespace Sitecore.Demo.Feature.Accounts.Services
+namespace Sitecore.Demo.Shared.Feature.Accounts.Services
 {
     [Service(typeof(IUserProfileService))]
     public class UserProfileService : IUserProfileService

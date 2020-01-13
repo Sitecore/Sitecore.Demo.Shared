@@ -7,9 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sitecore.Demo.Website.Utilities {
-    
-    
-    public partial class DeployMarketingDefinitions {
+namespace Sitecore.Demo.Shared.Website.Utilities
+{
+
+
+    public partial class DeployMarketingDefinitions
+    {
     }
 }

@@ -1,9 +1,9 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Repositories
-{
-  using System.Collections.Generic;
-  using Sitecore.Demo.Feature.Demo.Models;
+﻿using System.Collections.Generic;
+using Sitecore.Demo.Shared.Feature.Demo.Models;
 
-  public interface ICampaignRepository
+namespace Sitecore.Demo.Shared.Feature.Demo.Repositories
+{
+    public interface ICampaignRepository
   {
     Campaign GetCurrent();
     IEnumerable<Campaign> GetHistoric();

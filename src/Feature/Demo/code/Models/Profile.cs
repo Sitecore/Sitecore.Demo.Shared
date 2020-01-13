@@ -1,8 +1,8 @@
-namespace Sitecore.Demo.Feature.Demo.Models
-{
-  using System.Collections.Generic;
+using System.Collections.Generic;
 
-  public class Profile
+namespace Sitecore.Demo.Shared.Feature.Demo.Models
+{
+    public class Profile
   {
     public string Name { get; set; }
     public IEnumerable<PatternMatch> PatternMatches { get; set; }

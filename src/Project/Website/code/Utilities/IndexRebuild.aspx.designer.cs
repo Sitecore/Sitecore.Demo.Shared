@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sitecore.Demo.Website.Utilities {
-    
-    
-    public partial class IndexRebuild {
-        
+namespace Sitecore.Demo.Shared.Website.Utilities
+{
+
+
+    public partial class IndexRebuild
+    {
+
         /// <summary>
         /// indexform control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Sitecore.Demo.Website.Utilities {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm indexform;
-        
+
         /// <summary>
         /// ErrorMessage control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Sitecore.Demo.Website.Utilities {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder ErrorMessage;
-        
+
         /// <summary>
         /// LoginTextBox control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Sitecore.Demo.Website.Utilities {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox LoginTextBox;
-        
+
         /// <summary>
         /// RebuildIndexButton control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace Sitecore.Demo.Website.Utilities {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button RebuildIndexButton;
-        
+
         /// <summary>
         /// IndexRebuilding control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace Sitecore.Demo.Website.Utilities {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal IndexRebuilding;
-        
+
         /// <summary>
         /// IndexNotFound control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace Sitecore.Demo.Website.Utilities {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal IndexNotFound;
-        
+
         /// <summary>
         /// IndexRebuildError control.
         /// </summary>

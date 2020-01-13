@@ -1,9 +1,9 @@
-﻿using Sitecore.Demo.Foundation.Accounts.Models.Facets;
+﻿using Sitecore.Demo.Shared.Foundation.Accounts.Models.Facets;
 using Sitecore.XConnect;
 using Sitecore.XConnect.Collection.Model;
 using Sitecore.XConnect.Schema;
 
-namespace Sitecore.Demo.Foundation.Accounts.Models
+namespace Sitecore.Demo.Shared.Foundation.Accounts.Models
 {
     public class AccountCollectionModel
     {

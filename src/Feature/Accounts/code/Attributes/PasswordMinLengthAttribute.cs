@@ -1,10 +1,10 @@
-﻿namespace Sitecore.Demo.Feature.Accounts.Attributes
-{
-  using System;
-  using System.ComponentModel.DataAnnotations;
-  using System.Web.Security;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Web.Security;
 
-  [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
+namespace Sitecore.Demo.Shared.Feature.Accounts.Attributes
+{
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
   public class PasswordMinLengthAttribute : MinLengthAttribute
   {
     public PasswordMinLengthAttribute() : base(Membership.MinRequiredPasswordLength)

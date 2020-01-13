@@ -1,4 +1,4 @@
-﻿namespace Sitecore.Demo.Feature.Accounts
+﻿namespace Sitecore.Demo.Shared.Feature.Accounts
 {
     public struct Constants
     {

@@ -1,19 +1,17 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Repositories
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Globalization;
-    using Sitecore.Analytics;
-    using Sitecore.Common;
-    using Sitecore.Data;
-    using Sitecore.Demo.Feature.Demo.Models;
-    using Sitecore.Demo.Foundation.DependencyInjection;
-    using Sitecore.Demo.Foundation.Dictionary.Repositories;
-    using Sitecore.Marketing.Definitions;
-    using Sitecore.Marketing.Definitions.Campaigns;
-    using Sitecore.Marketing.Taxonomy;
-    using Sitecore.Marketing.Taxonomy.Extensions;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Sitecore.Analytics;
+using Sitecore.Demo.Shared.Feature.Demo.Models;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Demo.Shared.Foundation.Dictionary.Repositories;
+using Sitecore.Marketing.Definitions;
+using Sitecore.Marketing.Definitions.Campaigns;
+using Sitecore.Marketing.Taxonomy;
+using Sitecore.Marketing.Taxonomy.Extensions;
 
+namespace Sitecore.Demo.Shared.Feature.Demo.Repositories
+{
     [Service(typeof(ICampaignRepository))]
     public class CampaignRepository : ICampaignRepository
     {

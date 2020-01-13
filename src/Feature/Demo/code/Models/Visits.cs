@@ -1,8 +1,8 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Models
-{
-  using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-  public class Visits
+namespace Sitecore.Demo.Shared.Feature.Demo.Models
+{
+    public class Visits
   {
     public int EngagementValue { get; set; }
     public IEnumerable<PageView> PageViews { get; set; }

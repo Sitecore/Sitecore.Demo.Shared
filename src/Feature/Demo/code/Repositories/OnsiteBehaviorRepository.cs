@@ -1,10 +1,9 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Repositories
-{
-    using System.Linq;
-    using Sitecore.Demo.Feature.Demo.Models;
-    using Sitecore.Demo.Feature.Demo.Services;
-    using Sitecore.Demo.Foundation.DependencyInjection;
+﻿using System.Linq;
+using Sitecore.Demo.Shared.Feature.Demo.Models;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
 
+namespace Sitecore.Demo.Shared.Feature.Demo.Repositories
+{
     [Service(typeof(IOnsiteBehaviorRepository))]
     public class OnsiteBehaviorRepository : IOnsiteBehaviorRepository
     {

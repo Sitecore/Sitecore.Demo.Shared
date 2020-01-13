@@ -1,14 +1,11 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using Sitecore.Data;
+using Sitecore.Data.Items;
+using Sitecore.Sites;
 
-namespace Sitecore.Demo.Foundation.SitecoreExtensions.Extensions
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions
 {
-    using System;
-    using Sitecore;
-    using Sitecore.Data;
-    using Sitecore.Data.Items;
-
-    using Sitecore.Sites;
-
     public static class SiteExtensions
     {
         public static Item GetContextItem(this SiteContext site, ID derivedFromTemplateID)

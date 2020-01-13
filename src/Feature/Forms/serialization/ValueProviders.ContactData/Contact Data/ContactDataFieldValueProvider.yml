@@ -1,4 +1,4 @@
----
+﻿---
 ID: "b9572b47-4d42-42f3-b417-517acd33c64b"
 Parent: "38b86c13-abdd-463e-89dd-a14b54170f6a"
 Template: "60706220-93c4-4d8d-9267-06621a1c05f9"
@@ -10,7 +10,7 @@ SharedFields:
   Value: Office/32x32/dude6.png
 - ID: "6e0f73b7-a507-4318-8e57-e03b1666e958"
   Hint: Model Type
-  Value: Sitecore.Demo.Feature.Forms.Providers.ContactDataFieldValueProvider, Sitecore.Demo.Feature.Forms
+  Value: Sitecore.Demo.Shared.Feature.Forms.Providers.ContactDataFieldValueProvider, Sitecore.Demo.Shared.Feature.Forms
 Languages:
 - Language: en
   Versions:
@@ -23,13 +23,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\Admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "98bbe6ef-1f14-4777-9e38-f14df3c95cd9"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\Admin
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190813T201002Z

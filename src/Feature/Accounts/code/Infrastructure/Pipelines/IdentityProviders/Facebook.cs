@@ -1,17 +1,17 @@
-﻿using Microsoft.Owin.Security;
+﻿using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.Owin.Infrastructure;
+using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Facebook;
+using Sitecore.Abstractions;
 using Sitecore.Diagnostics;
 using Sitecore.Owin.Authentication.Configuration;
 using Sitecore.Owin.Authentication.Extensions;
 using Sitecore.Owin.Authentication.Pipelines.IdentityProviders;
 using Sitecore.Owin.Authentication.Services;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using Microsoft.Owin.Infrastructure;
-using Sitecore.Abstractions;
 using FacebookAuthenticationExtensions = Owin.FacebookAuthenticationExtensions;
 
-namespace Sitecore.Demo.Feature.Accounts.Infrastructure.Pipelines.IdentityProviders
+namespace Sitecore.Demo.Shared.Feature.Accounts.Infrastructure.Pipelines.IdentityProviders
 {
     public class Facebook : IdentityProvidersProcessor
     {
@@ -28,8 +28,8 @@ namespace Sitecore.Demo.Feature.Accounts.Infrastructure.Pipelines.IdentityProvid
             var identityProvider = GetIdentityProvider();
             var authenticationType = GetAuthenticationType();
 
-            string appId = Settings.GetSetting("Sitecore.Demo.Feature.Accounts.Facebook.AppId");   //todo: move this to site-specific configuration item
-            string appSecret = Settings.GetSetting("Sitecore.Demo.Feature.Accounts.Facebook.AppSecret");  //todo: move this to site-specific configuration item
+            string appId = Settings.GetSetting("Sitecore.Demo.Shared.Feature.Accounts.Facebook.AppId");   //todo: move this to site-specific configuration item
+            string appSecret = Settings.GetSetting("Sitecore.Demo.Shared.Feature.Accounts.Facebook.AppSecret");  //todo: move this to site-specific configuration item
 
             if (string.IsNullOrEmpty(appId) || string.IsNullOrEmpty(appSecret))
             {

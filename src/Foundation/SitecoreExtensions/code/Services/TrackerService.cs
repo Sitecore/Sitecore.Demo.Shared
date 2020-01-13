@@ -1,17 +1,17 @@
-﻿namespace Sitecore.Demo.Foundation.SitecoreExtensions.Services
-{
-    using System;
-    using System.Globalization;
-    using Sitecore.Analytics;
-    using Sitecore.Analytics.Tracking;
-    using Sitecore.Configuration;
-    using Sitecore.Diagnostics;
-    using Sitecore.Demo.Foundation.DependencyInjection;
-    using Sitecore.Marketing.Definitions;
-    using Sitecore.Marketing.Definitions.Goals;
-    using Sitecore.Marketing.Definitions.Outcomes.Model;
-    using Sitecore.Marketing.Definitions.PageEvents;
+﻿using System;
+using System.Globalization;
+using Sitecore.Analytics;
+using Sitecore.Analytics.Tracking;
+using Sitecore.Configuration;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Diagnostics;
+using Sitecore.Marketing.Definitions;
+using Sitecore.Marketing.Definitions.Goals;
+using Sitecore.Marketing.Definitions.Outcomes.Model;
+using Sitecore.Marketing.Definitions.PageEvents;
 
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Services
+{
     [Service(typeof(ITrackerService), Lifetime = Lifetime.Transient)]
     public class TrackerService : ITrackerService
     {

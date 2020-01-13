@@ -1,22 +1,17 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Repositories
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Globalization;
-    using System.Linq;
-    using Sitecore.Analytics;
-    using Sitecore.Analytics.Model;
-    using Sitecore.Analytics.Tracking;
-    using Sitecore.Common;
-    using Sitecore.Data;
-    using Sitecore.Demo.Feature.Demo.Models;
-    using Sitecore.Demo.Foundation.DependencyInjection;
-    using Sitecore.Demo.Foundation.Dictionary.Repositories;
-    using Sitecore.Marketing.Definitions;
-    using Sitecore.Marketing.Definitions.Goals;
-    using Sitecore.Marketing.Definitions.PageEvents;
-    using Sitecore.Marketing.Definitions.PageEvents.Data;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using Sitecore.Analytics;
+using Sitecore.Analytics.Model;
+using Sitecore.Demo.Shared.Feature.Demo.Models;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Demo.Shared.Foundation.Dictionary.Repositories;
+using Sitecore.Marketing.Definitions;
+using Sitecore.Marketing.Definitions.PageEvents;
 
+namespace Sitecore.Demo.Shared.Feature.Demo.Repositories
+{
     [Service]
     public class PageEventRepository
     {

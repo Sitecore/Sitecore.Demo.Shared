@@ -1,8 +1,8 @@
----
+﻿---
 ID: "eb1e858c-f8d0-4bcf-b2d5-990df1485495"
 Parent: "7d7a238e-fd78-4ed9-b496-093ad21bbd43"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Habitat Home/Accounts/_FacebookUserProfile
+Path: /sitecore/templates/Feature/Demo Shared/Accounts/_FacebookUserProfile
 DB: core
 SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
@@ -21,13 +21,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "f9cd3202-6ec8-408f-938b-cbeb08ed9bca"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T160054Z

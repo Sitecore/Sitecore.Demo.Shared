@@ -1,7 +1,7 @@
-﻿namespace Sitecore.Demo.Foundation.SitecoreExtensions.Extensions
-{
-    using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions
+{
     public static class StringExtensions
     {
         public static string Humanize(this string input)

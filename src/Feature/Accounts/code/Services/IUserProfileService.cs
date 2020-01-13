@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using Sitecore.Demo.Feature.Accounts.Models;
-using Sitecore.Demo.Foundation.Accounts.Models;
+using Sitecore.Demo.Shared.Feature.Accounts.Models;
 using Sitecore.Security;
 using Sitecore.Security.Accounts;
 
-namespace Sitecore.Demo.Feature.Accounts.Services
+namespace Sitecore.Demo.Shared.Feature.Accounts.Services
 {
     public interface IUserProfileService
     {

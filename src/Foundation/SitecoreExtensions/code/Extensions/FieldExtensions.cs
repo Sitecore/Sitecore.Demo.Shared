@@ -1,10 +1,9 @@
-﻿namespace Sitecore.Demo.Foundation.SitecoreExtensions.Extensions
-{
-    using System;
-    using Sitecore;
-    using Sitecore.Data.Fields;
-    using Sitecore.Resources.Media;
+﻿using System;
+using Sitecore.Data.Fields;
+using Sitecore.Resources.Media;
 
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions
+{
     public static class FieldExtensions
     {
         public static string ImageUrl(this ImageField imageField)

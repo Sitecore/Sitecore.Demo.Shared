@@ -1,8 +1,8 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Models
-{
-  using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-  public class PersonalInfo
+namespace Sitecore.Demo.Shared.Feature.Demo.Models
+{
+    public class PersonalInfo
   {
     public string FullName { get; set; }
     public bool IsIdentified { get; set; }

@@ -1,4 +1,4 @@
-﻿namespace Sitecore.Demo.Foundation.Accounts.Models
+﻿namespace Sitecore.Demo.Shared.Foundation.Accounts.Models
 {
     public class ContactFacetData 
     {

@@ -1,16 +1,15 @@
-﻿namespace Sitecore.Demo.Foundation.Dictionary.Services
-{
-    using System;
-    using System.Linq;
-    using Sitecore.Data;
-    using Sitecore.Data.Items;
-    using Sitecore.Diagnostics;
-    using Sitecore.Demo.Foundation.Dictionary.Models;
-    using Sitecore.SecurityModel;
+﻿using System;
+using System.Linq;
+using Sitecore.Data;
+using Sitecore.Data.Items;
+using Sitecore.Diagnostics;
+using Sitecore.SecurityModel;
 
+namespace Sitecore.Demo.Shared.Foundation.Dictionary.Services
+{
     internal static class CreateDictionaryEntryService
     {
-        public static Item CreateDictionaryEntry(Dictionary dictionary, string relativePath, string defaultValue)
+        public static Item CreateDictionaryEntry(Models.Dictionary dictionary, string relativePath, string defaultValue)
         {
             lock (dictionary)
             {

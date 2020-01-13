@@ -9,7 +9,7 @@ using Sitecore.Marketing.Definitions;
 using Sitecore.Marketing.Definitions.MarketingAssets;
 using Sitecore.Marketing.xMgmt.Pipelines.DeployDefinition;
 
-namespace  Sitecore.Demo.Website.Utilities.Installation
+namespace  Sitecore.Demo.Shared.Website.Utilities.Installation
 {
     public class DeployMarketingDefinitionsPostStep : IPostStep
     {

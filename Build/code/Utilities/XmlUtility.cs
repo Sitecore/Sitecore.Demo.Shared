@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Xml;
 
-namespace Sitecore.Demo.BuildTools.Utilities
+namespace Sitecore.Demo.Shared.BuildTools.Utilities
 {
     public class XmlUtility
     {

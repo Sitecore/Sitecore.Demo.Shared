@@ -1,10 +1,10 @@
-﻿namespace Sitecore.Demo.Feature.Accounts.Attributes
-{
-    using System.Web.Mvc;
-    using Microsoft.Extensions.DependencyInjection;
-    using Sitecore.DependencyInjection;
-    using Sitecore.Demo.Feature.Accounts.Services;
+﻿using System.Web.Mvc;
+using Microsoft.Extensions.DependencyInjection;
+using Sitecore.Demo.Shared.Feature.Accounts.Services;
+using Sitecore.DependencyInjection;
 
+namespace Sitecore.Demo.Shared.Feature.Accounts.Attributes
+{
     public class RedirectAuthenticatedAttribute : ActionFilterAttribute
     {
         private readonly IGetRedirectUrlService getRedirectUrlService;

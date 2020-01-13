@@ -1,10 +1,11 @@
-namespace Sitecore.Demo.Feature.Demo.Models
+using System.Linq;
+using Sitecore.CES.GeoIp.Core.Model;
+using Sitecore.Data.Items;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions;
+using Sitecore.Text;
+
+namespace Sitecore.Demo.Shared.Feature.Demo.Models
 {
-    using System.Linq;
-    using Sitecore.CES.GeoIp.Core.Model;
-    using Sitecore.Data.Items;
-    using Sitecore.Demo.Foundation.SitecoreExtensions.Extensions;
-    using Sitecore.Text;
     using static Configuration.Factory;
 
     public class DemoContent

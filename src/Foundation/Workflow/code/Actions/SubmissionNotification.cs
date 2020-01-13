@@ -8,7 +8,7 @@ using Sitecore.Diagnostics;
 using Sitecore.Security.Accounts;
 using Sitecore.Workflows.Simple;
 
-namespace Sitecore.Demo.Foundation.Workflow.Actions
+namespace Sitecore.Demo.Shared.Foundation.Workflow.Actions
 {
     public class SubmissionNotification
     {       

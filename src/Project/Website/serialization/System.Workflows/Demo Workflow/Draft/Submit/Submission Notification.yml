@@ -22,7 +22,7 @@ Languages:
         sitecore\Habitat Home Content Approver
     - ID: "42dc6037-ca08-4fc8-8c70-213842d032ea"
       Hint: Subject
-      Value: "Habitat Home: Items Awaiting Approval"
+      Value: "Demo Shared: Items Awaiting Approval"
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
@@ -62,7 +62,7 @@ Languages:
         sitecore\Habitat Home Content Approver
     - ID: "42dc6037-ca08-4fc8-8c70-213842d032ea"
       Hint: Subject
-      Value: "Habitat Home: Items Awaiting Approval"
+      Value: "Demo Shared: Items Awaiting Approval"
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Sitecore.Abstractions;
 using Sitecore.Data;
-using Sitecore.Demo.Feature.Accounts.Models;
-using Sitecore.Demo.Feature.Accounts.Services;
-using Sitecore.Demo.Foundation.DependencyInjection;
-using Sitecore.Demo.Foundation.Dictionary.Repositories;
+using Sitecore.Demo.Shared.Feature.Accounts.Models;
+using Sitecore.Demo.Shared.Feature.Accounts.Services;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Demo.Shared.Foundation.Dictionary.Repositories;
 using Sitecore.Pipelines.GetSignInUrlInfo;
 
-namespace Sitecore.Demo.Feature.Accounts.Repositories
+namespace Sitecore.Demo.Shared.Feature.Accounts.Repositories
 {
     [Service(typeof(IFedAuthLoginButtonRepository))]
     public class FedAuthLoginButtonRepository : IFedAuthLoginButtonRepository

@@ -1,7 +1,7 @@
-﻿using Sitecore.ExperienceEditor.Speak.Server.Responses;        
-using Sitecore.SecurityModel;    
+﻿using Sitecore.ExperienceEditor.Speak.Server.Responses;
+using Sitecore.SecurityModel;
 
-namespace Sitecore.Demo.Feature.Accounts.ExperienceEditor
+namespace Sitecore.Demo.Shared.Feature.Accounts.ExperienceEditor
 {       
     public class LargeDropDownButtonChildItems : Sitecore.ExperienceEditor.Speak.Ribbon.Requests.LargeDropDownButton.LargeDropDownButtonChildItems
     {

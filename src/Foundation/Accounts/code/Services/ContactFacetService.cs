@@ -1,23 +1,23 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using System.Linq;
+using System.Net;
+using Newtonsoft.Json;
 using Sitecore.Analytics;
 using Sitecore.Analytics.Model;
 using Sitecore.Analytics.Tracking;
 using Sitecore.Configuration;
+using Sitecore.Demo.Shared.Foundation.Accounts.Models;
+using Sitecore.Demo.Shared.Foundation.Accounts.Models.Facets;
+using Sitecore.Demo.Shared.Foundation.Accounts.Providers;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
 using Sitecore.Diagnostics;
-using Sitecore.Demo.Foundation.Accounts.Models;
-using Sitecore.Demo.Foundation.Accounts.Models.Facets;
-using Sitecore.Demo.Foundation.Accounts.Providers;
-using Sitecore.Demo.Foundation.DependencyInjection;
 using Sitecore.XConnect;
 using Sitecore.XConnect.Client;
 using Sitecore.XConnect.Client.Configuration;
 using Sitecore.XConnect.Client.Serialization;
 using Sitecore.XConnect.Collection.Model;
-using System;
-using System.Linq;
-using System.Net;
 
-namespace Sitecore.Demo.Foundation.Accounts.Services
+namespace Sitecore.Demo.Shared.Foundation.Accounts.Services
 {
     [Service(typeof(IContactFacetService))]
     public class ContactFacetService : IContactFacetService

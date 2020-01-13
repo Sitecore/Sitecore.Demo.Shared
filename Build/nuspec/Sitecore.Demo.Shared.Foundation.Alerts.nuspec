@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Demo.Shared.Foundation.Alerts</id>
+    <version>$version$</version>
+    <description>Sitecore.Demo.Shared.Foundation.Alerts</description>
+    <authors>Sitecore Demo Team</authors>
+    <contentFiles>
+      <files include="any/any/Views/**/*.*" buildAction="Content" copyToOutput="true" />
+    </contentFiles>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Mvc" version="5.2.4" />
+      <dependency id="Microsoft.AspNet.Razor" version="3.2.4" />
+      <dependency id="Microsoft.AspNet.WebPages" version="3.2.4" />
+      <dependency id="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" version="1.0.3" />
+      <dependency id="Microsoft.Net.Compilers" version="1.3.2" />
+      <dependency id="Microsoft.Web.Infrastructure" version="1.0.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\src\Foundation\Alerts\code\bin\Sitecore.Demo.Shared.Foundation.*.dll" target="lib\net471" />
+    <file src="..\..\src\Foundation\Alerts\code\bin\Sitecore.Demo.Shared.Foundation.*.dll" target="lib\netstandard2.0" />
+    <file src="..\..\src\Foundation\Alerts\code\Views\**\*.*" target="contentFiles\any\any\Views" />
+    <file src="..\..\build\targets\Sitecore.Demo.Shared.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Shared.Foundation.Alerts.targets" />
+    <file src="..\..\build\targets\Sitecore.Demo.Shared.BuildTools.CopyPackageYmlFiles.targets" target="build\netstandard2.0\Sitecore.Demo.Shared.Foundation.Alerts.targets" />
+  </files>
+</package>

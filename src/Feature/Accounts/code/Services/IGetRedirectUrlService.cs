@@ -1,6 +1,4 @@
-using System;
-
-namespace Sitecore.Demo.Feature.Accounts.Services
+namespace Sitecore.Demo.Shared.Feature.Accounts.Services
 {
     public interface IGetRedirectUrlService
     {

@@ -1,7 +1,7 @@
-﻿namespace Sitecore.Demo.Feature.Demo
-{
-    using Sitecore.Data;
+﻿using Sitecore.Data;
 
+namespace Sitecore.Demo.Shared.Feature.Demo
+{
     public struct Templates
     {
         public struct ProfilingSettings

@@ -5,19 +5,19 @@ VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{FDBFE0CC-75CE-4004-9790-D37BAE38873E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Foundation.Accounts", "src\Foundation\Accounts\code\Sitecore.Demo.Foundation.Accounts.csproj", "{CE34A3B7-B91A-41BA-8B16-C1E131E1C621}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Foundation.Accounts", "src\Foundation\Accounts\code\Sitecore.Demo.Shared.Foundation.Accounts.csproj", "{CE34A3B7-B91A-41BA-8B16-C1E131E1C621}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Foundation.Alerts", "src\Foundation\Alerts\code\Sitecore.Demo.Foundation.Alerts.csproj", "{33130B84-7456-4B2E-9EA6-CF27A273E918}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Foundation.Alerts", "src\Foundation\Alerts\code\Sitecore.Demo.Shared.Foundation.Alerts.csproj", "{33130B84-7456-4B2E-9EA6-CF27A273E918}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Foundation.Cdn", "src\Foundation\Cdn\code\Sitecore.Demo.Foundation.Cdn.csproj", "{FFE9AC9F-8E9C-4599-AF7B-6FCA32130F42}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Foundation.Cdn", "src\Foundation\Cdn\code\Sitecore.Demo.Shared.Foundation.Cdn.csproj", "{FFE9AC9F-8E9C-4599-AF7B-6FCA32130F42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Foundation.DependencyInjection", "src\Foundation\DependencyInjection\code\Sitecore.Demo.Foundation.DependencyInjection.csproj", "{FA1EEE78-E6D6-4B63-A126-5F470624EFEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Foundation.DependencyInjection", "src\Foundation\DependencyInjection\code\Sitecore.Demo.Shared.Foundation.DependencyInjection.csproj", "{FA1EEE78-E6D6-4B63-A126-5F470624EFEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Foundation.Dictionary", "src\Foundation\Dictionary\code\Sitecore.Demo.Foundation.Dictionary.csproj", "{0D6BA4D8-C469-4AE9-9EBB-93BDF7D7E78F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Foundation.Dictionary", "src\Foundation\Dictionary\code\Sitecore.Demo.Shared.Foundation.Dictionary.csproj", "{0D6BA4D8-C469-4AE9-9EBB-93BDF7D7E78F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Foundation.SitecoreExtensions", "src\Foundation\SitecoreExtensions\code\Sitecore.Demo.Foundation.SitecoreExtensions.csproj", "{1C7B40C7-AEA6-4038-9D45-0F5440908929}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Foundation.SitecoreExtensions", "src\Foundation\SitecoreExtensions\code\Sitecore.Demo.Shared.Foundation.SitecoreExtensions.csproj", "{1C7B40C7-AEA6-4038-9D45-0F5440908929}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Foundation.Workflow", "src\Foundation\Workflow\code\Sitecore.Demo.Foundation.Workflow.csproj", "{5D1C63AD-D212-4DD0-89BB-7ABF00AC2D13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Foundation.Workflow", "src\Foundation\Workflow\code\Sitecore.Demo.Shared.Foundation.Workflow.csproj", "{5D1C63AD-D212-4DD0-89BB-7ABF00AC2D13}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Accounts", "Accounts", "{59A4327E-8D06-48F9-8169-5A01185AB253}"
 EndProject
@@ -43,32 +43,32 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecoreExtensions", "Sitec
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{4CAD1DC9-6B9C-41EC-95F9-0AD656C25C0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Foundation.Serialization", "src\Foundation\Serialization\code\Sitecore.Demo.Foundation.Serialization.csproj", "{22A2B11A-B41B-426C-9202-AEBB6C9B5CA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Foundation.Serialization", "src\Foundation\Serialization\code\Sitecore.Demo.Shared.Foundation.Serialization.csproj", "{22A2B11A-B41B-426C-9202-AEBB6C9B5CA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspec", ".nuspec", "{C511AB93-291F-4C99-847D-A875907FA35A}"
 	ProjectSection(SolutionItems) = preProject
-		Build\nuspec\Sitecore.Demo.BuildTools.CopyYmlFiles.nuspec = Build\nuspec\Sitecore.Demo.BuildTools.CopyYmlFiles.nuspec
-		Build\nuspec\Sitecore.Demo.BuildTools.Packaging.nuspec = Build\nuspec\Sitecore.Demo.BuildTools.Packaging.nuspec
-		Build\nuspec\Sitecore.Demo.Foundation.Accounts.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Accounts.nuspec
-		Build\nuspec\Sitecore.Demo.Foundation.Alerts.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Alerts.nuspec
-		Build\nuspec\Sitecore.Demo.Foundation.Cdn.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Cdn.nuspec
-		Build\nuspec\Sitecore.Demo.Foundation.DependencyInjection.nuspec = Build\nuspec\Sitecore.Demo.Foundation.DependencyInjection.nuspec
-		Build\nuspec\Sitecore.Demo.Foundation.Dictionary.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Dictionary.nuspec
-		Build\nuspec\Sitecore.Demo.Foundation.Serialization.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Serialization.nuspec
-		Build\nuspec\Sitecore.Demo.Foundation.SitecoreExtensions.nuspec = Build\nuspec\Sitecore.Demo.Foundation.SitecoreExtensions.nuspec
-		Build\nuspec\Sitecore.Demo.Foundation.Test.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Test.nuspec
-		Build\nuspec\Sitecore.Demo.Foundation.Workflow.nuspec = Build\nuspec\Sitecore.Demo.Foundation.Workflow.nuspec
+		Build\nuspec\Sitecore.Demo.Shared.BuildTools.CopyYmlFiles.nuspec = Build\nuspec\Sitecore.Demo.Shared.BuildTools.CopyYmlFiles.nuspec
+		Build\nuspec\Sitecore.Demo.Shared.BuildTools.Packaging.nuspec = Build\nuspec\Sitecore.Demo.Shared.BuildTools.Packaging.nuspec
+		Build\nuspec\Sitecore.Demo.Shared.Foundation.Accounts.nuspec = Build\nuspec\Sitecore.Demo.Shared.Foundation.Accounts.nuspec
+		Build\nuspec\Sitecore.Demo.Shared.Foundation.Alerts.nuspec = Build\nuspec\Sitecore.Demo.Shared.Foundation.Alerts.nuspec
+		Build\nuspec\Sitecore.Demo.Shared.Foundation.Cdn.nuspec = Build\nuspec\Sitecore.Demo.Shared.Foundation.Cdn.nuspec
+		Build\nuspec\Sitecore.Demo.Shared.Foundation.DependencyInjection.nuspec = Build\nuspec\Sitecore.Demo.Shared.Foundation.DependencyInjection.nuspec
+		Build\nuspec\Sitecore.Demo.Shared.Foundation.Dictionary.nuspec = Build\nuspec\Sitecore.Demo.Shared.Foundation.Dictionary.nuspec
+		Build\nuspec\Sitecore.Demo.Shared.Foundation.Serialization.nuspec = Build\nuspec\Sitecore.Demo.Shared.Foundation.Serialization.nuspec
+		Build\nuspec\Sitecore.Demo.Shared.Foundation.SitecoreExtensions.nuspec = Build\nuspec\Sitecore.Demo.Shared.Foundation.SitecoreExtensions.nuspec
+		Build\nuspec\Sitecore.Demo.Shared.Foundation.Test.nuspec = Build\nuspec\Sitecore.Demo.Shared.Foundation.Test.nuspec
+		Build\nuspec\Sitecore.Demo.Shared.Foundation.Workflow.nuspec = Build\nuspec\Sitecore.Demo.Shared.Foundation.Workflow.nuspec
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".targets", ".targets", "{6C5027B7-88AE-4875-A74A-0D2F1DCFB73B}"
 	ProjectSection(SolutionItems) = preProject
 		Build\targets\.gitignore = Build\targets\.gitignore
-		Build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets = Build\targets\Sitecore.Demo.BuildTools.CopyPackageYmlFiles.targets
-		Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets = Build\targets\Sitecore.Demo.BuildTools.CopyYmlFiles.targets
-		Build\targets\Sitecore.Demo.BuildTools.Packaging.targets = Build\targets\Sitecore.Demo.BuildTools.Packaging.targets
+		Build\targets\Sitecore.Demo.Shared.BuildTools.CopyPackageYmlFiles.targets = Build\targets\Sitecore.Demo.Shared.BuildTools.CopyPackageYmlFiles.targets
+		Build\targets\Sitecore.Demo.Shared.BuildTools.CopyYmlFiles.targets = Build\targets\Sitecore.Demo.Shared.BuildTools.CopyYmlFiles.targets
+		Build\targets\Sitecore.Demo.Shared.BuildTools.Packaging.targets = Build\targets\Sitecore.Demo.Shared.BuildTools.Packaging.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.BuildTools", "Build\code\Sitecore.Demo.BuildTools.csproj", "{63FEC644-C069-4962-BB4E-B9C14475C5CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.BuildTools", "Build\code\Sitecore.Demo.Shared.BuildTools.csproj", "{63FEC644-C069-4962-BB4E-B9C14475C5CA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".scripts", ".scripts", "{2B967A89-6E33-4146-B6C6-3FC96919D791}"
 	ProjectSection(SolutionItems) = preProject
@@ -77,7 +77,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".scripts", ".scripts", "{2B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{302FD026-BA29-4692-960E-9FD125054E34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Foundation.Test", "src\Foundation\Test\code\Sitecore.Demo.Foundation.Test.csproj", "{7CBAD942-9C88-46AE-AF30-86A2C70B7A25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Foundation.Test", "src\Foundation\Test\code\Sitecore.Demo.Shared.Foundation.Test.csproj", "{7CBAD942-9C88-46AE-AF30-86A2C70B7A25}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{344ECC26-AB6A-402D-97B3-56CB003BF906}"
 EndProject
@@ -93,17 +93,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Email", "Email", "{91A04E6A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{88562826-47DA-4855-B924-F45E489998BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Feature.Accounts", "src\Feature\Accounts\code\Sitecore.Demo.Feature.Accounts.csproj", "{B4A56D7D-DDBB-494B-A05A-26974FB7EEB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Feature.Accounts", "src\Feature\Accounts\code\Sitecore.Demo.Shared.Feature.Accounts.csproj", "{B4A56D7D-DDBB-494B-A05A-26974FB7EEB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Feature.Demo", "src\Feature\Demo\code\Sitecore.Demo.Feature.Demo.csproj", "{B4848A62-92AA-4670-B519-12EFC204409E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Feature.Demo", "src\Feature\Demo\code\Sitecore.Demo.Shared.Feature.Demo.csproj", "{B4848A62-92AA-4670-B519-12EFC204409E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Feature.Email", "src\Feature\Email\code\Sitecore.Demo.Feature.Email.csproj", "{A5DD50D9-3A50-4F25-97EC-D3B71A8562CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Feature.Email", "src\Feature\Email\code\Sitecore.Demo.Shared.Feature.Email.csproj", "{A5DD50D9-3A50-4F25-97EC-D3B71A8562CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Feature.Forms", "src\Feature\Forms\code\Sitecore.Demo.Feature.Forms.csproj", "{9CC4B700-D002-4BC2-B417-FD956AD3DD39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Feature.Forms", "src\Feature\Forms\code\Sitecore.Demo.Shared.Feature.Forms.csproj", "{9CC4B700-D002-4BC2-B417-FD956AD3DD39}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Website", "Website", "{DCF19890-96FF-49A6-8EE4-DA33801EB370}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Website", "src\Project\Website\code\Sitecore.Demo.Website.csproj", "{292C46BF-53A5-4D9E-8482-E4359FD59EA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Demo.Shared.Website", "src\Project\Website\code\Sitecore.Demo.Shared.Website.csproj", "{292C46BF-53A5-4D9E-8482-E4359FD59EA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

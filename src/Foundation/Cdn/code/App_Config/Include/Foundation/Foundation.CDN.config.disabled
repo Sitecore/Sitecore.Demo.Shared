@@ -5,7 +5,7 @@
     
     <mediaLibrary>
       <mediaProvider>
-        <patch:attribute name="type">Sitecore.Demo.Foundation.Cdn.Infrastructure.Pipelines.MediaProviders.MediaProvider, Sitecore.Demo.Foundation.Cdn</patch:attribute>
+        <patch:attribute name="type">Sitecore.Demo.Shared.Foundation.Cdn.Infrastructure.Pipelines.MediaProviders.MediaProvider, Sitecore.Demo.Shared.Foundation.Cdn</patch:attribute>
       </mediaProvider>
     </mediaLibrary>
 

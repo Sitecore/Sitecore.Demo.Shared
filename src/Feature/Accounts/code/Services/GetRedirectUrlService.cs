@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Web;
-using Sitecore.Demo.Foundation.DependencyInjection;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Extensions;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions;
 using Sitecore.SecurityModel;
 
-namespace Sitecore.Demo.Feature.Accounts.Services
+namespace Sitecore.Demo.Shared.Feature.Accounts.Services
 {                                                                             
     [Service(typeof(IGetRedirectUrlService))]
     public class GetRedirectUrlService : IGetRedirectUrlService

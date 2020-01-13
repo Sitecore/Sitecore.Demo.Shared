@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sitecore.Demo.Feature.Forms.SubmitActions
+namespace Sitecore.Demo.Shared.Feature.Forms.SubmitActions.Models
 {
     public class AssignPatternActionData
     {

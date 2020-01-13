@@ -1,4 +1,4 @@
-﻿namespace Sitecore.Demo.Foundation.SitecoreExtensions
+﻿namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions
 {
     public class Constants
     {

@@ -1,16 +1,16 @@
-﻿using Microsoft.Owin.Infrastructure;
+﻿using System.Threading.Tasks;
+using Microsoft.Owin.Infrastructure;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.MicrosoftAccount;
+using Sitecore.Abstractions;
 using Sitecore.Diagnostics;
 using Sitecore.Owin.Authentication.Configuration;
 using Sitecore.Owin.Authentication.Extensions;
 using Sitecore.Owin.Authentication.Pipelines.IdentityProviders;
 using Sitecore.Owin.Authentication.Services;
-using System.Threading.Tasks;
-using Sitecore.Abstractions;
 using MicrosoftAccountAuthenticationExtensions = Owin.MicrosoftAccountAuthenticationExtensions;
 
-namespace Sitecore.Demo.Feature.Accounts.Infrastructure.Pipelines.IdentityProviders
+namespace Sitecore.Demo.Shared.Feature.Accounts.Infrastructure.Pipelines.IdentityProviders
 {        
     public class MicrosoftAccount : IdentityProvidersProcessor
     {
@@ -28,8 +28,8 @@ namespace Sitecore.Demo.Feature.Accounts.Infrastructure.Pipelines.IdentityProvid
             var identityProvider = this.GetIdentityProvider();
             var authenticationType = this.GetAuthenticationType();
                                                                                                              
-            string clientSecret = Settings.GetSetting("Sitecore.Demo.Feature.Accounts.Microsoft.ClientSecret");     //todo: move this to site-specific configuration item   
-            string clientId = Settings.GetSetting("Sitecore.Demo.Feature.Accounts.Microsoft.ClientId"); //todo: move this to site-specific configuration item        
+            string clientSecret = Settings.GetSetting("Sitecore.Demo.Shared.Feature.Accounts.Microsoft.ClientSecret");     //todo: move this to site-specific configuration item   
+            string clientId = Settings.GetSetting("Sitecore.Demo.Shared.Feature.Accounts.Microsoft.ClientId"); //todo: move this to site-specific configuration item        
                 
             if(string.IsNullOrEmpty(clientSecret) || string.IsNullOrEmpty(clientId))
             {

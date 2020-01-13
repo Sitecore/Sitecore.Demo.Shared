@@ -1,6 +1,6 @@
-﻿using Sitecore.Demo.Feature.Demo.Models;
+﻿using Sitecore.Demo.Shared.Feature.Demo.Models;
 
-namespace Sitecore.Demo.Feature.Demo.Services
+namespace Sitecore.Demo.Shared.Feature.Demo.Services
 {
     public interface IExperienceDataFactory
     {

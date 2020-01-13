@@ -1,7 +1,7 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Models
-{
-    using System;
+﻿using System;
 
+namespace Sitecore.Demo.Shared.Feature.Demo.Models
+{
     public class PageEvent
     {
         public int EngagementValue { get; set; }

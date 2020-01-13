@@ -1,8 +1,8 @@
----
+﻿---
 ID: "2f0fd1ae-4dbd-4448-be5c-0470819e11a4"
 Parent: "5e40c944-414e-4d63-934b-436663f37b51"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Habitat Home/Forms/ContactIdentificationActionMapping/Facets/FacetValue
+Path: /sitecore/templates/Feature/Demo Shared/Forms/ContactIdentificationActionMapping/Facets/FacetValue
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -23,13 +23,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20180122T112858Z
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "89b65077-1dc8-4daf-a699-f978736ba11b"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T163507Z

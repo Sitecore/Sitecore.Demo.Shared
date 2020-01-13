@@ -1,8 +1,8 @@
-﻿namespace Sitecore.Demo.Foundation.Dictionary
-{
-  using Sitecore.Data;
+﻿using Sitecore.Data;
 
-  public struct Templates
+namespace Sitecore.Demo.Shared.Foundation.Dictionary
+{
+    public struct Templates
   {
     public struct DictionaryFolder
     {

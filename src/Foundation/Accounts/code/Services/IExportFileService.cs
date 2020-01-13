@@ -1,4 +1,4 @@
-﻿namespace Sitecore.Demo.Foundation.Accounts.Services
+﻿namespace Sitecore.Demo.Shared.Foundation.Accounts.Services
 {
     public interface IExportFileService
     {

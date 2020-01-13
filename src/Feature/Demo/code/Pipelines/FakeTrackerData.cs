@@ -1,16 +1,16 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Pipelines
-{
-    using Sitecore.Analytics;
-    using Sitecore.Analytics.Pipelines.ParseReferrer;
-    using Sitecore.CES.GeoIp.Core.Model;
-    using Sitecore.Demo.Feature.Demo.Models;
-    using Sitecore.Demo.Feature.Demo.Services;
-    using Sitecore.Demo.Foundation.SitecoreExtensions.Extensions;
-    using Sitecore.Pipelines;
-    using System;
-    using System.Net;
-    using System.Web;
+﻿using System;
+using System.Net;
+using System.Web;
+using Sitecore.Analytics;
+using Sitecore.Analytics.Pipelines.ParseReferrer;
+using Sitecore.CES.GeoIp.Core.Model;
+using Sitecore.Demo.Shared.Feature.Demo.Models;
+using Sitecore.Demo.Shared.Feature.Demo.Services;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions;
+using Sitecore.Pipelines;
 
+namespace Sitecore.Demo.Shared.Feature.Demo.Pipelines
+{
     public class FakeTrackerData
     {
         public IDemoStateService DemoStateService { get; }
@@ -20,7 +20,7 @@
             this.DemoStateService = demoStateService;
         }
 
-        private string FAKE_TRACKER_DATA = "Sitecore.Demo.Feature.Demo.FakeTrackerData";
+        private string FAKE_TRACKER_DATA = "Sitecore.Demo.Shared.Feature.Demo.FakeTrackerData";
 
         public void GetFakeTrackerData(PipelineArgs args)
         {

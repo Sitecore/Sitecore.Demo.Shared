@@ -1,9 +1,9 @@
-namespace Sitecore.Demo.Foundation.Accounts.Pipelines
-{
-    using System;
-    using Sitecore.Pipelines;
-    using Sitecore.Security.Accounts;
+using System;
+using Sitecore.Pipelines;
+using Sitecore.Security.Accounts;
 
+namespace Sitecore.Demo.Shared.Foundation.Accounts.Pipelines
+{
     public class AccountsPipelineArgs : PipelineArgs
     {
         public User User

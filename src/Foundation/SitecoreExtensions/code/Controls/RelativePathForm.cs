@@ -1,11 +1,11 @@
-﻿using System;             
+﻿using System;
 using Sitecore.Diagnostics;
 using Sitecore.Shell.Applications.Dialogs;
 using Sitecore.Web.UI.HtmlControls;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.Xml;
 
-namespace Sitecore.Demo.Foundation.SitecoreExtensions.Controls
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Controls
 {
     public class RelativePathForm : LinkForm
     {

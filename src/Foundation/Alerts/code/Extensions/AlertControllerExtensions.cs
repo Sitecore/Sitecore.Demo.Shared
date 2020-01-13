@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
-using Sitecore.Demo.Foundation.Alerts.Models;
+using Sitecore.Demo.Shared.Foundation.Alerts.Models;
 
-namespace Sitecore.Demo.Foundation.Alerts.Extensions
+namespace Sitecore.Demo.Shared.Foundation.Alerts.Extensions
 {
 
     public static class AlertControllerExtensions

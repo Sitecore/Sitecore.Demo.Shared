@@ -1,8 +1,8 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Models
-{
-  using System;
+﻿using System;
 
-  public class Outcome
+namespace Sitecore.Demo.Shared.Feature.Demo.Models
+{
+    public class Outcome
   {
     public string OutcomeGroup { get; set; }
     public string Title { get; set; }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Sitecore.Demo.Feature.Accounts.Models
+﻿namespace Sitecore.Demo.Shared.Feature.Accounts.Models
 {
     public class FedAuthLoginButton
     {

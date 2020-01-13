@@ -1,8 +1,8 @@
-﻿using Sitecore.Pipelines;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
+using Sitecore.Pipelines;
 
-namespace Sitecore.Demo.Feature.Demo.Pipelines
+namespace Sitecore.Demo.Shared.Feature.Demo.Pipelines
 {
     public class RegisterWebApiRoutes
     {

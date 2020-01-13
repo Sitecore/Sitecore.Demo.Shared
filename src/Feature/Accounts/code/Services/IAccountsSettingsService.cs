@@ -3,7 +3,7 @@ using System.Net.Mail;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 
-namespace Sitecore.Demo.Feature.Accounts.Services
+namespace Sitecore.Demo.Shared.Feature.Accounts.Services
 {
   public interface IAccountsSettingsService
   {

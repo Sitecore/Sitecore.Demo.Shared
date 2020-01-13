@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Sitecore.Pipelines;
 
-namespace Sitecore.Demo.Foundation.SitecoreExtensions.Pipelines
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Pipelines
 {
     public class ExcludeUrlsFromAnalytics
     {

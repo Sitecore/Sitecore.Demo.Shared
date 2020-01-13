@@ -1,10 +1,10 @@
 ﻿using System.Security.Claims;
 using Sitecore.Analytics;
-using Sitecore.Demo.Feature.Accounts.Services;
+using Sitecore.Demo.Shared.Feature.Accounts.Services;
 using Sitecore.Owin.Authentication.Configuration;
 using Sitecore.Owin.Authentication.Pipelines.CookieAuthentication.SignedIn;
 
-namespace Sitecore.Demo.Feature.Accounts.Infrastructure.Pipelines.SignedIn
+namespace Sitecore.Demo.Shared.Feature.Accounts.Infrastructure.Pipelines.SignedIn
 {                                                                                     
     public class TrackSignedIn : SignedInProcessor
     {

@@ -2,7 +2,7 @@
 using Sitecore.ExperienceEditor.Speak.Server.Responses;
 using Sitecore.SecurityModel;
 
-namespace Sitecore.Demo.Feature.Accounts.ExperienceEditor
+namespace Sitecore.Demo.Shared.Feature.Accounts.ExperienceEditor
 {
     public class CanExplore : Sitecore.ExperienceExplorer.Web.Requests.CanExplore
     {

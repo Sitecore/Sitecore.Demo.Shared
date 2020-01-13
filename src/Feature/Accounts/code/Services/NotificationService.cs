@@ -1,6 +1,6 @@
-﻿using Sitecore.Demo.Foundation.DependencyInjection;
+﻿using Sitecore.Demo.Shared.Foundation.DependencyInjection;
 
-namespace Sitecore.Demo.Feature.Accounts.Services
+namespace Sitecore.Demo.Shared.Feature.Accounts.Services
 {
     [Service(typeof(INotificationService))]
     public class NotificationService : INotificationService

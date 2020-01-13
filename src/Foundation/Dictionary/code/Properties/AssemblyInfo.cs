@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Sitecore.Demo.Foundation.Dictionary")]
+[assembly: AssemblyTitle("Sitecore.Demo.Shared.Foundation.Dictionary")]
 [assembly: AssemblyDescription("A module part of the Sitecore Helix Example Solution")]
 //NOTE: Other assembly atributes are added by the ProductInfo.cs
 
@@ -26,6 +26,6 @@ using System.Runtime.InteropServices;
 //[assembly: AssemblyFileVersion("1.0.0.0")]
 
 #if DEBUG
-[assembly: InternalsVisibleTo("Sitecore.Demo.Foundation.Dictionary.Tests")]
+[assembly: InternalsVisibleTo("Sitecore.Demo.Shared.Foundation.Dictionary.Tests")]
 
 #endif

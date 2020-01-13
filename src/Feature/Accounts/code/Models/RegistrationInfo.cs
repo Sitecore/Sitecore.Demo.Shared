@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Sitecore.Demo.Feature.Accounts.Attributes;
-using Sitecore.Demo.Foundation.Dictionary.Repositories;
+using Sitecore.Demo.Shared.Feature.Accounts.Attributes;
+using Sitecore.Demo.Shared.Foundation.Dictionary.Repositories;
 
-namespace Sitecore.Demo.Feature.Accounts.Models
+namespace Sitecore.Demo.Shared.Feature.Accounts.Models
 {                                                                       
     public class RegistrationInfo
     {

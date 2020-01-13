@@ -1,20 +1,19 @@
-namespace Sitecore.Demo.Foundation.Dictionary.Repositories
-{
-    using System;
-    using System.Configuration;
-    using Sitecore.Data.Items;
-    using Sitecore.Demo.Foundation.Dictionary.Models;
-    using Sitecore.Sites;
+using System;
+using System.Configuration;
+using Sitecore.Data.Items;
+using Sitecore.Sites;
 
+namespace Sitecore.Demo.Shared.Foundation.Dictionary.Repositories
+{
     public class DictionaryRepository : IDictionaryRepository
     {
         private const string MasterDatabaseName = "master";
 
-        public static Dictionary Current => new DictionaryRepository().Get(SiteContext.Current);
+        public static Models.Dictionary Current => new DictionaryRepository().Get(SiteContext.Current);
 
-        public Dictionary Get(SiteContext site)
+        public Models.Dictionary Get(SiteContext site)
         {
-            return new Dictionary()
+            return new Models.Dictionary()
             {
                 Site = site,
                 AutoCreate = this.GetAutoCreateSetting(site),

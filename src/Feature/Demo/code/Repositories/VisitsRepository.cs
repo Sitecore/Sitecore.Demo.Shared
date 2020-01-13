@@ -1,13 +1,13 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Repositories
-{
-    using System.Collections.Generic;
-    using System.Linq;
-    using Sitecore.Analytics;
-    using Sitecore.Analytics.Tracking;
-    using Sitecore.Demo.Feature.Demo.Models;
-    using Sitecore.Demo.Foundation.Accounts.Providers;
-    using Sitecore.Demo.Foundation.DependencyInjection;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Sitecore.Analytics;
+using Sitecore.Analytics.Tracking;
+using Sitecore.Demo.Shared.Feature.Demo.Models;
+using Sitecore.Demo.Shared.Foundation.Accounts.Providers;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
 
+namespace Sitecore.Demo.Shared.Feature.Demo.Repositories
+{
     [Service(typeof(IVisitsRepository))]
     public class VisitsRepository : IVisitsRepository
     {

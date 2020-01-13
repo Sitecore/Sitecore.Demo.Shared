@@ -1,13 +1,13 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Repositories
-{
-    using System;
-    using System.Linq;
-    using Sitecore.Analytics.Core;
-    using Sitecore.Analytics.Tracking;
-    using Sitecore.Demo.Feature.Demo.Models;
-    using Sitecore.Demo.Foundation.DependencyInjection;
-    using Sitecore.Demo.Foundation.Dictionary.Repositories;
+﻿using System;
+using System.Linq;
+using Sitecore.Analytics.Core;
+using Sitecore.Analytics.Tracking;
+using Sitecore.Demo.Shared.Feature.Demo.Models;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Demo.Shared.Foundation.Dictionary.Repositories;
 
+namespace Sitecore.Demo.Shared.Feature.Demo.Repositories
+{
     [Service(typeof(IPageViewRepository))]
     public class PageViewRepository : IPageViewRepository
     {

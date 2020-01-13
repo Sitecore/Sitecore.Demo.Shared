@@ -5,7 +5,7 @@ using Sitecore.Data.Items;
 using Sitecore.Install.Framework;
 using Sitecore.SecurityModel;
 
-namespace  Sitecore.Demo.Website.Utilities.Installation
+namespace  Sitecore.Demo.Shared.Website.Utilities.Installation
 {
     public class UpdateHostnamePostStep : IPostStep
     {

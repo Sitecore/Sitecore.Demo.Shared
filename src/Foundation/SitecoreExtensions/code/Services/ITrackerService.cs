@@ -1,8 +1,7 @@
-﻿namespace Sitecore.Demo.Foundation.SitecoreExtensions.Services
-{
-    using System;
-    using Sitecore.Data;
+﻿using System;
 
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Services
+{
     public interface ITrackerService
     {
         bool IsActive { get; }

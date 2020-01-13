@@ -1,9 +1,9 @@
 ﻿using System.Web;
-using Sitecore.Demo.Foundation.Dictionary.Repositories;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Extensions;
+using Sitecore.Demo.Shared.Foundation.Dictionary.Repositories;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions;
 using Sitecore.Mvc.Helpers;
 
-namespace Sitecore.Demo.Foundation.Dictionary.Extensions
+namespace Sitecore.Demo.Shared.Foundation.Dictionary.Extensions
 {
     public static class SitecoreExtensions
     {

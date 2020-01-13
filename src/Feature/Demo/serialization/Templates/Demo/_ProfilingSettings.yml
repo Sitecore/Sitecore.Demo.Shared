@@ -1,8 +1,8 @@
----
+﻿---
 ID: "c6d4ddd5-b912-4c1a-a3a3-e1d90e4d0939"
 Parent: "936350e1-6057-4250-986b-72be51833410"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Habitat Home/Demo/_ProfilingSettings
+Path: /sitecore/templates/Feature/Demo Shared/Demo/_ProfilingSettings
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
@@ -24,13 +24,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "8af93323-73b4-4de9-94c5-f4c6ef532144"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T160114Z

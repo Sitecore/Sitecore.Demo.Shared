@@ -1,10 +1,10 @@
 ﻿using System;
 using Sitecore.Configuration;
-using Sitecore.Demo.Foundation.DependencyInjection;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Services;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Services;
 using Sitecore.Security;
 
-namespace Sitecore.Demo.Feature.Accounts.Services
+namespace Sitecore.Demo.Shared.Feature.Accounts.Services
 {
 
     [Service(typeof(IAccountTrackerService))]
@@ -23,10 +23,10 @@ namespace Sitecore.Demo.Feature.Accounts.Services
         public static Guid RegistrationFailedPageEventId => Guid.Parse("{D98AAED9-CF5F-41D6-8A6E-109F60F1E950}");
         public static Guid LoginFailedPageEventId => Guid.Parse("{27E67C84-B055-4D57-ADEB-E73DEFCA22A8}");
         public static Guid EditProfilePageEvent => Guid.Parse("{7A2582D2-7270-4E53-8998-3934B84876C3}");
-        public static Guid LoginGoalId => Guid.Parse(Settings.GetSetting("Sitecore.Demo.Feature.Accounts.LoginGoalId", "{66722F52-2D13-4DCC-90FC-EA7117CF2298}"));
-        public static Guid RegistrationGoalId => Guid.Parse(Settings.GetSetting("Sitecore.Demo.Feature.Accounts.RegistrationGoalId", "{8FFB183B-DA1A-4C74-8F3A-9729E9FCFF6A}"));
-        public static Guid ExportDataGoalId => Guid.Parse(Settings.GetSetting("Sitecore.Demo.Feature.Accounts.ExportDataGoalId", "{D0EF461C-3AA0-40B8-9B5F-C1723E54F6ED}"));
-        public static Guid DeleteProfileGoalId => Guid.Parse(Settings.GetSetting("Sitecore.Demo.Feature.Accounts.DeleteProfileGoalId", "{83A9DF9A-D7D9-4B73-BAE0-4F77B4935462}"));
+        public static Guid LoginGoalId => Guid.Parse(Settings.GetSetting("Sitecore.Demo.Shared.Feature.Accounts.LoginGoalId", "{66722F52-2D13-4DCC-90FC-EA7117CF2298}"));
+        public static Guid RegistrationGoalId => Guid.Parse(Settings.GetSetting("Sitecore.Demo.Shared.Feature.Accounts.RegistrationGoalId", "{8FFB183B-DA1A-4C74-8F3A-9729E9FCFF6A}"));
+        public static Guid ExportDataGoalId => Guid.Parse(Settings.GetSetting("Sitecore.Demo.Shared.Feature.Accounts.ExportDataGoalId", "{D0EF461C-3AA0-40B8-9B5F-C1723E54F6ED}"));
+        public static Guid DeleteProfileGoalId => Guid.Parse(Settings.GetSetting("Sitecore.Demo.Shared.Feature.Accounts.DeleteProfileGoalId", "{83A9DF9A-D7D9-4B73-BAE0-4F77B4935462}"));
 
 
         public virtual void TrackLoginAndIdentifyContact(string source, string identifier)

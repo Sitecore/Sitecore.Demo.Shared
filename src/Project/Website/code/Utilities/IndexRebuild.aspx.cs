@@ -2,7 +2,7 @@
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Maintenance;
 
-namespace Sitecore.Demo.Website.Utilities
+namespace Sitecore.Demo.Shared.Website.Utilities
 {
     public partial class IndexRebuild : System.Web.UI.Page
     {

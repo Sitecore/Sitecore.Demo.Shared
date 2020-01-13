@@ -1,8 +1,8 @@
-﻿namespace Sitecore.Demo.Feature.Accounts.Attributes
-{
-  using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-  public class ValidateModelAttribute : ActionFilterAttribute
+namespace Sitecore.Demo.Shared.Feature.Accounts.Attributes
+{
+    public class ValidateModelAttribute : ActionFilterAttribute
   {
     public override void OnActionExecuting(ActionExecutingContext filterContext)
     {

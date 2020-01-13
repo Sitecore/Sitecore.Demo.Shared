@@ -3,12 +3,12 @@ using System.Linq;
 using Sitecore.Configuration;
 using Sitecore.Data;
 using Sitecore.Data.Items;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions;
 using Sitecore.Diagnostics;
-using Sitecore.Demo.Foundation.DependencyInjection;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Extensions;
 using Sitecore.SecurityModel;
 
-namespace Sitecore.Demo.Feature.Accounts.Services
+namespace Sitecore.Demo.Shared.Feature.Accounts.Services
 {
     [Service(typeof(IProfileSettingsService))]
     public class ProfileSettingsService : IProfileSettingsService

@@ -4,7 +4,7 @@ using Sitecore.Shell.Applications.ContentEditor;
 using Sitecore.Text;
 using Sitecore.Web.UI.Sheer;
 
-namespace Sitecore.Demo.Foundation.SitecoreExtensions.Controls
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Controls
 {
     public class ExtendedGeneralLink : Link
     {

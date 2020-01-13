@@ -1,20 +1,19 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Repositories
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Globalization;
-    using System.Linq;
-    using Sitecore.Analytics;
-    using Sitecore.Analytics.Model;
-    using Sitecore.Demo.Feature.Demo.Models;
-    using Sitecore.Demo.Foundation.DependencyInjection;
-    using Sitecore.Demo.Foundation.Dictionary.Repositories;
-    using Sitecore.Marketing.Definitions;
-    using Sitecore.Marketing.Definitions.Outcomes;
-    using Sitecore.Marketing.Definitions.Outcomes.Model;
-    using Sitecore.Marketing.Taxonomy;
-    using Sitecore.Marketing.Taxonomy.Extensions;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using Sitecore.Analytics;
+using Sitecore.Analytics.Model;
+using Sitecore.Demo.Shared.Feature.Demo.Models;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Demo.Shared.Foundation.Dictionary.Repositories;
+using Sitecore.Marketing.Definitions;
+using Sitecore.Marketing.Definitions.Outcomes.Model;
+using Sitecore.Marketing.Taxonomy;
+using Sitecore.Marketing.Taxonomy.Extensions;
 
+namespace Sitecore.Demo.Shared.Feature.Demo.Repositories
+{
     [Service]
     public class OutcomeRepository
     {
