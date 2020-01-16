@@ -118,15 +118,19 @@ namespace Cake.SitecoreDemo
         [CakeMethodAlias]
         public static void CopyToDestination(this ICakeContext context, bool publishLocal, Configuration config)
         {
-            string destination = GetDestination(publishLocal, config);
-            var publishFolder = $"{config.PublishTempFolder}";
-            context.Log.Information("Destination: " + destination);
 
-            // Copy assembly files to publish destination
-            CopyAssemblyFilesToDestination(context, destination, publishFolder);
+            string[] destinations = {GetDestination(publishLocal, config), GetDestination(publishLocal, config)};
 
-            // Copy other output files to publish destination
-            CopyOtherOutputFilesToDestination(context, destination, publishFolder);
+            foreach (string destination in destinations ) {
+                var publishFolder = $"{config.PublishTempFolder}";
+                context.Log.Information("Destination: " + destination);
+
+                // Copy assembly files to publish destination
+                CopyAssemblyFilesToDestination(context, destination, publishFolder);
+
+                // Copy other output files to publish destination
+                CopyOtherOutputFilesToDestination(context, destination, publishFolder);
+            }
         }
 
         [CakeMethodAlias]
@@ -329,7 +333,18 @@ namespace Cake.SitecoreDemo
             string[] excludePattern = { "ssl", "azure" };
             context.Transform(publishFolder, "transforms", destination, excludePattern);
         }
-        
+
+        private static string GetDestinationCD(bool publishLocal, Configuration config)
+        {
+            var destination = config.WebsiteRoot;
+            if (publishLocal)
+            {
+                destination = config.PublishWebFolderCD;
+            }
+
+            return destination;
+        }
+
         private static string GetDestination(bool publishLocal, Configuration config)
         {
             var destination = config.WebsiteRoot;
