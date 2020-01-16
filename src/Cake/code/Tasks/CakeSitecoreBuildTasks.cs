@@ -119,17 +119,21 @@ namespace Cake.SitecoreDemo
         public static void CopyToDestination(this ICakeContext context, bool publishLocal, Configuration config)
         {
 
-            string[] destinations = {GetDestination(publishLocal, config), GetDestination(publishLocal, config)};
+            string[] destinations = {GetDestination(publishLocal, config), GetDestinationCD(publishLocal, config)};
 
-            foreach (string destination in destinations ) {
-                var publishFolder = $"{config.PublishTempFolder}";
-                context.Log.Information("Destination: " + destination);
+            foreach (string destination in destinations ) 
+            {
+                if (!string.IsNullOrEmpty(destination)) {
+                    
+                    var publishFolder = $"{config.PublishTempFolder}";
+                    context.Log.Information("Destination: " + destination);
 
-                // Copy assembly files to publish destination
-                CopyAssemblyFilesToDestination(context, destination, publishFolder);
+                    // Copy assembly files to publish destination
+                    CopyAssemblyFilesToDestination(context, destination, publishFolder);
 
-                // Copy other output files to publish destination
-                CopyOtherOutputFilesToDestination(context, destination, publishFolder);
+                    // Copy other output files to publish destination
+                    CopyOtherOutputFilesToDestination(context, destination, publishFolder);
+                } 
             }
         }
 
@@ -336,21 +340,24 @@ namespace Cake.SitecoreDemo
 
         private static string GetDestinationCD(bool publishLocal, Configuration config)
         {
-            var destination = config.WebsiteRoot;
-            if (publishLocal)
-            {
-                destination = config.PublishWebFolderCD;
-            }
-
-            return destination;
+            return GetDestination(publishLocal, true, config);
         }
 
         private static string GetDestination(bool publishLocal, Configuration config)
         {
+            return GetDestination(publishLocal, false, config);
+        }
+
+        private static string GetDestination(bool publishLocal, bool cdTarget, Configuration config)
+        {
             var destination = config.WebsiteRoot;
             if (publishLocal)
             {
-                destination = config.PublishWebFolder;
+                if (cdTarget) {
+                    destination = config.PublishWebFolderCD;
+                } else {
+                    destination = config.PublishWebFolder;
+                }
             }
 
             return destination;
