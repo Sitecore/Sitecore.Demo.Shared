@@ -118,15 +118,23 @@ namespace Cake.SitecoreDemo
         [CakeMethodAlias]
         public static void CopyToDestination(this ICakeContext context, bool publishLocal, Configuration config)
         {
-            string destination = GetDestination(publishLocal, config);
-            var publishFolder = $"{config.PublishTempFolder}";
-            context.Log.Information("Destination: " + destination);
 
-            // Copy assembly files to publish destination
-            CopyAssemblyFilesToDestination(context, destination, publishFolder);
+            string[] destinations = {GetDestination(publishLocal, config), GetDestinationCD(publishLocal, config)};
 
-            // Copy other output files to publish destination
-            CopyOtherOutputFilesToDestination(context, destination, publishFolder);
+            foreach (string destination in destinations ) 
+            {
+                if (!string.IsNullOrEmpty(destination)) {
+                    
+                    var publishFolder = $"{config.PublishTempFolder}";
+                    context.Log.Information("Destination: " + destination);
+
+                    // Copy assembly files to publish destination
+                    CopyAssemblyFilesToDestination(context, destination, publishFolder);
+
+                    // Copy other output files to publish destination
+                    CopyOtherOutputFilesToDestination(context, destination, publishFolder);
+                } 
+            }
         }
 
         [CakeMethodAlias]
@@ -329,13 +337,27 @@ namespace Cake.SitecoreDemo
             string[] excludePattern = { "ssl", "azure" };
             context.Transform(publishFolder, "transforms", destination, excludePattern);
         }
-        
+
+        private static string GetDestinationCD(bool publishLocal, Configuration config)
+        {
+            return GetDestination(publishLocal, true, config);
+        }
+
         private static string GetDestination(bool publishLocal, Configuration config)
+        {
+            return GetDestination(publishLocal, false, config);
+        }
+
+        private static string GetDestination(bool publishLocal, bool cdTarget, Configuration config)
         {
             var destination = config.WebsiteRoot;
             if (publishLocal)
             {
-                destination = config.PublishWebFolder;
+                if (cdTarget) {
+                    destination = config.PublishWebFolderCD;
+                } else {
+                    destination = config.PublishWebFolder;
+                }
             }
 
             return destination;

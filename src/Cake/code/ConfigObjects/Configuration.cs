@@ -39,6 +39,7 @@ namespace Cake.SitecoreDemo
         public string FeatureSrcFolder => $"{SourceFolder}\\Feature";
         public string ProjectSrcFolder => $"{SourceFolder}\\Project";
         public string PublishWebFolder { get; set; }
+        public string PublishWebFolderCD { get; set; }
         public string PublishxConnectFolder { get; set; }
         public string PublishxConnectIndexWorkerFolder { get; set; }
         public string PublishDataFolder { get; set; }
