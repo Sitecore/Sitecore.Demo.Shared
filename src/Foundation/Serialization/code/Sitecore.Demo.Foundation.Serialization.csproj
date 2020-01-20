@@ -85,7 +85,6 @@
     </Content>
     <Content Include="App_Config\Include\Unicorn.Helix.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.zSharedSecret.config" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.config">
       <SubType>Designer</SubType>
     </Content>
