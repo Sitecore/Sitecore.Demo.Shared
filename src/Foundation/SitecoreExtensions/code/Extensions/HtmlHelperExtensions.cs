@@ -1,18 +1,18 @@
-﻿namespace Sitecore.Demo.Foundation.SitecoreExtensions.Extensions
-{
-    using System;
-    using System.Linq.Expressions;
-    using System.Web;
-    using System.Web.Mvc;
-    using System.Web.Mvc.Html;
-    using Sitecore.Data;
-    using Sitecore.Data.Items;
-    using Sitecore.Diagnostics;
-    using Sitecore.Demo.Foundation.SitecoreExtensions.Attributes;
-    using Sitecore.Demo.Foundation.SitecoreExtensions.Controls;
-    using Sitecore.Mvc;
-    using Sitecore.Mvc.Helpers;
+﻿using System;
+using System.Linq.Expressions;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Mvc.Html;
+using Sitecore.Data;
+using Sitecore.Data.Items;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Attributes;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Controls;
+using Sitecore.Diagnostics;
+using Sitecore.Mvc;
+using Sitecore.Mvc.Helpers;
 
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions
+{
     public static class HtmlHelperExtensions
     {
         public static HtmlString ImageField(this SitecoreHelper helper, ID fieldID, int mh = 0, int mw = 0, string cssClass = null, bool disableWebEditing = false)

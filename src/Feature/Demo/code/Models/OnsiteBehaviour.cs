@@ -1,8 +1,7 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Models
-{
-    using System.Collections.Generic;
-    using Sitecore.XConnect;
+﻿using System.Collections.Generic;
 
+namespace Sitecore.Demo.Shared.Feature.Demo.Models
+{
     public class OnsiteBehavior
     {
         public IEnumerable<Profile> ActiveProfiles { get; set; }

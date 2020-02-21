@@ -1,6 +1,4 @@
-﻿using System;                  
-
-namespace Sitecore.Demo.Foundation.DependencyInjection
+﻿namespace Sitecore.Demo.Shared.Foundation.DependencyInjection
 {
     public enum Lifetime
     {

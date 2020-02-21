@@ -1,8 +1,8 @@
----
+﻿---
 ID: "288a39aa-c455-48e5-b379-6bc06385f273"
 Parent: "ec4dd3f2-590d-404b-9189-2a12679749cc"
 Template: "ec4dd3f2-590d-404b-9189-2a12679749cc"
-Path: /sitecore/templates/Foundation/Habitat Home/Dictionary/DictionaryEntry/__Standard Values
+Path: /sitecore/templates/Foundation/Demo Shared/Dictionary/DictionaryEntry/__Standard Values
 DB: master
 SharedFields:
 - ID: "fd4e2050-186c-4375-8b99-e8a85dd7436e"
@@ -21,13 +21,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "f5ecfc32-0ad0-4a32-a770-3c8e37974180"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T160048Z

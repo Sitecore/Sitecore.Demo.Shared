@@ -1,7 +1,7 @@
-﻿using Sitecore.XConnect;
-using System;
+﻿using System;
+using Sitecore.XConnect;
 
-namespace Sitecore.Demo.Foundation.Accounts.Models.Facets
+namespace Sitecore.Demo.Shared.Foundation.Accounts.Models.Facets
 {
     [Serializable]
     public class SportName : Facet

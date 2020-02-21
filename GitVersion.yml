@@ -19,7 +19,7 @@ branches:
     mode: ContinuousDeployment
   pull-request:
     mode: ContinuousDeployment
-    tag: pull-
+    tag: alpha-
     tag-number-pattern: '[/-](?<number>\d+)[-/]'
   release:
     mode: ContinuousDeployment

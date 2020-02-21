@@ -1,6 +1,6 @@
-﻿using Sitecore.Data;     
+﻿using Sitecore.Data;
 
-namespace Sitecore.Demo.Feature.Forms
+namespace Sitecore.Demo.Shared.Feature.Forms
 {
     public struct Templates
     {

@@ -5,7 +5,7 @@ using System.Reflection;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 
-namespace Sitecore.Demo.Foundation.SitecoreExtensions.Models
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Models
 {
     public class ItemBase
     {

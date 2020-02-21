@@ -1,18 +1,16 @@
-namespace Sitecore.Demo.Feature.Demo.Repositories
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Globalization;
-    using System.Linq;
-    using Sitecore.Analytics;
-    using Sitecore.Demo.Feature.Demo.Models;
-    using Sitecore.Demo.Foundation.DependencyInjection;
-    using Sitecore.Marketing.Automation.Data;
-    using Sitecore.Marketing.Definitions;
-    using Sitecore.Marketing.Definitions.AutomationPlans.Model;
-    using Sitecore.XConnect.Collection.Model;
-    using Sitecore.Xdb.MarketingAutomation.Tracking.Extensions;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using Sitecore.Analytics;
+using Sitecore.Demo.Shared.Feature.Demo.Models;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Marketing.Definitions;
+using Sitecore.Marketing.Definitions.AutomationPlans.Model;
+using Sitecore.XConnect.Collection.Model;
+using Sitecore.Xdb.MarketingAutomation.Tracking.Extensions;
 
+namespace Sitecore.Demo.Shared.Feature.Demo.Repositories
+{
     [Service(typeof(IEngagementPlanStateRepository))]
     public class EngagementPlanStateRepository : IEngagementPlanStateRepository
     {

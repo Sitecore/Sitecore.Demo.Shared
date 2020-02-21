@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Web.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Sitecore.Demo.Foundation.DependencyInjection
+namespace Sitecore.Demo.Shared.Foundation.DependencyInjection
 {
-    using System.IO;              
-
     public static class ServiceCollectionExtensions
     {
         private const string DefaultControllerFilter = "*Controller";

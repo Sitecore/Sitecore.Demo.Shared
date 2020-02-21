@@ -2,7 +2,7 @@
 using Sitecore.Diagnostics;
 using Sitecore.Resources.Media;
 
-namespace Sitecore.Demo.Foundation.Cdn.Infrastructure.Pipelines.MediaProviders
+namespace Sitecore.Demo.Shared.Foundation.Cdn.Infrastructure.Pipelines.MediaProviders
 {
   public class MediaProvider : Sitecore.Resources.Media.MediaProvider
   {

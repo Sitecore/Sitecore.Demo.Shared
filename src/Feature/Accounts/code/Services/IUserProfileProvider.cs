@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Sitecore.Security;
 
-namespace Sitecore.Demo.Feature.Accounts.Services
+namespace Sitecore.Demo.Shared.Feature.Accounts.Services
 {
     public interface IUserProfileProvider
     {

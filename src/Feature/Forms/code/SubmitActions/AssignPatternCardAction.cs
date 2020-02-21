@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Sitecore.ExperienceForms.Processing;
-using Sitecore.ExperienceForms.Models;
-using Sitecore.Diagnostics;
-using Sitecore.Data;
-using Sitecore.Data.Items;
-using System.Xml;               
-using Sitecore.ExperienceForms.SubmitActions;
+using System.Xml;
 using Sitecore.Analytics;
 using Sitecore.Analytics.Tracking;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Extensions;
+using Sitecore.Data;
+using Sitecore.Data.Items;
+using Sitecore.Demo.Shared.Feature.Forms.Extensions;
+using Sitecore.Demo.Shared.Feature.Forms.SubmitActions.Models;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions;
+using Sitecore.Diagnostics;
+using Sitecore.ExperienceForms.Models;
+using Sitecore.ExperienceForms.Processing;
+using Sitecore.ExperienceForms.SubmitActions;
 
-namespace Sitecore.Demo.Feature.Forms.SubmitActions
+namespace Sitecore.Demo.Shared.Feature.Forms.SubmitActions
 {
     public class AssignPatternCardAction : AnalyticsActionBase<AssignPatternActionData>
     {

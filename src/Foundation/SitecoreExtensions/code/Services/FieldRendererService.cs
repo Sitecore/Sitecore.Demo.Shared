@@ -1,17 +1,17 @@
-﻿namespace Sitecore.Demo.Foundation.SitecoreExtensions.Services
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Web;
-    using Sitecore.Data;
-    using Sitecore.Data.Items;
-    using Sitecore.Diagnostics;
-    using Sitecore.Mvc.Extensions;
-    using Sitecore.Mvc.Presentation;
-    using Sitecore.Pipelines;
-    using Sitecore.Pipelines.RenderField;
-    using Sitecore.Web.UI.WebControls;
+﻿using System;
+using System.Collections.Generic;
+using System.Web;
+using Sitecore.Data;
+using Sitecore.Data.Items;
+using Sitecore.Diagnostics;
+using Sitecore.Mvc.Extensions;
+using Sitecore.Mvc.Presentation;
+using Sitecore.Pipelines;
+using Sitecore.Pipelines.RenderField;
+using Sitecore.Web.UI.WebControls;
 
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Services
+{
     public class FieldRendererService
     {
         [ThreadStatic]

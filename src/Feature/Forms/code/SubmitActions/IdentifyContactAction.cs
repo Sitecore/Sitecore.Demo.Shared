@@ -1,22 +1,21 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System;
+using System.Linq;
+using Microsoft.Extensions.DependencyInjection;
 using Sitecore.Analytics;
 using Sitecore.Data;
-using Sitecore.Data.Items;
+using Sitecore.Demo.Shared.Feature.Forms.Extensions;
+using Sitecore.Demo.Shared.Feature.Forms.SubmitActions.Models;
+using Sitecore.Demo.Shared.Foundation.Accounts.Models;
+using Sitecore.Demo.Shared.Foundation.Accounts.Services;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Services;
 using Sitecore.DependencyInjection;
 using Sitecore.Diagnostics;
 using Sitecore.ExperienceForms.Models;
 using Sitecore.ExperienceForms.Processing;
 using Sitecore.ExperienceForms.SubmitActions;
-using Sitecore.Demo.Feature.Forms.SubmitActions.Models;
-using Sitecore.Demo.Foundation.Accounts.Models;
-using Sitecore.Demo.Foundation.Accounts.Services;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Extensions;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Services;
-using Sitecore.SecurityModel;
-using System;
-using System.Linq;
 
-namespace Sitecore.Demo.Feature.Forms.SubmitActions
+namespace Sitecore.Demo.Shared.Feature.Forms.SubmitActions
 {
     public class IdentifyContactAction : AnalyticsActionBase<IdentifyContactActionData>
     {

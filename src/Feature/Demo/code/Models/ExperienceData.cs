@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Sitecore.Demo.Feature.Demo.Models
+﻿namespace Sitecore.Demo.Shared.Feature.Demo.Models
 {
     public class ExperienceData
     {

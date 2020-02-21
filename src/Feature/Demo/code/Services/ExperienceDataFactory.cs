@@ -1,9 +1,9 @@
-﻿using Sitecore.Demo.Feature.Demo.Models;
-using Sitecore.Demo.Feature.Demo.Repositories;
-using Sitecore.Demo.Foundation.DependencyInjection;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Services;
+﻿using Sitecore.Demo.Shared.Feature.Demo.Models;
+using Sitecore.Demo.Shared.Feature.Demo.Repositories;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Services;
 
-namespace Sitecore.Demo.Feature.Demo.Services
+namespace Sitecore.Demo.Shared.Feature.Demo.Services
 {
     [Service(typeof(IExperienceDataFactory))]
     public class ExperienceDataFactory : IExperienceDataFactory

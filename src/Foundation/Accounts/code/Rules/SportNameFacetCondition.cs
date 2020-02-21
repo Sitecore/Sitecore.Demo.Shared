@@ -1,11 +1,11 @@
 ﻿using Sitecore.Analytics;
 using Sitecore.Analytics.XConnect.Facets;
-using Sitecore.Demo.Foundation.Accounts.Models.Facets;
+using Sitecore.Demo.Shared.Foundation.Accounts.Models.Facets;
 using Sitecore.Rules;
 using Sitecore.Rules.Conditions;
 using Sitecore.XConnect;
 
-namespace Sitecore.Demo.Foundation.Accounts.Rules
+namespace Sitecore.Demo.Shared.Foundation.Accounts.Rules
 {
     public class SportNameFacetCondition<T> : OperatorCondition<T> where T : RuleContext
     {

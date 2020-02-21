@@ -1,8 +1,8 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Models
-{
-  using System;
+﻿using System;
 
-  public class PageView
+namespace Sitecore.Demo.Shared.Feature.Demo.Models
+{
+    public class PageView
   {
     public string FullPath { get; set; }
     public string Path { get; set; }

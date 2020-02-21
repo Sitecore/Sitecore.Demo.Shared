@@ -1,21 +1,21 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Mail;
 using Sitecore.Configuration;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions;
 using Sitecore.Diagnostics;
 using Sitecore.Exceptions;
-using Sitecore.Demo.Foundation.DependencyInjection;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Extensions;
-using System.Linq;
 
-namespace Sitecore.Demo.Feature.Accounts.Services
+namespace Sitecore.Demo.Shared.Feature.Accounts.Services
 {
     [Service(typeof(IAccountsSettingsService))]
     public class AccountsSettingsService : IAccountsSettingsService
     {
-        public static readonly string PageNotFoundUrl = Settings.GetSetting("Sitecore.Demo.Feature.Accounts.PageNotFoundUrl", "/404");
+        public static readonly string PageNotFoundUrl = Settings.GetSetting("Sitecore.Demo.Shared.Feature.Accounts.PageNotFoundUrl", "/404");
         public static AccountsSettingsService Instance => new AccountsSettingsService();
 
         public virtual string GetPageLink(Item contextItem, ID fieldId)

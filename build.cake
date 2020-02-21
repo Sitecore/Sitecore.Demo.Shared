@@ -42,10 +42,11 @@ Task("Copy-Sitecore-Lib")
 Task("Build-Solution")
 .IsDependentOn("Copy-Sitecore-Lib")
 .Does(() => {
-  var solutionFiles = new string[] {"Sitecore.Demo.Shared.sln"};
+  var solutionFiles = new string[] {"Sitecore.Demo.Shared.sln", "Cake.SitecoreDemo.sln"};
 
   foreach (var solution in solutionFiles) {
     Information($"Building :{solution}");
+    NuGetRestore(solution);
     MSBuild(solution, cfg => InitializeMSBuildSettings(cfg));
   }
 });

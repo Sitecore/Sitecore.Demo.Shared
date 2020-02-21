@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Sitecore.Demo.Feature.Demo.Services
+﻿namespace Sitecore.Demo.Shared.Feature.Demo.Services
 {
     public interface IDemoStateService
     {

@@ -1,8 +1,8 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Models
-{
-  using System;
+﻿using System;
 
-  public class Campaign
+namespace Sitecore.Demo.Shared.Feature.Demo.Models
+{
+    public class Campaign
   {
     public DateTime? Date { get; set; }
     public bool IsActive { get; set; }

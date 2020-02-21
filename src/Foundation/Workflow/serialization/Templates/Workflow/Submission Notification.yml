@@ -1,8 +1,8 @@
----
+﻿---
 ID: "f7a56f00-e12e-49ce-af4f-a92b2529618d"
 Parent: "97fe3baf-4bd2-4691-9019-9e863be74a33"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/Habitat Home/Workflow/Submission Notification
+Path: /sitecore/templates/Foundation/Demo Shared/Workflow/Submission Notification
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
@@ -27,13 +27,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "015374a5-fa27-4d9e-b624-523ac285a27f"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T160039Z

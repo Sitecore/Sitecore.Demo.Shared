@@ -1,21 +1,19 @@
-﻿using Sitecore.Data.Fields;
-using Sitecore.Diagnostics;
-using Sitecore.Demo.Feature.Accounts.Attributes;
-using Sitecore.Demo.Feature.Accounts.Models;
-using Sitecore.Demo.Feature.Accounts.Repositories;
-using Sitecore.Demo.Feature.Accounts.Services;
-using Sitecore.Demo.Foundation.Accounts.Services;
-using Sitecore.Demo.Foundation.Alerts.Extensions;
-using Sitecore.Demo.Foundation.Alerts.Models;
-using Sitecore.Demo.Foundation.Dictionary.Repositories;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Attributes;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Extensions;
-using System;
-using System.Linq;
+﻿using System;
 using System.Web.Mvc;
 using System.Web.Security;
+using Sitecore.Demo.Shared.Feature.Accounts.Attributes;
+using Sitecore.Demo.Shared.Feature.Accounts.Models;
+using Sitecore.Demo.Shared.Feature.Accounts.Repositories;
+using Sitecore.Demo.Shared.Feature.Accounts.Services;
+using Sitecore.Demo.Shared.Foundation.Accounts.Services;
+using Sitecore.Demo.Shared.Foundation.Alerts.Extensions;
+using Sitecore.Demo.Shared.Foundation.Alerts.Models;
+using Sitecore.Demo.Shared.Foundation.Dictionary.Repositories;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Attributes;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions;
+using Sitecore.Diagnostics;
 
-namespace Sitecore.Demo.Feature.Accounts.Controllers
+namespace Sitecore.Demo.Shared.Feature.Accounts.Controllers
 {
     public class AccountsController : Controller
     {

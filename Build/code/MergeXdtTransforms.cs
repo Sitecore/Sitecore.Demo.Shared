@@ -1,13 +1,13 @@
-﻿using Microsoft.Build.Framework;
-using Microsoft.Build.Utilities;
-using Sitecore.Demo.BuildTools.Utilities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Microsoft.Build.Framework;
+using Microsoft.Build.Utilities;
+using Sitecore.Demo.Shared.BuildTools.Utilities;
 
-namespace Sitecore.Demo.BuildTools
+namespace Sitecore.Demo.Shared.BuildTools
 {
     public class MergeXdtTransforms : Task
     {

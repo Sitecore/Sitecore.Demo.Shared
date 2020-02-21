@@ -1,8 +1,8 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Models
-{
-  using System;
+﻿using System;
 
-  public class EngagementPlanState
+namespace Sitecore.Demo.Shared.Feature.Demo.Models
+{
+    public class EngagementPlanState
   {
     public string EngagementPlanTitle { get; set; }
     public DateTime Date { get; set; }

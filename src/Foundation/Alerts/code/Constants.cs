@@ -1,4 +1,4 @@
-﻿namespace Sitecore.Demo.Foundation.Alerts
+﻿namespace Sitecore.Demo.Shared.Foundation.Alerts
 {
     public class Constants
     {

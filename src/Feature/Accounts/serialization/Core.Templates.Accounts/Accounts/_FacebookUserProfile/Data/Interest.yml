@@ -1,8 +1,8 @@
----
+﻿---
 ID: "d30a50fc-034c-4132-bfed-6a006b4cca23"
 Parent: "ddd1f7a8-f952-42c4-be07-43f9be73c88a"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Habitat Home/Accounts/_FacebookUserProfile/Data/Interest
+Path: /sitecore/templates/Feature/Demo Shared/Accounts/_FacebookUserProfile/Data/Interest
 DB: core
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -23,13 +23,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "fb99867a-d2a5-43ce-9502-47146d28388f"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T160059Z

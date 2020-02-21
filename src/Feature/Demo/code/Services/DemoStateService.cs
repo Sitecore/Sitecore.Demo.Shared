@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Web;
 using Sitecore.Configuration;
-using Sitecore.Demo.Feature.Demo.Services;
-using Sitecore.Demo.Foundation.DependencyInjection;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
 
-namespace Sitecore.Demo.Feature.Demo.Services
+namespace Sitecore.Demo.Shared.Feature.Demo.Services
 {
     [Service(typeof(IDemoStateService))]
     public class DemoStateService : IDemoStateService

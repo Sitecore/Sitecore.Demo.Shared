@@ -1,15 +1,15 @@
-﻿using Sitecore.Configuration;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Sitecore.Configuration;
 using Sitecore.Data;
 using Sitecore.Data.Managers;
 using Sitecore.Data.Templates;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
 using Sitecore.Diagnostics;
-using Sitecore.Demo.Foundation.DependencyInjection;
 using Sitecore.Security;
 using Sitecore.SecurityModel;
-using System.Collections.Generic;
-using System.Linq;
 
-namespace Sitecore.Demo.Feature.Accounts.Services
+namespace Sitecore.Demo.Shared.Feature.Accounts.Services
 {
     [Service(typeof(IUserProfileProvider))]
     public class UserProfileProvider : IUserProfileProvider

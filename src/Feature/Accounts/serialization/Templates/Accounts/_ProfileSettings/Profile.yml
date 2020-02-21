@@ -1,8 +1,8 @@
----
+﻿---
 ID: "97c23f1b-1385-4be3-9d0d-6990cf9a9f30"
 Parent: "7e5de17d-5975-40b7-952e-45e646699318"
 Template: "e269fbb5-3750-427a-9149-7aa950b49301"
-Path: /sitecore/templates/Feature/Habitat Home/Accounts/_ProfileSettings/Profile
+Path: /sitecore/templates/Feature/Demo Shared/Accounts/_ProfileSettings/Profile
 DB: master
 Languages:
 - Language: en
@@ -16,16 +16,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "a3b7537b-e8e8-46ed-b1a2-508f1da5c006"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T160101Z
 - Language: "ja-JP"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
@@ -41,13 +31,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "43909915-8e31-45e9-9fb7-8e22c96bccf8"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T160101Z

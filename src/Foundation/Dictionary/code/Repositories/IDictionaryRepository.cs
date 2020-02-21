@@ -1,7 +1,6 @@
-﻿using Sitecore.Demo.Foundation.Dictionary.Models;
-using Sitecore.Sites;
+﻿using Sitecore.Sites;
 
-namespace Sitecore.Demo.Foundation.Dictionary.Repositories
+namespace Sitecore.Demo.Shared.Foundation.Dictionary.Repositories
 {
   public interface IDictionaryRepository
   {

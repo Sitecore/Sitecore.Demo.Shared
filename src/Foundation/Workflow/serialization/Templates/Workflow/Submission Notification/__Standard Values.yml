@@ -1,8 +1,8 @@
----
+﻿---
 ID: "78d3dcc1-33c9-4028-a100-21573eb92a28"
 Parent: "f7a56f00-e12e-49ce-af4f-a92b2529618d"
 Template: "f7a56f00-e12e-49ce-af4f-a92b2529618d"
-Path: /sitecore/templates/Foundation/Habitat Home/Workflow/Submission Notification/__Standard Values
+Path: /sitecore/templates/Foundation/Demo Shared/Workflow/Submission Notification/__Standard Values
 DB: master
 SharedFields:
 - ID: "3cb83e5d-8b67-4ba5-9bc6-e9f122ad95cb"
@@ -10,7 +10,7 @@ SharedFields:
   Value: localhost
 - ID: "a291a22b-99e2-46bb-a27b-8ec744275396"
   Hint: Type
-  Value: Sitecore.Demo.Foundation.Workflow.Actions.SubmissionNotification, Sitecore.Demo.Foundation.Workflow
+  Value: Sitecore.Demo.Shared.Foundation.Workflow.Actions.SubmissionNotification, Sitecore.Demo.Shared.Foundation.Workflow
 Languages:
 - Language: en
   Versions:
@@ -23,13 +23,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "05d0d7e1-f4f5-46a2-a14e-3c55a911a73e"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T160047Z

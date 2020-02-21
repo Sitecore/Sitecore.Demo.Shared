@@ -1,4 +1,4 @@
-﻿namespace Sitecore.Demo.Foundation.Alerts.Models
+﻿namespace Sitecore.Demo.Shared.Foundation.Alerts.Models
 {
     public class InfoMessage
     {

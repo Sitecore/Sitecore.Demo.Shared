@@ -1,6 +1,6 @@
-﻿using System;            
+﻿using System;
 
-namespace Sitecore.Demo.Foundation.DependencyInjection
+namespace Sitecore.Demo.Shared.Foundation.DependencyInjection
 {
     [AttributeUsage(AttributeTargets.Class, Inherited = false)]
     public class ServiceAttribute : Attribute

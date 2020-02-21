@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.Demo.Shared.Project.Website</id>
+    <version>$version$</version>
+    <description>Sitecore.Demo.Shared.Project.Website</description>
+    <authors>Sitecore Demo Team</authors>
+    <contentFiles>
+      <files include="any/any/App_Config/**/*.*" buildAction="Content" copyToOutput="true" />
+      <files include="any/any/Utilities/**/*.*" buildAction="Content" copyToOutput="true" />
+      <files include="any/any/transforms/**/*.xdt" buildAction="Content" copyToOutput="true" />
+      <files include="../yml/**/*.yml" buildAction="EmbeddedResource" />      
+    </contentFiles>
+    <dependencies>
+      <dependency id="Microsoft.Extensions.DependencyInjection" version="2.1.1" />
+      <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="2.1.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\src\Project\Website\code\bin\Sitecore.Demo.*.dll" target="lib\net471" />
+    <file src="..\..\src\Project\Website\code\bin\Sitecore.Demo.*.dll" target="lib\netstandard2.0" />
+    <file src="..\..\src\Project\Website\code\App_Config\**\*.config" target="contentFiles\any\any\App_Config" />
+    <file src="..\..\src\Project\Website\code\Utilities\**\*.*" target="contentFiles\any\any\Utilities" />
+    <file src="..\..\src\Project\Website\code\**\*.xdt" target="contentFiles\any\any\transforms" />
+    <file src="..\..\src\Project\Website\serialization\**\*.yml" target="yml\Project\Website\serialization" />
+    <file src="..\..\build\targets\.gitignore" target="yml\Project\Website\serialization" />
+    <file src="..\..\build\targets\Sitecore.Demo.Shared.BuildTools.CopyPackageYmlFiles.targets" target="build\net471\Sitecore.Demo.Shared.Project.Website.targets" />
+    <file src="..\..\build\targets\Sitecore.Demo.Shared.BuildTools.CopyPackageYmlFiles.targets" target="build\netstandard2.0\Sitecore.Demo.Shared.Project.Website.targets" />
+  </files>
+</package>

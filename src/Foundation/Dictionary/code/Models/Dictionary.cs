@@ -1,7 +1,7 @@
 ﻿using Sitecore.Data.Items;
 using Sitecore.Sites;
 
-namespace Sitecore.Demo.Foundation.Dictionary.Models
+namespace Sitecore.Demo.Shared.Foundation.Dictionary.Models
 {
     public class Dictionary
     {

@@ -6,7 +6,7 @@ using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Maintenance;
 using Sitecore.Install.Framework;
 
-namespace  Sitecore.Demo.Website.Utilities.Installation
+namespace  Sitecore.Demo.Shared.Website.Utilities.Installation
 {
     public class IndexRebuildPostStep : IPostStep
     {

@@ -8,7 +8,7 @@ using Sitecore.Globalization;
 using Sitecore.Install.Framework;
 using Sitecore.Publishing;
 
-namespace Sitecore.Demo.Website.Utilities.Installation
+namespace Sitecore.Demo.Shared.Website.Utilities.Installation
 {
     public class SmartPublishPostStep : IPostStep
     {

@@ -1,18 +1,17 @@
-﻿using Sitecore.XConnect.Collection.Model.Cache;
+﻿using Sitecore.Analytics;
+using Sitecore.Analytics.Model;
+using Sitecore.Analytics.Tracking;
+using Sitecore.Analytics.XConnect.Facets;
+using Sitecore.Configuration;
+using Sitecore.Data;
+using Sitecore.Demo.Shared.Foundation.Accounts.Models.Facets;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.XConnect;
+using Sitecore.XConnect.Collection.Model;
+using Sitecore.XConnect.Collection.Model.Cache;
 
-namespace Sitecore.Demo.Foundation.Accounts.Providers
+namespace Sitecore.Demo.Shared.Foundation.Accounts.Providers
 {
-    using Sitecore.Analytics;
-    using Sitecore.Analytics.Model;
-    using Sitecore.Analytics.Tracking;
-    using Sitecore.Analytics.XConnect.Facets;
-    using Sitecore.Configuration;
-    using Sitecore.Data;
-    using Sitecore.Demo.Foundation.Accounts.Models.Facets;
-    using Sitecore.Demo.Foundation.DependencyInjection;
-    using Sitecore.XConnect;
-    using Sitecore.XConnect.Collection.Model;
-
     [Service(typeof(IContactFacetsProvider), Lifetime = Lifetime.Transient)]
     public class ContactFacetsProvider : IContactFacetsProvider
     {

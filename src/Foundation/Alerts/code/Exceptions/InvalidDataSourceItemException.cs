@@ -1,8 +1,8 @@
-﻿namespace Sitecore.Demo.Foundation.Alerts.Exceptions
-{
-    using System;
-    using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 
+namespace Sitecore.Demo.Shared.Foundation.Alerts.Exceptions
+{
     [Serializable]
     public class InvalidDataSourceItemException : Exception
     {

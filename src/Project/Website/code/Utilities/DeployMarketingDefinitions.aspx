@@ -1,1 +1,1 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeployMarketingDefinitions.aspx.cs" Inherits="Sitecore.Demo.Website.Utilities.DeployMarketingDefinitions" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeployMarketingDefinitions.aspx.cs" Inherits="Sitecore.Demo.Shared.Website.Utilities.DeployMarketingDefinitions" %>

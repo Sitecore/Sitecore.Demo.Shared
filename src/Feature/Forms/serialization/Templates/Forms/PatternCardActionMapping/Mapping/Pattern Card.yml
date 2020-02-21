@@ -1,8 +1,8 @@
----
+﻿---
 ID: "e30632b3-b1c5-494e-8eb2-5c323fe80c5e"
 Parent: "0b02637c-da0f-481c-98b0-9bb410ed8cb3"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Habitat Home/Forms/PatternCardActionMapping/Mapping/Pattern Card
+Path: /sitecore/templates/Feature/Demo Shared/Forms/PatternCardActionMapping/Mapping/Pattern Card
 DB: master
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
@@ -22,13 +22,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20171215T043909Z
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "e2e670d9-fe6b-4857-b885-a59f3f6b85a2"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T163506Z

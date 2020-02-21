@@ -1,9 +1,9 @@
-﻿namespace Sitecore.Demo.Foundation.Accounts.Providers
-{
-    using Sitecore.Analytics.Tracking;
-    using Sitecore.Demo.Foundation.Accounts.Models.Facets;
-    using Sitecore.XConnect.Collection.Model;
+﻿using Sitecore.Analytics.Tracking;
+using Sitecore.Demo.Shared.Foundation.Accounts.Models.Facets;
+using Sitecore.XConnect.Collection.Model;
 
+namespace Sitecore.Demo.Shared.Foundation.Accounts.Providers
+{
     public interface IContactFacetsProvider
     {
         Contact Contact { get; }

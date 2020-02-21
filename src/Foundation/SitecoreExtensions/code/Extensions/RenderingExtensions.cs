@@ -1,7 +1,7 @@
 ﻿using System;
 using Sitecore.Mvc.Presentation;
 
-namespace Sitecore.Demo.Foundation.SitecoreExtensions.Extensions
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions
 {
     public static class RenderingExtensions
     {

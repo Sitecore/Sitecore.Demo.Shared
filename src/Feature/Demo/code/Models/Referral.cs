@@ -1,8 +1,8 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Models
-{
-  using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-  public class Referral
+namespace Sitecore.Demo.Shared.Feature.Demo.Models
+{
+    public class Referral
   {
     public string ReferringSite { get; set; }
     public int TotalNoOfCampaigns { get; set; }

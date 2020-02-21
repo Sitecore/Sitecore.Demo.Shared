@@ -1,13 +1,13 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System;
+using System.Globalization;
+using Microsoft.Extensions.DependencyInjection;
 using Sitecore.Configuration;
 using Sitecore.DependencyInjection;
 using Sitecore.Marketing.Definitions;
 using Sitecore.Marketing.Definitions.MarketingAssets;
 using Sitecore.Marketing.xMgmt.Pipelines.DeployDefinition;
-using System;
-using System.Globalization;
 
-namespace Sitecore.Demo.Website.Utilities
+namespace Sitecore.Demo.Shared.Website.Utilities
 {
     public partial class DeployMarketingDefinitions : System.Web.UI.Page
     {

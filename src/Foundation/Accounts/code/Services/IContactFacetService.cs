@@ -1,6 +1,6 @@
-﻿using Sitecore.Demo.Foundation.Accounts.Models;
+﻿using Sitecore.Demo.Shared.Foundation.Accounts.Models;
 
-namespace Sitecore.Demo.Foundation.Accounts.Services
+namespace Sitecore.Demo.Shared.Foundation.Accounts.Services
 {
     public interface IContactFacetService
     {

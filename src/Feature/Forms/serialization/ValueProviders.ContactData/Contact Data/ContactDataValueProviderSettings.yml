@@ -1,4 +1,4 @@
----
+﻿---
 ID: "395c7a50-db99-4bd5-87de-84f71fca0eb7"
 Parent: "38b86c13-abdd-463e-89dd-a14b54170f6a"
 Template: "50938e2f-e169-47c4-975a-3a97bc945538"
@@ -22,13 +22,3 @@ Languages:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20181010T194520Z
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "81e1bf87-a182-4dbd-a2b2-6ad36f150fd6"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T163507Z

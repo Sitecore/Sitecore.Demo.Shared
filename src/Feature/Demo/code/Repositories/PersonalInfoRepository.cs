@@ -1,19 +1,18 @@
-﻿namespace Sitecore.Demo.Feature.Demo.Repositories
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Reflection;
-    using Sitecore.Analytics.Model;
-    using Sitecore.Analytics.Model.Entities;
-    using Sitecore.Analytics.Tracking;
-    using Sitecore.Demo.Feature.Demo.Models;
-    using Sitecore.Demo.Foundation.Accounts.Providers;
-    using Sitecore.Demo.Foundation.DependencyInjection;
-    using Sitecore.Demo.Foundation.Dictionary.Repositories;
-    using Sitecore.Demo.Foundation.SitecoreExtensions.Extensions;
-    using Sitecore.XConnect.Collection.Model;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using Sitecore.Analytics.Model;
+using Sitecore.Analytics.Model.Entities;
+using Sitecore.Demo.Shared.Feature.Demo.Models;
+using Sitecore.Demo.Shared.Foundation.Accounts.Providers;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Demo.Shared.Foundation.Dictionary.Repositories;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions;
+using Sitecore.XConnect.Collection.Model;
 
+namespace Sitecore.Demo.Shared.Feature.Demo.Repositories
+{
     [Service(typeof(IPersonalInfoRepository))]
     public class PersonalInfoRepository : IPersonalInfoRepository
     {
@@ -231,7 +230,7 @@
             {
                 return null;
             }
-            var base64Data = Convert.ToBase64String(this.contactFacetsProvider.Picture.Picture);
+            var base64Data = System.Convert.ToBase64String(this.contactFacetsProvider.Picture.Picture);
             return "data: image; base64," + base64Data;
         }
 

@@ -1,6 +1,6 @@
-﻿using System;           
+﻿using System;
 
-namespace Sitecore.Demo.Feature.Forms.SubmitActions.Models
+namespace Sitecore.Demo.Shared.Feature.Forms.SubmitActions.Models
 {
     public class IdentifyContactActionData
     {

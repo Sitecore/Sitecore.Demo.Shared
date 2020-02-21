@@ -1,7 +1,7 @@
-﻿namespace Sitecore.Demo.Feature.Accounts
-{
-    using Sitecore.Data;
+﻿using Sitecore.Data;
 
+namespace Sitecore.Demo.Shared.Feature.Accounts
+{
     public struct Templates
     {                
         public struct AccountsSettings

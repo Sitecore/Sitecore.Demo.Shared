@@ -6,7 +6,7 @@ using Sitecore.Analytics.Patterns;
 using Sitecore.Analytics.Tracking;
 using Sitecore.Data;
 
-namespace Sitecore.Demo.Feature.Demo.Services
+namespace Sitecore.Demo.Shared.Feature.Demo.Services
 {
     internal class BehaviorProfileDecorator : IProfileData
     {

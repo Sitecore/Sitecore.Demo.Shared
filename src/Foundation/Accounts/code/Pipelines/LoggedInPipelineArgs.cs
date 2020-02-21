@@ -1,7 +1,7 @@
-namespace Sitecore.Demo.Foundation.Accounts.Pipelines
-{
-    using System;
+using System;
 
+namespace Sitecore.Demo.Shared.Foundation.Accounts.Pipelines
+{
     public class LoggedInPipelineArgs : AccountsPipelineArgs
     {
         public string Source { get; set; }

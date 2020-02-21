@@ -1,17 +1,17 @@
-﻿using Sitecore.Analytics;
+﻿using System.Net;
+using System.Web.Mvc;
+using Sitecore.Analytics;
+using Sitecore.Demo.Shared.Feature.Demo.Models;
+using Sitecore.Demo.Shared.Feature.Demo.Services;
+using Sitecore.Demo.Shared.Foundation.Alerts.Exceptions;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Attributes;
 using Sitecore.ExperienceEditor.Utils;
 using Sitecore.ExperienceExplorer.Core.State;
-using Sitecore.Demo.Feature.Demo.Models;
-using Sitecore.Demo.Feature.Demo.Services;
-using Sitecore.Demo.Foundation.Alerts.Exceptions;
-using Sitecore.Demo.Foundation.SitecoreExtensions.Attributes;
 using Sitecore.Mvc.Controllers;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Sites;
-using System.Net;
-using System.Web.Mvc;
 
-namespace Sitecore.Demo.Feature.Demo.Controllers
+namespace Sitecore.Demo.Shared.Feature.Demo.Controllers
 {
     [SkipAnalyticsTracking]
     public class DemoController : SitecoreController

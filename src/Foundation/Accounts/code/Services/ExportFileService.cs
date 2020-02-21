@@ -1,7 +1,7 @@
-﻿using Sitecore.Demo.Foundation.DependencyInjection;
-using System.IO;
+﻿using System.IO;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
 
-namespace Sitecore.Demo.Foundation.Accounts.Services
+namespace Sitecore.Demo.Shared.Foundation.Accounts.Services
 {
     [Service(typeof(IExportFileService))]
     public class ExportFileService : IExportFileService

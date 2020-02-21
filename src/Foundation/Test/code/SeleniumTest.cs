@@ -12,7 +12,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 
-namespace Sitecore.Demo.Foundation.Test
+namespace Sitecore.Demo.Shared.Foundation.Test
 {
     public class SeleniumTest
     {

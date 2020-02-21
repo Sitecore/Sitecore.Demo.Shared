@@ -1,12 +1,12 @@
-﻿namespace Sitecore.Demo.Foundation.SitecoreExtensions.Controls
-{
-  using System;
-  using System.IO;
-  using System.Web.UI;
-  using Sitecore.Web.UI.WebControls;
-  using Sitecore.Demo.Foundation.SitecoreExtensions.Extensions;
+﻿using System;
+using System.IO;
+using System.Web.UI;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions;
+using Sitecore.Web.UI.WebControls;
 
-  /// <summary>
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Controls
+{
+    /// <summary>
   ///   Edit frame class.
   /// </summary>
   /// <remarks>

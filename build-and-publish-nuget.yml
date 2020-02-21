@@ -53,17 +53,8 @@ steps:
     versionEnvVar: GitVersion.SemVer
     verbosityPack: Normal
 - task: NuGetCommand@2
-  displayName: 'NuGet push to sc-demo-packages-dev'
-  condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
-  inputs:
-    command: 'push'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
-    nuGetFeedType: 'internal'
-    publishVstsFeed: 'f9b5d027-f29c-449f-826c-d7bb655b30f4/a5b4dbc0-611c-4ba4-b55c-b95a2a249dac'
-    verbosityPush: 'Normal'
-- task: NuGetCommand@2
   displayName: 'NuGet push to sc-demo-packages'
-  condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.SourceBranch'], 'refs/heads/develop'), startsWith(variables['Build.SourceBranch'], 'refs/heads/release/')))
+  condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.SourceBranch'], 'refs/heads/develop'), startsWith(variables['Build.SourceBranch'], 'refs/heads/release/'), eq(variables['Build.Reason'], 'PullRequest')))
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
@@ -75,7 +66,7 @@ steps:
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['prerelease'], false))
   inputs:
     command: 'push'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/Sitecore.Demo.Shared.*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
     nuGetFeedType: external
     publishFeedCredentials: 'nuget-external'
     verbosityPush: 'Normal'

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Sitecore.Demo.Feature.Accounts.Models;      
+using Sitecore.Demo.Shared.Feature.Accounts.Models;
 
-namespace Sitecore.Demo.Feature.Accounts.Repositories
+namespace Sitecore.Demo.Shared.Feature.Accounts.Repositories
 {
     public interface IFedAuthLoginButtonRepository
     {

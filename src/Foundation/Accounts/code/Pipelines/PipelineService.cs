@@ -1,10 +1,10 @@
-﻿namespace Sitecore.Demo.Foundation.Accounts.Pipelines
-{
-    using Sitecore.Analytics;
-    using Sitecore.Demo.Foundation.DependencyInjection;
-    using Sitecore.Pipelines;
-    using Sitecore.Security.Accounts;
+﻿using Sitecore.Analytics;
+using Sitecore.Demo.Shared.Foundation.DependencyInjection;
+using Sitecore.Pipelines;
+using Sitecore.Security.Accounts;
 
+namespace Sitecore.Demo.Shared.Foundation.Accounts.Pipelines
+{
     [Service]
     public class PipelineService
     {

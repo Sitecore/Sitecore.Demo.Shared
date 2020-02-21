@@ -1,19 +1,19 @@
-﻿namespace Sitecore.Demo.Foundation.SitecoreExtensions.Extensions
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Globalization;
-    using System.Linq;
-    using System.Web;
-    using Sitecore.Data;
-    using Sitecore.Data.Fields;
-    using Sitecore.Data.Items;
-    using Sitecore.Data.Managers;
-    using Sitecore.Diagnostics;
-    using Sitecore.Demo.Foundation.SitecoreExtensions.Services;
-    using Sitecore.Links;
-    using Sitecore.Resources.Media;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Web;
+using Sitecore.Data;
+using Sitecore.Data.Fields;
+using Sitecore.Data.Items;
+using Sitecore.Data.Managers;
+using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Services;
+using Sitecore.Diagnostics;
+using Sitecore.Links;
+using Sitecore.Resources.Media;
 
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions
+{
     public static class ItemExtensions
     {
         public static string Url(this Item item, UrlOptions options = null)

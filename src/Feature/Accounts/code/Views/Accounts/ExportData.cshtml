@@ -1,11 +1,10 @@
 ﻿@using System.Web.Mvc
 @using System.Web.Mvc.Html
-@using Sitecore.Demo.Foundation.Alerts.Models
-@using Sitecore.Demo.Foundation.Dictionary.Extensions
-@using Sitecore.Demo.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.Demo.Shared.Foundation.Dictionary.Extensions
+@using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions
 @using Sitecore.Mvc
 @using Sitecore.Mvc.Configuration
-@model Sitecore.Demo.Feature.Accounts.Models.ExportAccount
+@model Sitecore.Demo.Shared.Feature.Accounts.Models.ExportAccount
 
 @using (Html.BeginRouteForm(MvcSettings.SitecoreRouteName, FormMethod.Post, new { @class = "form-signin" }))
 {

@@ -1,10 +1,10 @@
-﻿using Sitecore.Diagnostics;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sitecore.Diagnostics;
 using Sitecore.ExperienceForms.Models;
-using System;
 
-namespace Sitecore.Demo.Feature.Forms.SubmitActions
+namespace Sitecore.Demo.Shared.Feature.Forms.Extensions
 {
     internal static class FormFieldExtensions
     {

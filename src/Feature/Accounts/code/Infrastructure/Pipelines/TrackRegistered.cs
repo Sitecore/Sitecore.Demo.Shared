@@ -1,8 +1,7 @@
-﻿using Sitecore.Demo.Feature.Accounts.Services;
-using Sitecore.Demo.Foundation.Accounts.Pipelines;
-using Sitecore.Demo.Foundation.Accounts.Services;
+﻿using Sitecore.Demo.Shared.Feature.Accounts.Services;
+using Sitecore.Demo.Shared.Foundation.Accounts.Pipelines;
 
-namespace Sitecore.Demo.Feature.Accounts.Infrastructure.Pipelines
+namespace Sitecore.Demo.Shared.Feature.Accounts.Infrastructure.Pipelines
 {            
     public class TrackRegistered
     {

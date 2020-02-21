@@ -1,4 +1,4 @@
----
+﻿---
 ID: "337ddf68-a471-4675-b859-0da4f5c242e9"
 Parent: "a3e5e09f-1422-4050-9414-dc959aa60d7b"
 Template: "5f2c442f-2554-4c80-b1d9-2195fa6168b1"
@@ -62,16 +62,6 @@ Languages:
     - ID: "7205a57f-93b4-413a-aa9a-6b16bbc59565"
       Hint: BrowserTitle
       Value: Udløser mål
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "b9ccef23-0604-46e1-b37f-4a64122c8c74"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T163504Z
 - Language: "de-DE"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
@@ -90,16 +80,6 @@ Languages:
     - ID: "7205a57f-93b4-413a-aa9a-6b16bbc59565"
       Hint: BrowserTitle
       Value: Ziel auslösen
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "a2a4d004-9fdd-47f5-9a9c-baf7ca18ce8c"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T163504Z
 - Language: en
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
@@ -118,16 +98,6 @@ Languages:
     - ID: "7205a57f-93b4-413a-aa9a-6b16bbc59565"
       Hint: BrowserTitle
       Value: Assign Pattern Card
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "042c903e-b656-4e71-aa3d-c7cc3a5740a7"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T163504Z
 - Language: "ja-JP"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
@@ -146,13 +116,3 @@ Languages:
     - ID: "7205a57f-93b4-413a-aa9a-6b16bbc59565"
       Hint: BrowserTitle
       Value: ゴールをトリガー
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "205fb255-694d-49e7-8c09-493814bbcdae"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190425T163504Z

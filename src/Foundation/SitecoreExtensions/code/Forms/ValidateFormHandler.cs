@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Web.Mvc;
 
-namespace Sitecore.Demo.Foundation.SitecoreExtensions.Forms
+namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Forms
 {
     public class ValidateFormHandler : ActionMethodSelectorAttribute
     {

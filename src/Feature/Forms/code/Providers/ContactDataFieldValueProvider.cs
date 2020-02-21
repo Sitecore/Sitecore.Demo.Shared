@@ -1,9 +1,9 @@
-﻿using Sitecore.DependencyInjection;
+﻿using Sitecore.Demo.Shared.Foundation.Accounts.Models;
+using Sitecore.Demo.Shared.Foundation.Accounts.Services;
+using Sitecore.DependencyInjection;
 using Sitecore.ExperienceForms.ValueProviders;
-using Sitecore.Demo.Foundation.Accounts.Models;
-using Sitecore.Demo.Foundation.Accounts.Services;
 
-namespace Sitecore.Demo.Feature.Forms.Providers
+namespace Sitecore.Demo.Shared.Feature.Forms.Providers
 {
     public class ContactDataFieldValueProvider : IFieldValueProvider
     {

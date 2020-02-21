@@ -2,7 +2,7 @@
 using System.Web.Routing;
 using Sitecore.Pipelines;
 
-namespace Sitecore.Demo.Feature.Accounts.Infrastructure.Pipelines
+namespace Sitecore.Demo.Shared.Feature.Accounts.Infrastructure.Pipelines
 {
     public class RegisterWebApiRoutes
     {
