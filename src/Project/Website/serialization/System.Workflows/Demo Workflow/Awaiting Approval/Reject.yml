@@ -1,4 +1,4 @@
----
+﻿---
 ID: "45db5548-eedd-4888-8e97-22bdc4a181fc"
 Parent: "4fdd1979-b09e-41fb-ad96-4434f050a74b"
 Template: "cb01f9fc-c187-46b3-ab0b-97a8468d8303"
@@ -14,7 +14,7 @@ SharedFields:
 - ID: "dec8d2d5-e3cf-48b6-a653-8e69e2716641"
   Hint: __Security
   Value: |
-    ar|sitecore\Sitecore Client Authoring|pe|+workflowCommand:execute|pd|+workflowCommand:execute|
+    ar|sitecore\Sitecore Client Authoring|pe|+workflowCommand:execute|pd|+workflowCommand:execute|ar|sitecore\Sitecore Demo Content Author|pe|-workflowCommand:execute|pd|-workflowCommand:execute|
 Languages:
 - Language: da
   Fields:
@@ -31,16 +31,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "9fcbcaed-db5f-40c5-83e1-141191a6709a"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151403Z
 - Language: "de-DE"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
@@ -56,16 +46,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "677f952a-3c19-4b20-bd0b-f07ebf3a0dea"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151403Z
 - Language: en
   Versions:
   - Version: 1
@@ -77,16 +57,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "d944cee5-d6e2-4d82-a025-48f835d78b80"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151403Z
 - Language: "ja-JP"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
@@ -102,13 +72,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "63d19444-6c34-4ebb-80b1-cb46f70ca01c"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151403Z
