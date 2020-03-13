@@ -53,6 +53,9 @@
     <Reference Include="Cake.Http, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Cake.Http.0.7.0\lib\netstandard2.0\Cake.Http.dll</HintPath>
     </Reference>
+    <Reference Include="Cake.Npm, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Cake.Npm.0.17.0\lib\netstandard2.0\Cake.Npm.dll</HintPath>
+    </Reference>
     <Reference Include="Cake.Powershell, Version=0.4.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Cake.Powershell.0.4.8\lib\net46\Cake.Powershell.dll</HintPath>
     </Reference>

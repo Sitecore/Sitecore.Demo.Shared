@@ -13,12 +13,19 @@ using Cake.Powershell;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Cake.Common.Diagnostics;
+using Cake.Npm;
+using Cake.Npm.Install;
+using Cake.Npm.RunScript;
 
 [assembly: CakeNamespaceImport("System.Text.RegularExpressions")]
 namespace Cake.SitecoreDemo
 {
     public static class CakeSitecoreBuildTasks
     {
+        private const string FrontendDirectoryPath = "./FrontEnd/*";
+        private const string nodeModulesFolder = "node_modules";
+
         [CakeMethodAlias]
         public static void PublishXConnectProjects(this ICakeContext context, bool publishLocal, Configuration config)
         {
@@ -43,7 +50,11 @@ namespace Cake.SitecoreDemo
             context.EnsureDirectoryExists(destination);
             context.Log.Information("Source: " + source);
             context.Log.Information("Destination: " + destination);
-            context.CopyDirectory(source, destination);
+
+            var contentFiles = context.GetFiles($"{source}\\**\\*")
+                .Where(file => !file.FullPath.ToLower().Contains(nodeModulesFolder));
+
+            context.CopyFiles(contentFiles, destination, true);
         }
 
         [CakeMethodAlias]
@@ -336,6 +347,42 @@ namespace Cake.SitecoreDemo
             }
             string[] excludePattern = { "ssl", "azure" };
             context.Transform(publishFolder, "transforms", destination, excludePattern);
+        }
+
+        [CakeMethodAlias]
+        public static void FrontEndNpmInstall(this ICakeContext context)
+        {
+            var directories = context.GetDirectories(FrontendDirectoryPath);
+            foreach (var directory in directories)
+            {
+                var settings = new NpmInstallSettings
+                {
+                    LogLevel = NpmLogLevel.Warn, 
+                    WorkingDirectory = directory
+                };
+                context.NpmInstall(settings);
+
+                var template = System.IO.Path.Combine(directory.ToString(), "npm-shrinkwrap.template.json");
+                var shrinkwrap = System.IO.Path.Combine(directory.ToString(), "npm-shrinkwrap.json");
+                context.DeleteFile(shrinkwrap);
+                context.CopyFile(template, shrinkwrap);
+            }
+        }
+
+        [CakeMethodAlias]
+        public static void FrontEndNpmBuild(this ICakeContext context)
+        {
+            var directories = context.GetDirectories(FrontendDirectoryPath);
+            foreach (var directory in directories)
+            {
+                var settings = new NpmRunScriptSettings
+                {
+                    ScriptName = "build",
+                    LogLevel = NpmLogLevel.Info,
+                    WorkingDirectory = directory
+                };
+                context.NpmRunScript(settings);
+            }
         }
 
         private static string GetDestinationCD(bool publishLocal, Configuration config)
