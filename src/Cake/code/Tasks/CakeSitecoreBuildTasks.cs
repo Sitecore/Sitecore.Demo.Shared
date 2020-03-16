@@ -355,6 +355,12 @@ namespace Cake.SitecoreDemo
             var directories = context.GetDirectories(FrontendDirectoryPath);
             foreach (var directory in directories)
             {
+                // TODO: Remove when we clean up old themes in Platform
+                if (directory.GetDirectoryName().StartsWith("-"))
+                {
+                    continue;
+                }
+
                 var settings = new NpmInstallSettings
                 {
                     LogLevel = NpmLogLevel.Warn, 
@@ -375,6 +381,12 @@ namespace Cake.SitecoreDemo
             var directories = context.GetDirectories(FrontendDirectoryPath);
             foreach (var directory in directories)
             {
+                // TODO: Remove when we clean up old themes in Platform
+                if (directory.GetDirectoryName().StartsWith("-"))
+                {
+                    continue;
+                }
+
                 var settings = new NpmRunScriptSettings
                 {
                     ScriptName = "build",
