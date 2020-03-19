@@ -1,5 +1,9 @@
-﻿@using Sitecore.Demo.Shared.Feature.Accounts
+﻿@using System.Web.Mvc.Html
+@using Sitecore.Demo.Shared.Feature.Accounts
 @using Sitecore.Demo.Shared.Feature.Accounts.Services
+@using Sitecore.Demo.Shared.Foundation.Dictionary.Extensions
+@using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Extensions
+@using Sitecore.Mvc
 @model Sitecore.Demo.Shared.Feature.Accounts.Models.LoginInfo
 <div class="login-body">
     @Html.ValidationMessage("invalidCredentials", new {@class = "alert alert-danger"}, "div")
