@@ -34,11 +34,17 @@ namespace Cake.SitecoreDemo
         [CakeMethodAlias]
         public static void PublishProjects(this ICakeContext context, string rootFolder, string destination, Configuration config, string[] excludePatterns)
         {
+            context.PublishProjects(rootFolder, destination, config, excludePatterns, "code");
+        }
+
+        [CakeMethodAlias]
+        public static void PublishProjects(this ICakeContext context, string rootFolder, string destination, Configuration config, string[] excludePatterns, string projectParentFolderName)
+        {
             var globberSettings = new GlobberSettings();
             bool excludes(IFileSystemInfo fileSystemInfo) => !excludePatterns.Any(s => fileSystemInfo.Path.FullPath.Contains(s));
             globberSettings.FilePredicate = excludes;
 
-            var projects = GlobbingAliases.GetFiles(context, $"{rootFolder}\\**\\code\\*.csproj", globberSettings);
+            var projects = GlobbingAliases.GetFiles(context, $"{rootFolder}\\**\\{projectParentFolderName}\\*.csproj", globberSettings);
             context.Log.Information("Publishing " + rootFolder + " to " + destination);
 
             foreach (var project in projects)
