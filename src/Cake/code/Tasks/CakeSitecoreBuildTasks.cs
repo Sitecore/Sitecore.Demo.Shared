@@ -60,8 +60,14 @@ namespace Cake.SitecoreDemo
         [CakeMethodAlias]
         public static void PublishSourceProjects(this ICakeContext context, bool publishLocal, string srcFolder, Configuration config)
         {
+            context.PublishSourceProjects(publishLocal, srcFolder, config, "code");
+        }
+
+        [CakeMethodAlias]
+        public static void PublishSourceProjects(this ICakeContext context, bool publishLocal, string srcFolder, Configuration config, string projectParentFolderName)
+        {
             var destination = GetDestination(publishLocal, config);
-            context.PublishProjects(srcFolder, destination, config);
+            context.PublishProjects(srcFolder, destination, config, new string[] {}, projectParentFolderName);
         }
 
         [CakeMethodAlias]
@@ -293,6 +299,12 @@ namespace Cake.SitecoreDemo
         [CakeMethodAlias]
         public static void ApplyXmlTransform(this ICakeContext context, Configuration config, bool publishLocal)
         {
+            context.ApplyXmlTransform(config, publishLocal, "code");
+        }
+
+        [CakeMethodAlias]
+        public static void ApplyXmlTransform(this ICakeContext context, Configuration config, bool publishLocal, string projectParentFolderName)
+        {
             var layers = new [] { config.FoundationSrcFolder, config.FeatureSrcFolder, config.ProjectSrcFolder };
             var publishDestination = config.WebsiteRoot;
 
@@ -303,7 +315,7 @@ namespace Cake.SitecoreDemo
 
             foreach (var layer in layers)
             {
-                context.Transform(layer, "code", publishDestination, null);
+                context.Transform(layer, projectParentFolderName, publishDestination, null);
             }
         }
 
