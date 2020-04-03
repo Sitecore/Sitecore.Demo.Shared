@@ -13,7 +13,6 @@ using Cake.Powershell;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Cake.Common.Diagnostics;
 using Cake.Npm;
 using Cake.Npm.Install;
 using Cake.Npm.RunScript;
@@ -44,17 +43,20 @@ namespace Cake.SitecoreDemo
         public static void PublishFrontEndProject(this ICakeContext context, bool publishLocal, Configuration config)
         {
             var source = $"{config.ProjectFolder}\\FrontEnd";
-            var destination = GetDestination(publishLocal, config);
+            var destinations = GetDestinations(publishLocal, config);
 
-            destination = $"{destination}\\App_Data\\FrontEnd\\";
-            context.EnsureDirectoryExists(destination);
-            context.Log.Information("Source: " + source);
-            context.Log.Information("Destination: " + destination);
+            foreach (var destination in destinations)
+            {
+                var frontEndDestination = $"{destination}\\App_Data\\FrontEnd\\";
+                context.EnsureDirectoryExists(frontEndDestination);
+                context.Log.Information("Source: " + source);
+                context.Log.Information("Destination: " + frontEndDestination);
 
-            var contentFiles = context.GetFiles($"{source}\\**\\*")
-                .Where(file => !file.FullPath.ToLower().Contains(nodeModulesFolder));
+                var contentFiles = context.GetFiles($"{source}\\**\\*")
+                    .Where(file => !file.FullPath.ToLower().Contains(nodeModulesFolder));
 
-            context.CopyFiles(contentFiles, destination, true);
+                context.CopyFiles(contentFiles, frontEndDestination, true);
+            }
         }
 
         [CakeMethodAlias]
@@ -66,8 +68,11 @@ namespace Cake.SitecoreDemo
         [CakeMethodAlias]
         public static void PublishSourceProjects(this ICakeContext context, bool publishLocal, string srcFolder, Configuration config, string projectParentFolderName)
         {
-            var destination = GetDestination(publishLocal, config);
-            context.PublishProjects(srcFolder, destination, config, new string[] {}, projectParentFolderName);
+            var destinations = GetDestinations(publishLocal, config);
+            foreach (var destination in destinations)
+            {
+                context.PublishProjects(srcFolder, destination, config, new string[] {}, projectParentFolderName);
+            }
         }
 
         [CakeMethodAlias]
@@ -136,7 +141,7 @@ namespace Cake.SitecoreDemo
         public static void CopyToDestination(this ICakeContext context, bool publishLocal, Configuration config)
         {
 
-            string[] destinations = {GetDestination(publishLocal, config), GetDestinationCD(publishLocal, config)};
+            var destinations = GetDestinations(publishLocal, config);
 
             foreach (string destination in destinations ) 
             {
@@ -408,30 +413,21 @@ namespace Cake.SitecoreDemo
                 context.NpmRunScript(settings);
             }
         }
-
-        private static string GetDestinationCD(bool publishLocal, Configuration config)
+        
+        private static List<string> GetDestinations(bool publishLocal, Configuration config)
         {
-            return GetDestination(publishLocal, true, config);
-        }
-
-        private static string GetDestination(bool publishLocal, Configuration config)
-        {
-            return GetDestination(publishLocal, false, config);
-        }
-
-        private static string GetDestination(bool publishLocal, bool cdTarget, Configuration config)
-        {
-            var destination = config.WebsiteRoot;
-            if (publishLocal)
+            if (!publishLocal)
             {
-                if (cdTarget) {
-                    destination = config.PublishWebFolderCD;
-                } else {
-                    destination = config.PublishWebFolder;
-                }
+                return new List<string>() {config.WebsiteRoot};
             }
 
-            return destination;
+            var destinations = new List<string>() {config.PublishWebFolder};
+            if (!string.IsNullOrEmpty(config.PublishWebFolderCD))
+            {
+                destinations.Add(config.PublishWebFolderCD);
+            }
+
+            return destinations;
         }
     }
 }
