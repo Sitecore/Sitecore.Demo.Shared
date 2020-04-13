@@ -149,6 +149,7 @@
     <None Include="web.azure.config.project.website.xdt" />
     <Content Include="web.config.project.website.appsettings.xdt" />
     <Content Include="web.config.project.website.ssl.xdt" />
+    <Content Include="web.config.encryption.xdt" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

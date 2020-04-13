@@ -176,17 +176,13 @@ namespace Cake.SitecoreDemo
 
             context.Log.Information($"Filter: {serializationFilesFilter} - Destination: {destination}");
 
-            Func<IFileSystemInfo, bool> exclude_build_folder = fileSystemInfo => !fileSystemInfo.Path.FullPath.Contains("Build");
-
             if (!context.DirectoryExists(destination))
             {
                 context.CreateFolder(destination);
             }
             try
             {
-                var files = context.GetFiles(serializationFilesFilter, new GlobberSettings { Predicate = exclude_build_folder })
-                  .Select(x => x.FullPath).ToList();
-
+                var files = context.GetFiles(serializationFilesFilter).Select(x => x.FullPath).ToList();
                 context.CopyFiles(files, destination, preserveFolderStructure: true);
             }
             catch (Exception ex)
@@ -311,6 +307,9 @@ namespace Cake.SitecoreDemo
         public static void ApplyXmlTransform(this ICakeContext context, Configuration config, bool publishLocal, string projectParentFolderName)
         {
             var layers = new [] { config.FoundationSrcFolder, config.FeatureSrcFolder, config.ProjectSrcFolder };
+
+            // Do not apply encryption algorithm change on IIS deployments
+            string[] excludePattern = { "encryption" };
             var publishDestination = config.WebsiteRoot;
 
             if (publishLocal)
@@ -320,7 +319,7 @@ namespace Cake.SitecoreDemo
 
             foreach (var layer in layers)
             {
-                context.Transform(layer, projectParentFolderName, publishDestination, null);
+                context.Transform(layer, projectParentFolderName, publishDestination, excludePattern);
             }
         }
 
@@ -362,7 +361,7 @@ namespace Cake.SitecoreDemo
             {
                 destination = config.PublishWebFolder;
             }
-            string[] excludePattern = { "ssl", "azure" };
+            string[] excludePattern = { "ssl", "azure", "encryption" };
             context.Transform(publishFolder, "transforms", destination, excludePattern);
         }
 
