@@ -307,6 +307,9 @@ namespace Cake.SitecoreDemo
         public static void ApplyXmlTransform(this ICakeContext context, Configuration config, bool publishLocal, string projectParentFolderName)
         {
             var layers = new [] { config.FoundationSrcFolder, config.FeatureSrcFolder, config.ProjectSrcFolder };
+
+            // Do not apply encryption algorithm change on IIS deployments
+            string[] excludePattern = { "encryption" };
             var publishDestination = config.WebsiteRoot;
 
             if (publishLocal)
@@ -316,7 +319,7 @@ namespace Cake.SitecoreDemo
 
             foreach (var layer in layers)
             {
-                context.Transform(layer, projectParentFolderName, publishDestination, null);
+                context.Transform(layer, projectParentFolderName, publishDestination, excludePattern);
             }
         }
 
@@ -358,7 +361,7 @@ namespace Cake.SitecoreDemo
             {
                 destination = config.PublishWebFolder;
             }
-            string[] excludePattern = { "ssl", "azure" };
+            string[] excludePattern = { "ssl", "azure", "encryption" };
             context.Transform(publishFolder, "transforms", destination, excludePattern);
         }
 

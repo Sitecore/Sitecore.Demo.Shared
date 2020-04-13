@@ -201,18 +201,21 @@ namespace Cake.SitecoreDemo
                 fileToTransform = ((FilePath)$"{source}").GetRelativePath((FilePath)fileToTransform);
                 FilePath sourceTransform = $"{(FilePath)fileToTransform}";
 
-                var targetTansformPath = ((DirectoryPath)destination).CombineWithFilePath((FilePath)sourceTransform);
+                var targetTransformPath = ((DirectoryPath)destination).CombineWithFilePath((FilePath)sourceTransform);
+                context.Log.Information($"Target transform path: {targetTransformPath}");
 
-                if (!context.FileExists(targetTansformPath))
+                if (!context.FileExists(targetTransformPath))
                 {
-                    CreateFolder(context, targetTansformPath.GetDirectory().FullPath);
-                    context.CopyFile(xdtFilePath.FullPath, targetTansformPath);
+                    CreateFolder(context, targetTransformPath.GetDirectory().FullPath);
+                    context.Log.Information($"Copying: {xdtFilePath.FullPath} to {targetTransformPath}");
+
+                    context.CopyFile(xdtFilePath.FullPath, targetTransformPath);
                 }
                 else
                 {
-                    CakeXmlHelper.MergeFile(targetTansformPath.FullPath       // Source File
-                        , xdtFilePath.FullPath            // Tranforms file (*.xdt)
-                        , targetTansformPath.FullPath);       // Target File
+                    CakeXmlHelper.MergeFile(targetTransformPath.FullPath       // Source File
+                        , xdtFilePath.FullPath            // Transforms file (*.xdt)
+                        , targetTransformPath.FullPath);       // Target File
                 }
             }
         }
