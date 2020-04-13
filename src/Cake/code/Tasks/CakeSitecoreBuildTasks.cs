@@ -176,17 +176,13 @@ namespace Cake.SitecoreDemo
 
             context.Log.Information($"Filter: {serializationFilesFilter} - Destination: {destination}");
 
-            Func<IFileSystemInfo, bool> exclude_build_folder = fileSystemInfo => !fileSystemInfo.Path.FullPath.Contains("Build");
-
             if (!context.DirectoryExists(destination))
             {
                 context.CreateFolder(destination);
             }
             try
             {
-                var files = context.GetFiles(serializationFilesFilter, new GlobberSettings { Predicate = exclude_build_folder })
-                  .Select(x => x.FullPath).ToList();
-
+                var files = context.GetFiles(serializationFilesFilter).Select(x => x.FullPath).ToList();
                 context.CopyFiles(files, destination, preserveFolderStructure: true);
             }
             catch (Exception ex)
