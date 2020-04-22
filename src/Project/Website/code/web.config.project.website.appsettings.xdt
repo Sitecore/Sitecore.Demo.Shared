@@ -4,9 +4,9 @@
     <!-- SUPPORTED ENVIRONMENTS
          Local
          Production
-    Default value: Local
+    Default value: Production
     -->
-    <add key="env:define" value="Local" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
+    <add key="env:define" value="Production" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
 
     <!-- UNICORN MODE SUPPORTED VALUES
          On
@@ -18,16 +18,16 @@
      <!-- PUBLISHING SERVICE MODE SUPPORTED VALUES
          Enabled
          Disabled
-    Default value: Disabled
+    Default value: Enabled
     -->
-     <add key="publishingservice:define" value="Disabled" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
+     <add key="publishingservice:define" value="Enabled" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
 
      <!-- CONTENT HUB MODE SUPPORTED VALUES
          Enabled
          Disabled
-     Default value: Disabled
+     Default value: Enabled
     -->
-     <add key="contenthub:define" value="Disabled" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
+     <add key="contenthub:define" value="Enabled" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
 
      <!-- THIRD PARTY INTEGRATIONS: SUPPORTED VALUES
          None (disables all)
