@@ -19,7 +19,7 @@ Languages:
     - ID: "2c18e0dc-d31f-437d-8eb2-0b025959e57a"
       Hint: Approvers Role
       Value: |
-        sitecore\Habitat Home Content Approver
+        sitecore\SitecoreDemo Content Approver
     - ID: "42dc6037-ca08-4fc8-8c70-213842d032ea"
       Hint: Subject
       Value: "Demo Shared: Items Awaiting Approval"
@@ -59,7 +59,7 @@ Languages:
     - ID: "2c18e0dc-d31f-437d-8eb2-0b025959e57a"
       Hint: Approvers Role
       Value: |
-        sitecore\Habitat Home Content Approver
+        sitecore\SitecoreDemo Content Approver
     - ID: "42dc6037-ca08-4fc8-8c70-213842d032ea"
       Hint: Subject
       Value: "Demo Shared: Items Awaiting Approval"

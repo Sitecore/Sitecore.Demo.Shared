@@ -8,7 +8,7 @@ BranchID: "f6d87616-5e7c-461a-9d5c-c2bf87deb2a1"
 SharedFields:
 - ID: "8aea46af-f0a9-41d7-a765-4fe09881c1a9"
   Hint: Value
-  Value: Habitat Home Tenant
+  Value: SitecoreDemo Tenant
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{62B9F4C8-D094-4868-A4B7-B0B9DC5B606B}"
