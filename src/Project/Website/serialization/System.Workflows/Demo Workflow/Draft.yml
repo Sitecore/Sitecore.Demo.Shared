@@ -1,4 +1,4 @@
----
+﻿---
 ID: "ff509b64-b6d4-4fb7-9718-c4218b992740"
 Parent: "c6ebe5e6-bce3-4bab-a5f9-16382f8369fe"
 Template: "4b7e2da9-de43-4c83-88c3-02f042031d04"
@@ -35,16 +35,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "c635bd2e-b79a-4fea-99ab-8d991f066cbd"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151402Z
 - Language: "de-DE"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
@@ -60,16 +50,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "4301e5e2-bf91-4990-9d62-b7b0880058d5"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151403Z
 - Language: en
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
@@ -85,16 +65,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "0bbd5ef8-4a49-4bb6-8f88-3fba219cb41d"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151403Z
 - Language: "ja-JP"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
@@ -110,13 +80,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "703be2cb-0b10-4491-8e02-a2a88b1407fe"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151403Z

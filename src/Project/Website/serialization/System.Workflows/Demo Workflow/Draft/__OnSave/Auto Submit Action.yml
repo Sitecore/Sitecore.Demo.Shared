@@ -1,4 +1,4 @@
----
+﻿---
 ID: "deb1b608-bc4f-41f2-b7fd-e098e205a2d9"
 Parent: "b7180972-2314-444a-982e-e0cf7e6a81f5"
 Template: "26c54307-6d31-46cf-a96b-70678c4fef7d"
@@ -34,16 +34,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "aa4ecc92-c250-4bc4-b0be-ebcb40736986"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151404Z
 - Language: "de-DE"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
@@ -59,16 +49,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "1c9fdab8-8170-41c5-b288-1e80eb01f044"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151404Z
 - Language: en
   Versions:
   - Version: 1
@@ -80,16 +60,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "4d0204d4-8c98-43b3-97e0-f3a3357221f6"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151404Z
 - Language: "ja-JP"
   Fields:
   - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
@@ -105,13 +75,3 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "8037a35a-1cc0-47f0-b46f-dfbf72c3036a"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151404Z

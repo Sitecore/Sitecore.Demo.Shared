@@ -1,4 +1,4 @@
----
+﻿---
 ID: "1640a48f-19bd-4c7a-83e7-39567fa1263a"
 Parent: "40f27bd8-433d-442f-a047-a0285f3a232f"
 Template: "f7a56f00-e12e-49ce-af4f-a92b2529618d"
@@ -27,16 +27,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "937fcdd5-de4c-446b-ab4f-dad7befa6011"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151404Z
     - ID: "e8f76062-0990-4b8b-860e-de4f50eb76ea"
       Hint: Message
       Value: |
@@ -67,16 +57,6 @@ Languages:
       Hint: __Created by
       Value: |
         sitecore\admin
-    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
-      Hint: __Revision
-      Value: "22479c12-9ffa-4863-8d3e-1f9cdf140bf2"
-    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
-      Hint: __Updated by
-      Value: |
-        sitecore\unicorn
-    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
-      Hint: __Updated
-      Value: 20190530T151404Z
     - ID: "e8f76062-0990-4b8b-860e-de4f50eb76ea"
       Hint: Message
       Value: |
