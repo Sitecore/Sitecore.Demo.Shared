@@ -221,6 +221,22 @@ namespace Cake.SitecoreDemo
         }
 
         [CakeMethodAlias]
+        public static void ModifyContentHubVariable(this ICakeContext context, Configuration config)
+        {
+            var webConfigFile = context.File($"{config.PublishWebFolder}/web.config");
+            var xmlSetting = new XmlPokeSettings
+            {
+                Namespaces = new Dictionary<string, string> {
+                    {"patch", @"http://www.sitecore.net/xmlconfig/"}
+                }
+            };
+
+            var appSetting = "configuration/appSettings/add[@key='contenthub:define']/@value";
+            var appSettingValue = config.IsContentHubEnabled ? "Enabled" : "Disabled";
+            context.XmlPoke(webConfigFile, appSetting, appSettingValue, xmlSetting);
+        }
+
+        [CakeMethodAlias]
         public static void ModifyPublishSettings(this ICakeContext context, Configuration config)
         {
             var publishSettingsOriginal = context.File($"{config.ProjectFolder}/publishsettings.targets");

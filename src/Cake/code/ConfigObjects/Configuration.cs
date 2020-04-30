@@ -40,6 +40,7 @@ namespace Cake.SitecoreDemo
         public string PublishxConnectFolder { get; set; }
         public string PublishxConnectIndexWorkerFolder { get; set; }
         public string PublishDataFolder { get; set; }
+        public bool IsContentHubEnabled { get; set; }
 
         public MSBuildToolVersion MSBuildToolVersion => this._msBuildToolVersion;
         public string BuildTargets => this.RunCleanBuilds ? "Clean;Build" : "Build";

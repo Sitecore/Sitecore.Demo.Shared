@@ -25,9 +25,9 @@
      <!-- CONTENT HUB MODE SUPPORTED VALUES
          Enabled
          Disabled
-     Default value: Enabled
+     Default value: Disabled
     -->
-     <add key="contenthub:define" value="Enabled" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
+     <add key="contenthub:define" value="Disabled" xdt:Transform="InsertIfMissing" xdt:Locator="Match(key)"/>
 
      <!-- THIRD PARTY INTEGRATIONS: SUPPORTED VALUES
          None (disables all)
