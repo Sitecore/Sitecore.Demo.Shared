@@ -3,89 +3,81 @@ using Cake.Common.Tools.DotNetCore;
 using Cake.Common.Tools.DotNetCore.MSBuild;
 using Cake.Common.Tools.DotNetCore.Publish;
 using Cake.Common.Tools.DotNetCore.Restore;
+using Cake.Common.Tools.MSBuild;
 using Cake.Common.Xml;
 using Cake.Core;
 using Cake.Core.Annotations;
 using Cake.Core.Diagnostics;
 using Cake.Core.IO;
 using Cake.Http;
-using Cake.Powershell;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Cake.Npm;
 using Cake.Npm.Install;
 using Cake.Npm.RunScript;
+using Cake.Powershell;
+using System;
+using System.Collections.Generic;
+using System.EnterpriseServices.Internal;
+using System.Linq;
+
 
 [assembly: CakeNamespaceImport("System.Text.RegularExpressions")]
 namespace Cake.SitecoreDemo
 {
     public static class CakeSitecoreBuildTasks
     {
-        private const string FrontendDirectoryPath = "./FrontEnd/*";
         private const string nodeModulesFolder = "node_modules";
 
         [CakeMethodAlias]
-        public static void PublishXConnectProjects(this ICakeContext context, bool publishLocal, Configuration config)
+        public static void PublishFrontEndProject(this ICakeContext context, string sourceFolder, string publishFolder)
         {
-            var xConnectProject = $"{config.ProjectSrcFolder}\\xConnect";
-            context.PublishProjects(xConnectProject, config.PublishxConnectFolder, config);
-        }
-
-        [CakeMethodAlias]
-        public static void PublishFrontEndProject(this ICakeContext context, bool publishLocal, Configuration config)
-        {
-            var source = $"{config.ProjectFolder}\\FrontEnd";
-            var frontEndDestination = $"{config.PublishWebFolder}\\App_Data\\FrontEnd\\";
+            var frontEndDestination = $"{publishFolder}\\App_Data\\FrontEnd\\";
             context.EnsureDirectoryExists(frontEndDestination);
-            context.Log.Information("Source: " + source);
+            context.Log.Information("Source: " + sourceFolder);
             context.Log.Information("Destination: " + frontEndDestination);
 
-            var contentFiles = context.GetFiles($"{source}\\**\\*")
+            var contentFiles = context.GetFiles($"{sourceFolder}\\**\\*")
               .Where(file => !file.FullPath.ToLower().Contains(nodeModulesFolder));
 
             context.CopyFiles(contentFiles, frontEndDestination, true);
         }
 
         [CakeMethodAlias]
-        public static void PublishSourceProjects(this ICakeContext context, bool publishLocal, string srcFolder, Configuration config)
+        public static void PublishSourceProjects(this ICakeContext context, Configuration config, string sourceFolder, string[] publishFolders)
         {
-            context.PublishSourceProjects(publishLocal, srcFolder, config, "code");
+            context.PublishSourceProjects(config, sourceFolder, publishFolders, "code");
         }
 
         [CakeMethodAlias]
-        public static void PublishSourceProjects(this ICakeContext context, bool publishLocal, string srcFolder, Configuration config, string projectParentFolderName)
+        public static void PublishSourceProjects(this ICakeContext context, Configuration config, string sourceFolder, string[] publishFolders, string projectParentFolderName)
         {
-            var destinations = GetDestinations(config);
-            foreach (var destination in destinations)
+            foreach (var publishFolder in publishFolders)
             {
-                context.PublishProjects(srcFolder, destination, config, new string[] {}, projectParentFolderName);
+                context.PublishProjects(config, sourceFolder, publishFolder, new string[] {}, projectParentFolderName);
             }
         }
 
         [CakeMethodAlias]
-        public static void PublishCoreProject(this ICakeContext context, string projectFile, bool publishLocal, Configuration config)
+        public static void PublishCoreProject(this ICakeContext context, Configuration config, string projectFile, string publishFolder)
         {
-            var publishFolder = $"{config.PublishTempFolder}";
-            DotNetCoreRestore(context, config, projectFile);
-            DotNetCorePublish(context, config, projectFile, publishFolder);
+            DotNetCoreRestore(context, projectFile, config.BuildConfiguration);
+            DotNetCorePublish(context, projectFile, publishFolder, config.BuildConfiguration);
         }
 
-        private static void DotNetCorePublish(ICakeContext context, Configuration config, string projectFile, string publishFolder)
+        private static void DotNetCorePublish(ICakeContext context, string projectFile, string publishFolder, string buildConfiguration)
         {
             var settings = new DotNetCorePublishSettings
             {
                 OutputDirectory = publishFolder,
-                Configuration = config.BuildConfiguration
+                Configuration = buildConfiguration
             };
 
             context.DotNetCorePublish(projectFile, settings);
         }
 
-        private static void DotNetCoreRestore(ICakeContext context, Configuration config, string projectFile)
+        private static void DotNetCoreRestore(ICakeContext context, string projectFile, string buildConfiguration)
         {
             DotNetCoreMSBuildSettings buildSettings = new DotNetCoreMSBuildSettings();
-            buildSettings.SetConfiguration(config.BuildConfiguration);
+            buildSettings.SetConfiguration(buildConfiguration);
 
             DotNetCoreRestoreSettings restoreSettings = new DotNetCoreRestoreSettings
             {
@@ -115,51 +107,51 @@ namespace Cake.SitecoreDemo
             context.CopyFiles(contentFiles, directoryPath1, true);
         }
 
-        private static void CopyAssemblyFilesToDestination(ICakeContext context, string destination, string publishFolder)
+        private static void CopyAssemblyFilesToDestination(ICakeContext context, string sourceFolder, string publishFolder)
         {
-            var assemblyFilesFilter = $@"{publishFolder}\*.dll";
+            var assemblyFilesFilter = $@"{sourceFolder}\*.dll";
+            var pdbFilesFilter = $@"{sourceFolder}\*.pdb";
             var assemblyFiles = context.GetFiles(assemblyFilesFilter).Select(x => x.FullPath).ToList();
-            context.EnsureDirectoryExists(destination + "\\bin");
+            var pdbFiles = context.GetFiles(pdbFilesFilter).Select(x => x.FullPath).ToList();
+            context.EnsureDirectoryExists(publishFolder + "\\bin");
 
-            DirectoryPath directoryPath = new DirectoryPath(destination + "\\bin");
+            DirectoryPath directoryPath = new DirectoryPath(publishFolder + "\\bin");
             context.CopyFiles(assemblyFiles, directoryPath, preserveFolderStructure: false);
+            context.CopyFiles(pdbFiles, directoryPath, preserveFolderStructure: false);
         }
 
         [CakeMethodAlias]
-        public static void CopyToDestination(this ICakeContext context, bool publishLocal, Configuration config)
+        public static void CopyToDestination(this ICakeContext context, string sourceFolder, string[] publishFolders)
         {
-            var destinations = GetDestinations(config);
-
-            foreach (string destination in destinations ) 
+            foreach (var publishFolder in publishFolders )
             {
-                if (!string.IsNullOrEmpty(destination)) {
-                    
-                    var publishFolder = $"{config.PublishTempFolder}";
-                    context.Log.Information("Destination: " + destination);
+                if (!string.IsNullOrEmpty(publishFolder)) {
+
+                    context.Log.Information("Destination: " + publishFolder);
 
                     // Copy assembly files to publish destination
-                    CopyAssemblyFilesToDestination(context, destination, publishFolder);
+                    CopyAssemblyFilesToDestination(context, sourceFolder, publishFolder);
 
                     // Copy other output files to publish destination
-                    CopyOtherOutputFilesToDestination(context, destination, publishFolder);
-                } 
+                    CopyOtherOutputFilesToDestination(context, sourceFolder, publishFolder);
+                }
             }
         }
 
         [CakeMethodAlias]
-        public static void CopySitecoreLib(this ICakeContext context, Configuration config)
+        public static void CopySitecoreLib(this ICakeContext context, string sourceFolder)
         {
-            var files = context.GetFiles($"{config.PublishWebFolder}/bin/Sitecore*.dll");
+            var files = context.GetFiles($"{sourceFolder}/Sitecore*.dll");
             var destination = "./lib";
             context.EnsureDirectoryExists(destination);
             context.CopyFiles(files, destination);
         }
 
         [CakeMethodAlias]
-        public static void PublishYML(this ICakeContext context, Configuration config)
+        public static void PublishYML(this ICakeContext context, string itemsRoot, string publishFolder)
         {
-            var serializationFilesFilter = $@"{config.ProjectFolder}\items\**\*.yml";
-            var destination = $@"{config.PublishTempFolder}\yml";
+            var serializationFilesFilter = $@"{itemsRoot}\**\*.yml";
+            var destination = $@"{publishFolder}\yml";
 
             context.Log.Information($"Filter: {serializationFilesFilter} - Destination: {destination}");
 
@@ -180,35 +172,35 @@ namespace Cake.SitecoreDemo
         }
 
         [CakeMethodAlias]
-        public static void CreateUpdatePackage(this ICakeContext context, Configuration config, string packagingScript)
+        public static void CreateUpdatePackage(this ICakeContext context, string publishFolder, string packagingScript)
         {
             context.StartPowershellFile(packagingScript, new PowershellSettings()
                 .SetLogOutput()
                 .WithArguments(args =>
                 {
-                    args.Append("target", $"{config.PublishTempFolder}\\yml")
-                        .Append("output", $"{config.PublishTempFolder}\\update\\package.update");
+                    args.Append("target", $"{publishFolder}\\yml")
+                        .Append("output", $"{publishFolder}\\update\\package.update");
                 }));
         }
 
         [CakeMethodAlias]
-        public static void GenerateDacpacs(this ICakeContext context, Configuration config, string dacpacScript)
+        public static void GenerateDacpacs(this ICakeContext context, string sitecoreAzureToolkitPath, string sourceFolder, string publishFolder, string dacpacScript)
         {
             context.StartPowershellFile(dacpacScript, new PowershellSettings()
                .SetLogOutput()
                .WithArguments(args =>
                {
-                   args.Append("SitecoreAzureToolkitPath", $"{config.SitecoreAzureToolkitPath}")
-                  .Append("updatePackagePath", $"{config.PublishTempFolder}\\update\\package.update")
-                  .Append("securityPackagePath", $"{config.PublishTempFolder}\\update\\security.dacpac")
-                  .Append("destinationPath", $"{config.PublishDataFolder}");
+                   args.Append("SitecoreAzureToolkitPath", $"{sitecoreAzureToolkitPath}")
+                  .Append("updatePackagePath", $"{sourceFolder}\\update\\package.update")
+                  .Append("securityPackagePath", $"{sourceFolder}\\update\\security.dacpac")
+                  .Append("destinationPath", $"{publishFolder}");
                }));
         }
 
         [CakeMethodAlias]
-        public static void TurnOnUnicorn(this ICakeContext context, Configuration config)
+        public static void TurnOnUnicorn(this ICakeContext context, string publishFolder)
         {
-            var webConfigFile = context.File($"{config.PublishWebFolder}/web.config");
+            var webConfigFile = context.File($"{publishFolder}/web.config");
             var xmlSetting = new XmlPokeSettings
             {
                 Namespaces = new Dictionary<string, string> {
@@ -221,9 +213,9 @@ namespace Cake.SitecoreDemo
         }
 
         [CakeMethodAlias]
-        public static void ModifyContentHubVariable(this ICakeContext context, Configuration config)
+        public static void ModifyContentHubVariable(this ICakeContext context, string publishFolder, bool isContentHubEnabled)
         {
-            var webConfigFile = context.File($"{config.PublishWebFolder}/web.config");
+            var webConfigFile = context.File($"{publishFolder}/web.config");
             var xmlSetting = new XmlPokeSettings
             {
                 Namespaces = new Dictionary<string, string> {
@@ -232,15 +224,15 @@ namespace Cake.SitecoreDemo
             };
 
             var appSetting = "configuration/appSettings/add[@key='contenthub:define']/@value";
-            var appSettingValue = config.IsContentHubEnabled ? "Enabled" : "Disabled";
+            var appSettingValue = isContentHubEnabled ? "Enabled" : "Disabled";
             context.XmlPoke(webConfigFile, appSetting, appSettingValue, xmlSetting);
         }
 
         [CakeMethodAlias]
-        public static void ModifyPublishSettings(this ICakeContext context, Configuration config)
+        public static void ModifyPublishSettings(this ICakeContext context, string projectFolder, string instanceUrl)
         {
-            var publishSettingsOriginal = context.File($"{config.ProjectFolder}/publishsettings.targets");
-            var destination = $"{config.ProjectFolder}/publishsettings.targets.user";
+            var publishSettingsOriginal = context.File($"{projectFolder}/publishsettings.targets");
+            var destination = $"{projectFolder}/publishsettings.targets.user";
 
             context.CopyFile(publishSettingsOriginal, destination);
 
@@ -255,16 +247,16 @@ namespace Cake.SitecoreDemo
             };
 
             context.XmlPoke(destination, importXPath, null, xmlSetting);
-            context.XmlPoke(destination, publishUrlPath, $"{config.InstanceUrl}", xmlSetting);
+            context.XmlPoke(destination, publishUrlPath, $"{instanceUrl}", xmlSetting);
         }
 
         [CakeMethodAlias]
-        public static void SyncUnicorn(this ICakeContext context, Configuration config, string unicornSyncScript)
+        public static void SyncUnicorn(this ICakeContext context, string instanceUrl, string publishFolder, string unicornSyncScript)
         {
-            var unicornUrl = config.InstanceUrl + "/unicorn.aspx";
+            var unicornUrl = instanceUrl + "/unicorn.aspx";
             context.Log.Information("Sync Unicorn items from url: " + unicornUrl);
 
-            var authenticationFile = new FilePath($"{config.PublishWebFolder}/App_config/Include/Unicorn/Unicorn.zSharedSecret.config");
+            var authenticationFile = new FilePath($"{publishFolder}/App_config/Include/Unicorn/Unicorn.zSharedSecret.config");
             var xPath = "/configuration/sitecore/unicorn/authenticationProvider/SharedSecret";
             string sharedSecret = context.XmlPeek(authenticationFile, xPath);
 
@@ -278,22 +270,19 @@ namespace Cake.SitecoreDemo
         }
 
         [CakeMethodAlias]
-        public static void MergeAndCopyXmlTransform(this ICakeContext context, Configuration config)
+        public static void MergeAndCopyXmlTransform(this ICakeContext context, string[] layersFolders, string sourceFolder, string publishFolder)
         {
             // Method will process all transforms from the temporary locations, merge them together and copy them to the temporary Publish\Web directory
             string[] excludePattern = {"ssl", "azure"};
-            var PublishTempFolder = $"{config.PublishTempFolder}";
-            var publishFolder = $"{config.PublishWebFolder}";
 
-            context.Log.Information($"Merging {PublishTempFolder}\\transforms to {publishFolder}");
+            context.Log.Information($"Merging {sourceFolder}\\transforms to {publishFolder}");
 
             // Processing dotnet core transforms from NuGet references
-            context.MergeTransforms($"{PublishTempFolder}\\transforms", $"{publishFolder}", excludePattern);
+            context.MergeTransforms($"{sourceFolder}\\transforms", $"{publishFolder}", excludePattern);
 
             // Processing project transformations
-            var layers = new[] {config.FoundationSrcFolder, config.FeatureSrcFolder, config.ProjectSrcFolder};
 
-            foreach (var layer in layers)
+            foreach (var layer in layersFolders)
             {
               context.Log.Information($"Merging {layer} to {publishFolder}");
               context.MergeTransforms(layer, publishFolder, excludePattern);
@@ -301,28 +290,26 @@ namespace Cake.SitecoreDemo
         }
 
         [CakeMethodAlias]
-        public static void ApplyXmlTransform(this ICakeContext context, Configuration config, bool publishLocal)
+        public static void ApplyXmlTransform(this ICakeContext context, string[] layersFolders, string publishFolder)
         {
-            context.ApplyXmlTransform(config, publishLocal, "code");
+            context.ApplyXmlTransform(layersFolders, publishFolder, "code");
         }
 
         [CakeMethodAlias]
-        public static void ApplyXmlTransform(this ICakeContext context, Configuration config, bool publishLocal, string projectParentFolderName)
+        public static void ApplyXmlTransform(this ICakeContext context, string[] layersFolders, string publishFolder, string projectParentFolderName)
         {
-            var layers = new [] { config.FoundationSrcFolder, config.FeatureSrcFolder, config.ProjectSrcFolder };
-
             // Do not apply encryption algorithm change on IIS deployments
             string[] excludePattern = { "encryption" };
-            foreach (var layer in layers)
+            foreach (var layer in layersFolders)
             {
-                context.Transform(layer, projectParentFolderName, config.PublishWebFolder, excludePattern);
+                context.Transform(layer, projectParentFolderName, publishFolder, excludePattern);
             }
         }
 
         [CakeMethodAlias]
-        public static void DeployMarketingDefinitions(this ICakeContext context, Configuration config)
+        public static void DeployMarketingDefinitions(this ICakeContext context, string instanceUrl, string marketingDefinitionsApiKey)
         {
-            var url = $"{config.InstanceUrl}/utilities/deploymarketingdefinitions.aspx?apiKey={config.MarketingDefinitionsApiKey}";
+            var url = $"{instanceUrl}/utilities/deploymarketingdefinitions.aspx?apiKey={marketingDefinitionsApiKey}";
             var responseBody = context.HttpGet(url, settings =>
             {
                 settings.AppendHeader("Connection", "keep-alive");
@@ -332,10 +319,10 @@ namespace Cake.SitecoreDemo
         }
 
         [CakeMethodAlias]
-        public static void ModifyUnicornSourceFolder(this ICakeContext context, Configuration config, string DevSettingsFile, string sourceFolderName)
+        public static void ModifyUnicornSourceFolder(this ICakeContext context, string unicornSerializationFolder, string DevSettingsFile, string sourceFolderName)
         {
             var rootXPath = "configuration/sitecore/sc.variable[@name='{0}']/@value";
-            var directoryPath = FileAliases.MakeAbsolute(context, config.UnicornSerializationFolder).FullPath;
+            var directoryPath = FileAliases.MakeAbsolute(context, unicornSerializationFolder).FullPath;
             var sourceFolderXPath = string.Format(rootXPath, sourceFolderName);
 
             var xmlSetting = new XmlPokeSettings
@@ -349,17 +336,16 @@ namespace Cake.SitecoreDemo
         }
 
         [CakeMethodAlias]
-        public static void ApplyDotnetCoreTransforms(this ICakeContext context, Configuration config, bool publishLocal)
+        public static void ApplyDotnetCoreTransforms(this ICakeContext context, string sourceFolder, string publishFolder)
         {
-            var publishFolder = $"{config.PublishTempFolder}";
             string[] excludePattern = { "ssl", "azure", "encryption" };
-            context.Transform(publishFolder, "transforms", config.PublishWebFolder, excludePattern);
+            context.Transform(sourceFolder, "transforms", publishFolder, excludePattern);
         }
 
         [CakeMethodAlias]
-        public static void FrontEndNpmInstall(this ICakeContext context)
+        public static void FrontEndNpmInstall(this ICakeContext context, string frontEndPath)
         {
-            var directories = context.GetDirectories(FrontendDirectoryPath);
+            var directories = context.GetDirectories(frontEndPath);
             foreach (var directory in directories)
             {
                 // TODO: Remove when we clean up old themes in Platform
@@ -370,7 +356,7 @@ namespace Cake.SitecoreDemo
 
                 var settings = new NpmInstallSettings
                 {
-                    LogLevel = NpmLogLevel.Warn, 
+                    LogLevel = NpmLogLevel.Warn,
                     WorkingDirectory = directory
                 };
                 context.NpmInstall(settings);
@@ -383,9 +369,9 @@ namespace Cake.SitecoreDemo
         }
 
         [CakeMethodAlias]
-        public static void FrontEndNpmBuild(this ICakeContext context)
+        public static void FrontEndNpmBuild(this ICakeContext context, string frontEndPath)
         {
-            var directories = context.GetDirectories(FrontendDirectoryPath);
+            var directories = context.GetDirectories(frontEndPath);
             foreach (var directory in directories)
             {
                 // TODO: Remove when we clean up old themes in Platform
@@ -402,17 +388,6 @@ namespace Cake.SitecoreDemo
                 };
                 context.NpmRunScript(settings);
             }
-        }
-        
-        private static List<string> GetDestinations(Configuration config)
-        {
-            var destinations = new List<string>() {config.PublishWebFolder};
-            if (!string.IsNullOrEmpty(config.PublishWebFolderCD))
-            {
-                destinations.Add(config.PublishWebFolderCD);
-            }
-
-            return destinations;
         }
     }
 }

@@ -26,19 +26,19 @@ namespace Cake.SitecoreDemo
         }
 
         [CakeMethodAlias]
-        public static void PublishProjects(this ICakeContext context, string rootFolder, string destination, Configuration config)
+        public static void PublishProjects(this ICakeContext context, Configuration config, string rootFolder, string destination)
         {
-            context.PublishProjects(rootFolder, destination, config, new string[] {});
+            context.PublishProjects(config, rootFolder, destination, new string[] {});
         }
 
         [CakeMethodAlias]
-        public static void PublishProjects(this ICakeContext context, string rootFolder, string destination, Configuration config, string[] excludePatterns)
+        public static void PublishProjects(this ICakeContext context, Configuration config, string rootFolder, string destination, string[] excludePatterns)
         {
-            context.PublishProjects(rootFolder, destination, config, excludePatterns, "code");
+            context.PublishProjects(config, rootFolder, destination, excludePatterns, "code");
         }
 
         [CakeMethodAlias]
-        public static void PublishProjects(this ICakeContext context, string rootFolder, string destination, Configuration config, string[] excludePatterns, string projectParentFolderName)
+        public static void PublishProjects(this ICakeContext context, Configuration config, string rootFolder, string destination, string[] excludePatterns, string projectParentFolderName)
         {
             var globberSettings = new GlobberSettings();
             bool excludes(IFileSystemInfo fileSystemInfo) => !excludePatterns.Any(s => fileSystemInfo.Path.FullPath.Contains(s));
@@ -49,7 +49,7 @@ namespace Cake.SitecoreDemo
 
             foreach (var project in projects)
             {
-                context.MSBuild(project, cfg => InitializeMSBuildSettingsInternal(context, cfg, config)
+                context.MSBuild(project, cfg => InitializeMSBuildSettingsInternal(context, config, cfg)
                   .WithTarget(config.BuildTargets)
                   .WithProperty("DeployOnBuild", "true")
                   .WithProperty("DeployDefaultTarget", "WebPublish")
@@ -98,7 +98,7 @@ namespace Cake.SitecoreDemo
         }
 
         [CakeMethodAlias]
-        public static void RebuildIndex(this ICakeContext context, string indexName, Configuration config)
+        public static void RebuildIndex(this ICakeContext context, Configuration config, string indexName)
         {
             var url = $"{config.InstanceUrl}/utilities/indexrebuild.aspx?index={indexName}";
             string responseBody = context.HttpGet(url);
@@ -116,14 +116,14 @@ namespace Cake.SitecoreDemo
         }
 
         [CakeMethodAlias]
-        public static MSBuildSettings InitializeMSBuildSettings(this ICakeContext context, MSBuildSettings settings, Configuration config)
+        public static MSBuildSettings InitializeMSBuildSettings(this ICakeContext context,Configuration config, MSBuildSettings settings)
         {
-            InitializeMSBuildSettingsInternal(context, settings, config)
+            InitializeMSBuildSettingsInternal(context, config, settings)
               .WithRestore();
             return settings;
         }
 
-        private static MSBuildSettings InitializeMSBuildSettingsInternal(this ICakeContext context, MSBuildSettings settings, Configuration config)
+        private static MSBuildSettings InitializeMSBuildSettingsInternal(this ICakeContext context, Configuration config, MSBuildSettings settings)
         {
             settings.SetConfiguration(config.BuildConfiguration)
               .SetVerbosity(Verbosity.Minimal)

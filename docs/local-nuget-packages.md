@@ -2,20 +2,24 @@
 
 When you are working on a project that consumes the public Sitecore.Demo.Shared NuGet packages, you might need to apply some changes to the shared code or items. In that case, you must generate local NuGet packages and use them.
 
+## Prerequisites
+
+Install GitVersion by running `choco install GitVersion.Portable`
+
 ## Generating Local NuGet Packages
 
-### Building the Solutions
+### Starting the Local NuGet Server
+
+1. Open a PowerShell prompt as adminstrator in the `\Build\nuget-server` folder.
+2. Run `docker-compose up -d`
+
+### Building the Solutions and Generating Their Packages
 
 1. Adjust the values in the `cake-config.json` file if needed.
 2. Open a PowerShell prompt as adminstrator.
-3. Run the `.\build.ps1` command.
-
-### Generating the Packages
-
-1. Open a PowerShell prompt as adminstrator in the `\Build` folder.
-2. Run the `.\generate-nuget-packages.ps1` command as is or with optional parameters:
-    - `-version <version>`: Generated packages version. Should be a high number. Default value is using 999 for the last digit (e.g.: 9.3.0.999).
-    - `-outputPath <path>`: Location where the packages are saved. Default value is `C:\sc_demo`
+3. Run the `.\build.ps1 -PushLocalNuget` command.
+4. Browse to your [local NuGet service](http://localhost:5555/v2/index.json) to see the published packages.
+   - Packages are also saved in `C:\sc_demo`
 
 ## Consuming Local NuGet Packages
 
@@ -27,20 +31,13 @@ When you are working on a project that consumes the public Sitecore.Demo.Shared 
     ```xml
     <configuration>
       <packageSources>
-        <add key="sc_demo" value="C:\sc_demo" />
+        <add key="sc_demo" value="http://localhost:5555/v2/index.json" />
         ...
       </packageSources>
     </configuration>
     ```
 
 3. Save the file.
-
-### Deleting old NuGet Packages
-
-1. In your solution folder, navigate to the `packages` folder.
-2. Delete all folders that start with `sitecore.demo*`.
-3. Navigate to your global NuGet cache (`C:\Users\[YourUsername]\.nuget\packages`).
-4. Delete all folders that start with `sitecore.demo*`.
 
 ### Restoring NuGet Packages
 
@@ -59,9 +56,18 @@ Do your work against your local NuGet Packages.
 2. Remove the local package source.
 3. Save the file.
 
-### Deleting the Local Packages
+### Deleting the Local Packages From a Solution
 
 1. In your solution folder, navigate to the `packages` folder.
 2. Delete all folders that start with `sitecore.demo*`.
 3. Navigate to your global NuGet cache (`C:\Users\[YourUsername]\.nuget\packages`).
 4. Delete all folders that start with `sitecore.demo*`.
+
+## Deleting All Packages From the Local NuGet Server
+
+1. Open a PowerShell prompt as adminstrator in the `\Build\nuget-server` folder.
+2. Run `docker-compose down`
+3. Ensure you have committed all pending changes in the repository.
+4. Run `git clean -Xdf`
+   - Uppercase `X` is important to avoid deleting new files tracked in Git.
+5. Restart the Local NuGet server by running `docker-compose up -d`

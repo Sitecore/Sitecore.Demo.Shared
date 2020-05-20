@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  nuget:
+    image:  ${REGISTRY}demo-build-nuget:latest
+    build:
+      context: .
+      args:
+        NODEJS_VERSION: v10.16.0
+        BAGET_TAG: v0.3.0-preview2
+    container_name: nuget
+    ports:
+      - 5555:80
+    environment:
+      - ApiKey=${ApiKey}
+      - Storage__Type=${Storage__Type}
+      - Storage__Path=${Storage__Path}
+      - Database__Type=${Database__Type}
+      - Database__ConnectionString=${Database__ConnectionString}
+      - Search__Type=${Search__Type}
+    volumes:
+      - ./baget-data:c:\var\baget
+    network_mode: nat
