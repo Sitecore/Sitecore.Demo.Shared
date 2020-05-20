@@ -29,7 +29,7 @@ Get-ChildItem -Path (Resolve-Path $nuspecPath) | ForEach-Object {
 }
 if ($pushLocalNuget) {
   Get-ChildItem -Path (Resolve-Path $outputPath) | ForEach-Object {
-    & $nugetPath push -Source http://localhost:5555/v3/index.json -ApiKey 112212 $_.FullName
+    & $nugetPath push -Source http://localhost:5555/v3/index.json -ApiKey 121212 $_.FullName
   }
 
 }

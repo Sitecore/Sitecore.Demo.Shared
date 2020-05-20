@@ -249,7 +249,7 @@ if ($Configuration) { $cakeArguments += "-configuration=$Configuration" }
 if ($Verbosity) { $cakeArguments += "-verbosity=$Verbosity" }
 if ($ShowDescription) { $cakeArguments += "-showdescription" }
 if ($DryRun) { $cakeArguments += "-dryrun" }
-if ($PushLocalNuget){ $cakeArguments += "-pushLocalNuget" }
+if ($PushLocalNuget){ $cakeArguments += "-pushLocalNuget=$true" }
 $cakeArguments += $ScriptArgs
 
 # Start Cake

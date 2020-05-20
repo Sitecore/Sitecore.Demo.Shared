@@ -87,10 +87,10 @@ namespace Cake.SitecoreDemo
             context.DotNetCoreRestore(projectFile, restoreSettings);
         }
 
-        private static void CopyOtherOutputFilesToDestination(ICakeContext context, string destination, string publishFolder)
+        private static void CopyOtherOutputFilesToDestination(ICakeContext context, string sourceFolder, string publishFolder)
         {
             var ignoredExtensions = new[] { ".dll", ".exe", ".pdb", ".xdt", ".yml" };
-            var ignoredFilesPublishFolderPath = publishFolder.ToLower().Replace("\\", "/");
+            var ignoredFilesPublishFolderPath = sourceFolder.ToLower().Replace("\\", "/");
             var ignoredFiles = new[] {
                                     $"{ignoredFilesPublishFolderPath}/web.config",
                                     $"{ignoredFilesPublishFolderPath}/build.website.deps.json",
@@ -99,10 +99,10 @@ namespace Cake.SitecoreDemo
                                     $"{ignoredFilesPublishFolderPath}/build.shared.exe.config"
                                   };
 
-            var contentFiles = context.GetFiles($"{publishFolder}\\**\\*")
+            var contentFiles = context.GetFiles($"{sourceFolder}\\**\\*")
                                 .Where(file => !ignoredExtensions.Contains(file.GetExtension().ToLower()))
                                 .Where(file => !ignoredFiles.Contains(file.FullPath.ToLower()));
-            DirectoryPath directoryPath1 = new DirectoryPath(destination);
+            DirectoryPath directoryPath1 = new DirectoryPath(publishFolder);
 
             context.CopyFiles(contentFiles, directoryPath1, true);
         }
