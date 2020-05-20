@@ -40,6 +40,7 @@ Param(
     [string]$Script = "build.cake",
     [string]$Target,
     [string]$Configuration,
+    [switch]$PushLocalNuget,
     [ValidateSet("Quiet", "Minimal", "Normal", "Verbose", "Diagnostic")]
     [string]$Verbosity,
     [switch]$ShowDescription,
@@ -248,6 +249,7 @@ if ($Configuration) { $cakeArguments += "-configuration=$Configuration" }
 if ($Verbosity) { $cakeArguments += "-verbosity=$Verbosity" }
 if ($ShowDescription) { $cakeArguments += "-showdescription" }
 if ($DryRun) { $cakeArguments += "-dryrun" }
+if ($PushLocalNuget){ $cakeArguments += "-pushLocalNuget" }
 $cakeArguments += $ScriptArgs
 
 # Start Cake

@@ -6,6 +6,13 @@ namespace Cake.SitecoreDemo
     public class Configuration
     {
         private MSBuildToolVersion _msBuildToolVersion;
+
+        private string _SourceFolder;
+        private string _FoundationSrcFolder;
+        private string _FeatureSrcFolder;
+        private string _ProjectSrcFolder;
+        private string _FrontEndFolder;
+
         public string InstanceUrl { get; set; }
         public string SolutionName { get; set; }
         public string ProjectFolder { get; set; }
@@ -31,10 +38,47 @@ namespace Cake.SitecoreDemo
             }
         }
 
-        public string SourceFolder => $"{ProjectFolder}\\src";
-        public string FoundationSrcFolder => $"{SourceFolder}\\Foundation";
-        public string FeatureSrcFolder => $"{SourceFolder}\\Feature";
-        public string ProjectSrcFolder => $"{SourceFolder}\\Project";
+        public string SourceFolder {
+            get {
+                return _SourceFolder ?? $"{ProjectFolder}\\src";
+            }
+            set {
+                _SourceFolder = value;
+            }
+        }
+        public string FoundationSrcFolder {
+            get {
+                return _FoundationSrcFolder ?? $"{SourceFolder}\\Foundation";
+            }
+            set {
+                _FoundationSrcFolder = value;
+            }
+        }
+        public string FeatureSrcFolder {
+            get {
+                return _FeatureSrcFolder ?? $"{SourceFolder}\\Feature";
+            }
+            set {
+                _FeatureSrcFolder = value;
+            }
+        }
+        public string ProjectSrcFolder {
+            get {
+                return _ProjectSrcFolder ?? $"{SourceFolder}\\Project";
+            }
+            set {
+                _ProjectSrcFolder = value;
+            }
+        }
+        public string FrontEndFolder {
+            get {
+                return _FrontEndFolder ?? $"{ProjectFolder}\\FrontEnd";
+            }
+            set {
+                _FrontEndFolder = value;
+            }
+        }
+
         public string PublishWebFolder { get; set; }
         public string PublishWebFolderCD { get; set; }
         public string PublishxConnectFolder { get; set; }

@@ -13,6 +13,16 @@ namespace Sitecore.Demo.Shared.Feature.Accounts.Services
     [Service(typeof(IProfileSettingsService))]
     public class ProfileSettingsService : IProfileSettingsService
     {
+        public virtual string GetUserDefaultProfileId()
+        {
+            using (new SecurityDisabler())
+            {
+                Item item = GetSettingsItem();
+                Assert.IsNotNull(item, "Page with profile settings isn't specified");
+                return item[Templates.ProfileSettigs.Fields.UserProfile];
+            }
+        }
+
         public virtual Item GetUserDefaultProfile()
         {
             using (new SecurityDisabler())

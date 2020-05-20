@@ -26,7 +26,7 @@ namespace Sitecore.Demo.Shared.Feature.Accounts.Services
 
         public virtual string GetUserDefaultProfileId()
         {
-            return _profileSettingsService.GetUserDefaultProfile()?.ID?.ToString();
+            return _profileSettingsService.GetUserDefaultProfileId();
         }
 
         public virtual EditProfile GetEmptyProfile()
@@ -40,17 +40,14 @@ namespace Sitecore.Demo.Shared.Feature.Accounts.Services
         public virtual EditProfile GetProfile(User user)
         {
             SetProfileIfEmpty(user);
-
-            var properties = _userProfileProvider.GetCustomProperties(user.Profile);
             var contactData = _contactFacetsService.GetContactData();
-
             var model = new EditProfile
                         {
                             Email = user.Profile.Email,
                             FirstName = user.Profile.GetCustomProperty(Constants.UserProfile.Fields.FirstName) ?? "",
                             LastName = user.Profile.GetCustomProperty(Constants.UserProfile.Fields.LastName) ?? "",
                             PhoneNumber = user.Profile.GetCustomProperty(Constants.UserProfile.Fields.PhoneNumber) ?? "",
-                            Interest = properties.ContainsKey(Constants.UserProfile.Fields.Interest) ? properties[Constants.UserProfile.Fields.Interest] : "",
+                            Interest = user.Profile.GetCustomProperty(Constants.UserProfile.Fields.Interest) ?? "",
                             InterestTypes = _profileSettingsService.GetInterests(),
                             SportType = contactData.SportType,
                             SportName = contactData.SportName
