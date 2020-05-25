@@ -253,24 +253,40 @@ namespace Cake.SitecoreDemo
         [CakeMethodAlias]
         public static void SyncUnicorn(this ICakeContext context, string instanceUrl, string publishFolder, string unicornSyncScript)
         {
-            var unicornUrl = instanceUrl + "/unicorn.aspx";
-            context.Log.Information("Sync Unicorn items from url: " + unicornUrl);
-
             var authenticationFile = new FilePath($"{publishFolder}/App_config/Include/Unicorn/Unicorn.zSharedSecret.config");
             var xPath = "/configuration/sitecore/unicorn/authenticationProvider/SharedSecret";
             string sharedSecret = context.XmlPeek(authenticationFile, xPath);
 
-            context.StartPowershellFile(unicornSyncScript, new PowershellSettings()
-                      .SetLogOutput()
-                      .WithArguments(args =>
-                      {
-                          args.Append("secret", sharedSecret)
-                  .Append("url", unicornUrl);
-                      }));
+            context.SyncUnicornWithSecret(instanceUrl, unicornSyncScript, sharedSecret);
+        }
+
+        [CakeMethodAlias]
+        public static void SyncUnicornWithSecret(this ICakeContext context, string instanceUrl, string unicornSyncScript, string unicornSharedSecret)
+        {
+            var unicornUrl = instanceUrl + "/unicorn.aspx";
+            context.Log.Information("Sync Unicorn items from url: " + unicornUrl);
+
+            context.StartPowershellFile(
+                unicornSyncScript,
+                new PowershellSettings()
+                    .SetLogOutput()
+                    .WithArguments(args =>
+                        {
+                            args.Append("secret", unicornSharedSecret)
+                                .Append("url", unicornUrl);
+                        }
+                    )
+            );
         }
 
         [CakeMethodAlias]
         public static void MergeAndCopyXmlTransform(this ICakeContext context, string[] layersFolders, string sourceFolder, string publishFolder)
+        {
+            context.MergeAndCopyXmlTransform(layersFolders, sourceFolder, publishFolder, "code");
+        }
+
+        [CakeMethodAlias]
+        public static void MergeAndCopyXmlTransform(this ICakeContext context, string[] layersFolders, string sourceFolder, string publishFolder, string projectParentFolderName)
         {
             // Method will process all transforms from the temporary locations, merge them together and copy them to the temporary Publish\Web directory
             string[] excludePattern = {"ssl", "azure"};
@@ -278,14 +294,14 @@ namespace Cake.SitecoreDemo
             context.Log.Information($"Merging {sourceFolder}\\transforms to {publishFolder}");
 
             // Processing dotnet core transforms from NuGet references
-            context.MergeTransforms($"{sourceFolder}\\transforms", $"{publishFolder}", excludePattern);
+            context.MergeTransforms($"{sourceFolder}\\transforms", "", $"{publishFolder}", excludePattern);
 
             // Processing project transformations
 
             foreach (var layer in layersFolders)
             {
-              context.Log.Information($"Merging {layer} to {publishFolder}");
-              context.MergeTransforms(layer, publishFolder, excludePattern);
+                context.Log.Information($"Merging {layer} to {publishFolder}");
+                context.MergeTransforms(layer, projectParentFolderName, publishFolder, excludePattern);
             }
         }
 

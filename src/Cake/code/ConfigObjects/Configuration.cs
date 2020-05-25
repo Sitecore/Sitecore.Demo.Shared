@@ -27,6 +27,7 @@ namespace Cake.SitecoreDemo
         public string PublishTempFolder { get; set; }
         public string SolutionFile { get; set; }
         public string UnicornSerializationFolder { get; set; }
+        public string UnicornSharedSecret { get; set; }
         public string BuildToolVersions
         {
             set

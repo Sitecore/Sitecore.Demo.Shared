@@ -182,7 +182,7 @@ namespace Cake.SitecoreDemo
         }
 
         [CakeMethodAlias]
-        public static void MergeTransforms(this ICakeContext context, string source, string destination, string[] excludePatterns)
+        public static void MergeTransforms(this ICakeContext context, string source, string projectParentFolderName, string destination, string[] excludePatterns)
         {
             var xdtFiles = GetTransformFiles(context, source);
 
@@ -196,12 +196,23 @@ namespace Cake.SitecoreDemo
 
                 FilePath xdtFilePath = (FilePath)file;
                 context.Log.Information($"Processing {xdtFilePath}");
-                FilePath fileToTransform = Regex.Replace(file.FullPath, "(.*.config).?(.*)", "$1.xdt");
 
-                fileToTransform = ((FilePath)$"{source}").GetRelativePath((FilePath)fileToTransform);
-                FilePath sourceTransform = $"{(FilePath)fileToTransform}";
+                FilePath targetTransformPath;
+                if (string.IsNullOrEmpty(projectParentFolderName))
+                {
+                    // For [PublishTempFolder]\transforms\**\*.config.*.xdt to [destination]\transforms\**\*.config.xdt
+                    FilePath fileToTransform = Regex.Replace(file.FullPath, "(.*.config).?(.*)", "$1.xdt");
+                    fileToTransform = ((FilePath)$"{source}").GetRelativePath((FilePath)fileToTransform);
+                    FilePath sourceTransform = $"{(FilePath)fileToTransform}";
+                    targetTransformPath = ((DirectoryPath)destination).CombineWithFilePath((FilePath)sourceTransform);
+                }
+                else
+                {
+                    // For [Feature]\[Module]\[projectParentFolderName]\**\*.config.*.xdt to [destination]\transforms\**\*.config.xdt
+                    var fileToTransform = Regex.Replace(file.FullPath, $".+{projectParentFolderName}/(.*.config).?(.*)", "transforms\\$1.xdt");
+                    targetTransformPath = ((DirectoryPath)destination).CombineWithFilePath((FilePath)fileToTransform);
+                }
 
-                var targetTransformPath = ((DirectoryPath)destination).CombineWithFilePath((FilePath)sourceTransform);
                 context.Log.Information($"Target transform path: {targetTransformPath}");
 
                 if (!context.FileExists(targetTransformPath))
@@ -213,9 +224,11 @@ namespace Cake.SitecoreDemo
                 }
                 else
                 {
-                    CakeXmlHelper.MergeFile(targetTransformPath.FullPath       // Source File
-                        , xdtFilePath.FullPath            // Transforms file (*.xdt)
-                        , targetTransformPath.FullPath);       // Target File
+                    CakeXmlHelper.MergeFile(
+                        targetTransformPath.FullPath, // Source File
+                        xdtFilePath.FullPath,         // Transforms file (*.xdt)
+                        targetTransformPath.FullPath  // Target File
+                    );
                 }
             }
         }
