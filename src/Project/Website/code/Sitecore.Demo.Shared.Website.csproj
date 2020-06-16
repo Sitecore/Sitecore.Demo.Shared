@@ -127,7 +127,6 @@
     <Content Include="App_Config\Include\Project\Demo.Website.config" />
     <Content Include="App_Config\Include\Project\Demo.Website.Serialization.config" />
     <Content Include="App_Config\Include\Project\Demo.Website.SPE.config" />
-    <Content Include="App_Config\Include\zz.Foundation.Overrides\Foundation.Logging.config" />
     <Content Include="App_Config\Include\zz.Foundation.Overrides\Foundation.Search.Azure.config" />
     <Content Include="App_Config\Layers.config.project.website.xdt" />
     <Content Include="App_Config\Security\Domains.config" />
