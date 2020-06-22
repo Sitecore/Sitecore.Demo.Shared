@@ -23,7 +23,7 @@
                 {
                     @class = "form-control",
                     id = "registerFirstName",
-                    tabindex = "1",
+                    tabindex = 1,
                     @placeholder = Html.Sitecore().Dictionary("/Accounts/Register/First Name Placeholder", "Please enter your first name")
                 })
                 @Html.ValidationMessageFor(x => x.FirstName, "", new
@@ -42,7 +42,7 @@
                 {
                     @class = "form-control",
                     id = "registerLastName",
-                    tabindex = "2",
+                    tabindex = 2,
                     @placeholder = Html.Sitecore().Dictionary("/Accounts/Register/Last Name Placeholder", "Please enter your last name")
                 })
                 @Html.ValidationMessageFor(x => x.LastName, "", new
@@ -61,7 +61,7 @@
                 {
                     @class = "form-control",
                     id = "registerEmail",
-                    tabindex = "3",
+                    tabindex = 3,
                     @placeholder = Html.Sitecore().Dictionary("/Accounts/Register/Register Email Placeholder", "Please enter your e-mail address")
                 })
                 @Html.ValidationMessageFor(x => x.Email, "", new
@@ -83,7 +83,7 @@
                 {
                     @class = "form-control",
                     id = "registerPassword",
-                    tabindex = "4",
+                    tabindex = 4,
                     @placeholder = Html.Sitecore().Dictionary("/Accounts/Register/Register Password Placeholder", "Please enter your new password")
                 })
                 @Html.ValidationMessageFor(x => x.Password, "", new
@@ -102,7 +102,7 @@
                 {
                     @class = "form-control",
                     id = "registerConfirmPassword",
-                    tabindex = "5",
+                    tabindex = 5,
                     @placeholder = Html.Sitecore().Dictionary("/Accounts/Register/Register Confirm Password Placeholder", "Please confirm you new password")
                 })
                 @Html.ValidationMessageFor(x => x.ConfirmPassword, "", new
@@ -114,6 +114,6 @@
     </div>    
 
     <div class="col-sm-12">
-        <input type="submit" class="btn btn-primary btn-lg btn-block" value="@Html.Sitecore().Dictionary("/Accounts/Register/Register", "Register")"/>
+        <input type="submit" tabindex="6" class="btn btn-primary btn-lg btn-block" value="@Html.Sitecore().Dictionary("/Accounts/Register/Register", "Register")"/>
     </div>
 }
