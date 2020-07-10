@@ -10,13 +10,13 @@
     <div class="form-group @Html.ValidationErrorFor(x => x.Email, "has-error")">
         @Html.LabelFor(x => x.Email, new
         {
-            @class = "control-label"
+            @class = "control-label",
+            @for = "popupLoginEmail"
         })
         @Html.TextBoxFor(x => x.Email, new
         {
             @class = "form-control",
-            id = "popupLoginEmail",
-            placeholder = Html.Sitecore().Dictionary("/Accounts/Login/Login E-mail Placeholder", "Enter your e-mail")
+            id = "popupLoginEmail"
         })
         @Html.ValidationMessageFor(x => x.Email, "", new
         {
@@ -26,13 +26,13 @@
     <div class="form-group @Html.ValidationErrorFor(x => x.Password, "has-error")">
         @Html.LabelFor(x => x.Password, new
         {
-            @class = "control-label"
+            @class = "control-label",
+            @for = "popupLoginPassword"
         })
         @Html.PasswordFor(x => x.Password, new
         {
             @class = "form-control",
-            id = "popupLoginPassword",
-            placeholder = Html.Sitecore().Dictionary("/Accounts/Login/Login Password Placeholder", "Enter your password")
+            id = "popupLoginPassword"
         })
         @Html.ValidationMessageFor(x => x.Password, "", new
         {

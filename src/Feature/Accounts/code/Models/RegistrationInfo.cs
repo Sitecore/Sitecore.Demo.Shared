@@ -1,9 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Sitecore.Demo.Shared.Feature.Accounts.Attributes;
+﻿using Sitecore.Demo.Shared.Feature.Accounts.Attributes;
 using Sitecore.Demo.Shared.Foundation.Dictionary.Repositories;
+using System.ComponentModel.DataAnnotations;
 
 namespace Sitecore.Demo.Shared.Feature.Accounts.Models
-{                                                                       
+{
     public class RegistrationInfo
     {
         [Display(Name = nameof(EmailCaption), ResourceType = typeof(RegistrationInfo))]
