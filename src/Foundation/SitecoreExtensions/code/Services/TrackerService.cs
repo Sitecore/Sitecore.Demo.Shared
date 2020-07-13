@@ -140,6 +140,11 @@ namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Services
             }
 
             Tracker.Current.Session.IdentifyAs(source, identifier);
-        }
-    }
+
+            var manager = Factory.CreateObject("tracking/contactManager", true) as ContactManager;
+            manager.RemoveFromSession(Sitecore.Analytics.Tracker.Current.Contact.ContactId);
+            Tracker.Current.Session.Contact = manager.LoadContact(Tracker.Current.Contact.ContactId, false);
+
+  }
+ }
 }

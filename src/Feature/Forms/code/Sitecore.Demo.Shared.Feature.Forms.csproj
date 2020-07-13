@@ -139,6 +139,8 @@
     <Compile Include="SubmitActions\Models\AssignPatternActionData.cs" />
     <Compile Include="SubmitActions\AssignPatternCardAction.cs" />
     <Compile Include="SubmitActions\Models\IdentifyContactActionData.cs" />
+    <Compile Include="SubmitActions\Models\PushContactDataFromSessionActionData.cs" />
+    <Compile Include="SubmitActions\PushContactDataFromSessionAction.cs" />
     <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
