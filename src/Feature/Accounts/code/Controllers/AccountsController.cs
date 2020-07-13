@@ -81,8 +81,6 @@ namespace Sitecore.Demo.Shared.Feature.Accounts.Controllers
             if (_accountRepository.Exists(registrationInfo.Email))
             {
                 ModelState.AddModelError(nameof(registrationInfo.Email), UserAlreadyExistsError);
-
-                return View(registrationInfo);
             }
 
             try
@@ -90,15 +88,15 @@ namespace Sitecore.Demo.Shared.Feature.Accounts.Controllers
                 _accountRepository.RegisterUser(registrationInfo, _userProfileService.GetUserDefaultProfileId());
 
                 string link = _getRedirectUrlService.GetRedirectUrl(AuthenticationStatus.Authenticated);
-                return Redirect(link);
+                Response.Redirect(link);
             }
             catch (MembershipCreateUserException ex)
             {
                 Log.Error($"Can't create user with {registrationInfo.Email}", ex, this);
                 ModelState.AddModelError(nameof(registrationInfo.Email), ex.Message);
-
-                return View(registrationInfo);
             }
+
+            return View(registrationInfo);
         }
 
         [RedirectAuthenticated]
@@ -118,13 +116,13 @@ namespace Sitecore.Demo.Shared.Feature.Accounts.Controllers
         {
             if (ModelState.IsValid)
             {
-                return Login(loginInfo, redirectUrl => new RedirectResult(redirectUrl));
+                return LoginUser(loginInfo);
             }
 
             return View(CreateLoginInfo());
         }
 
-        protected virtual ActionResult Login(LoginInfo loginInfo, Func<string, ActionResult> redirectAction)
+        protected virtual ActionResult LoginUser(LoginInfo loginInfo)
         {
             LoginInfo model = CreateLoginInfo();
             model.Email = loginInfo.Email;
@@ -134,33 +132,33 @@ namespace Sitecore.Demo.Shared.Feature.Accounts.Controllers
             if (user == null)
             {
                 ModelState.AddModelError("invalidCredentials", DictionaryPhraseRepository.Current.Get("/Accounts/Login/User Not Found", "Username or password is not valid."));
-                return View(model);
             }
-
-            var redirectUrl = model.ReturnUrl;
-            if (string.IsNullOrEmpty(redirectUrl))
+            else
             {
-                redirectUrl = _getRedirectUrlService.GetRedirectUrl(AuthenticationStatus.Authenticated);
+                var redirectUrl = model.ReturnUrl;
+                if (string.IsNullOrEmpty(redirectUrl))
+                {
+                    redirectUrl = _getRedirectUrlService.GetRedirectUrl(AuthenticationStatus.Authenticated);
+                }
+
+                Response.Redirect(redirectUrl);
             }
 
-            return redirectAction(redirectUrl);
+            return View(model);
         }
 
         [HttpPost]
         [ValidateModel]
         public ActionResult _Login(LoginInfo loginInfo)
         {
-            return Login(loginInfo, redirectUrl => Json(new LoginResult
-            {
-                RedirectUrl = redirectUrl
-            }));
+            return LoginUser(loginInfo);
         }
 
         [HttpPost]
         [ValidateModel]
         public ActionResult LoginTeaser(LoginInfo loginInfo)
         {
-            return Login(loginInfo, redirectUrl => new RedirectResult(redirectUrl));
+            return LoginUser(loginInfo);
         }
 
         [HttpPost]

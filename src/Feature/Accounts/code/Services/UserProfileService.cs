@@ -120,6 +120,10 @@ namespace Sitecore.Demo.Shared.Feature.Accounts.Services
                 Birthday = profile[Constants.UserProfile.Fields.Birthday]
             };
 
+            if (!string.IsNullOrEmpty(data.EmailAddress))
+            {
+                data.EmailKey = "Work Email";
+            }
             _contactFacetsService.UpdateContactFacets(data);
         }
     }

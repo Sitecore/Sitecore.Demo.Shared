@@ -194,7 +194,6 @@
     <Compile Include="Models\FedAuthLoginButton.cs" />
     <Compile Include="Models\FedAuthLoginInfo.cs" />
     <Compile Include="Models\LoginInfo.cs" />
-    <Compile Include="Models\LoginResult.cs" />
     <Compile Include="Models\PasswordResetInfo.cs" />
     <Compile Include="Models\RegistrationInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,4 +1,4 @@
-version: '3'
+version: '2.4'
 
 services:
   nuget:
@@ -20,4 +20,20 @@ services:
       - Search__Type=${Search__Type}
     volumes:
       - ./baget-data:c:\var\baget
-    network_mode: nat
+    networks:
+      - demo
+
+  monitor:
+    image: ${REGISTRY}sitecore-hostswriter:9174-nanoserver-${NANOSERVER_VERSION}
+    volumes:
+      - C:/windows/system32/drivers/etc:C:\driversetc
+      - source: '\\.\pipe\docker_engine'
+        target: '\\.\pipe\docker_engine'
+        type: npipe
+    networks:
+      - demo
+
+networks:
+  demo:
+    external:
+      name: nat
