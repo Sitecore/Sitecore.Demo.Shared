@@ -30,7 +30,7 @@ Languages:
         sitecore\admin
     - ID: "61abbfba-383b-4e6c-b744-e714b4cc1a4f"
       Hint: Copyright
-      Value: &copy; 2018 Sitecore Demo, Inc. All rights reserved.
+      Value: &copy; Sitecore Demo, Inc. All rights reserved.
     - ID: "a0775839-f666-4348-b080-f2618f4d999c"
       Hint: YoutubeLogo
       Value: |
@@ -41,13 +41,12 @@ Languages:
         <image mediaid="{9EA27032-EC53-4F3C-AEF1-AF602B2ADED9}" />
     - ID: "c32e54a4-e8a6-4968-b7b2-e42351043d27"
       Hint: Logo
-      Value: |
-        <image mediaid="{090E2BBF-FD28-412D-BEA8-9A8C4B1C775D}" />
+      Value: 
     - ID: "c699c120-b1a1-4884-8951-f476c8c95ab3"
       Hint: Text
       Value: |
         Live well, live simply, stay connected. That's the Sitecore Demo way.
-        <br />
+        <br /><br />
         <a href="/sitecore%20modules/Web/EXM/Unsubscribe.aspx">Unsubscribe</a> | 
         <a href="/sitecore%20modules/Web/EXM/UnsubscribeFromAll.aspx">Unsubscribe from All</a> |
         <a href="/sitecore%20modules/Web/EXM/SubscriptionPreferences.ashx">Update your subscription preferences</a>

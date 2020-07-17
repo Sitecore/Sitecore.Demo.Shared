@@ -22,5 +22,4 @@ Languages:
         sitecore\admin
     - ID: "d839f656-ca1e-404d-8250-2750057712e0"
       Hint: Logo
-      Value: |
-        <image mediaid="{090E2BBF-FD28-412D-BEA8-9A8C4B1C775D}" />
+      Value: 
