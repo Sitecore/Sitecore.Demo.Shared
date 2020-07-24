@@ -83,14 +83,14 @@
                                 }
                                 else
                                 {
-                                    <ol class="list-unstyled">
+                                    <ol class="list-styled small">
                                         @foreach (var goal in Model.Goals)
                                         {
                                             <li>
                                                 <div>
                                                     <small>@(goal.IsCurrentVisit ? Html.Sitecore().Dictionary("//Demo/Onsite Behavior/Current Visit", "Now") : goal.Date.ToString("dd-MM HH:MM"))</small>
                                                 </div>
-                                                <div class="text-nowrap">
+                                                <div>
                                                     @goal.Title
                                                     @if (goal.EngagementValue > 0)
                                                     {
@@ -164,7 +164,7 @@
                     }
                     else
                     {
-                        <ol class="list-unstyled">
+                        <ol class="list-styled small">
                             @foreach (var outcome in Model.Outcomes)
                             {
                                 <li>

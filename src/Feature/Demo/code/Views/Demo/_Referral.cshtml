@@ -62,7 +62,7 @@
                     }
                     else
                     {
-                        <ol class="list-unstyled">
+                        <ol class="list-styled small">
                             @foreach (var campaign in Model.Campaigns)
                             {
                                 <li>
@@ -78,8 +78,8 @@
                                             }
                                         </small>
                                     </div>
-                                    <div class="text-nowrap" title="@campaign.Title">@campaign.Title</div>
-                                    <div class="text-nowrap" title="@campaign.Channel">
+                                    <div title="@campaign.Title">@campaign.Title</div>
+                                    <div title="@campaign.Channel">
                                         <small>@campaign.Channel</small>
                                     </div>
                                 </li>

@@ -3,12 +3,12 @@
 
 @if (Model != null)
 {
-<div class="off-canvas-sidebar off-canvas-sidebar-right" id="sidebar">             
+<div class="off-canvas-sidebar off-canvas-sidebar-right" id="sidebar">
     <div class="btn-group-vertical hover" role="group">
         <button type="button" class="btn btn-info sidebar-closed" data-toggle="sidebar" title="@Html.Sitecore().Dictionary("/Demo/ExperiencePanel/Open Visit Details Panel", "Open visit details panel")" data-side="right">
             <i class="fa fa-info-circle" aria-hidden="true"></i>
         </button>
-        <button type="button" class="btn btn-info btn-lg sidebar-opened" style="display: none" data-toggle="sidebar" title="@Html.Sitecore().Dictionary("/Demo/ExperiencePanel/Close Visit Details Panel", "Close visit details panel")" data-side="right">
+        <button type="button" class="btn btn-info sidebar-opened" style="display: none" data-toggle="sidebar" title="@Html.Sitecore().Dictionary("/Demo/ExperiencePanel/Close Visit Details Panel", "Close visit details panel")" data-side="right">
             <i class="fa fa-times" aria-hidden="true"></i>
             <span class="hover-only">@Html.Sitecore().Dictionary("/Demo/ExperiencePanel/Close Label", "Close")</span>
         </button>
