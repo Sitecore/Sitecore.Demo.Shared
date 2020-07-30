@@ -4,8 +4,6 @@ using System.Net;
 using Newtonsoft.Json;
 using Sitecore.Analytics;
 using Sitecore.Analytics.Model;
-using Sitecore.Analytics.Tracking;
-using Sitecore.Configuration;
 using Sitecore.Demo.Shared.Foundation.Accounts.Models;
 using Sitecore.Demo.Shared.Foundation.Accounts.Models.Facets;
 using Sitecore.Demo.Shared.Foundation.Accounts.Providers;
@@ -24,7 +22,6 @@ namespace Sitecore.Demo.Shared.Foundation.Accounts.Services
     {
         private readonly IContactFacetsProvider contactFacetsProvider;
         private readonly IExportFileService exportFileService;
-        private readonly ContactManager contactManager;
         private readonly string[] facetsToUpdate = {
             PersonalInformation.DefaultFacetKey,
             AddressList.DefaultFacetKey,
@@ -41,7 +38,6 @@ namespace Sitecore.Demo.Shared.Foundation.Accounts.Services
         {
             this.contactFacetsProvider = contactFacetsProvider;
             this.exportFileService = exportFileService;
-            this.contactManager = Factory.CreateObject("tracking/contactManager", true) as ContactManager;
         }
 
         public ContactFacetData GetContactData()
@@ -130,7 +126,6 @@ namespace Sitecore.Demo.Shared.Foundation.Accounts.Services
                     if (changed)
                     {
                         client.Submit();
-                        this.UpdateTracker();
                     }
                 }
                 catch (XdbExecutionException ex)
@@ -432,7 +427,11 @@ namespace Sitecore.Demo.Shared.Foundation.Accounts.Services
             if (Tracker.Current.Contact.IsNew)
             {
                 Tracker.Current.Contact.ContactSaveMode = ContactSaveMode.AlwaysSave;
-                this.contactManager.SaveContactToCollectionDb(Tracker.Current.Contact);
+                using (var client = SitecoreXConnectClientConfiguration.GetClient())
+                {
+                    client.Submit();
+                }
+
                 return trackerIdentifier;
             }
 
@@ -443,15 +442,6 @@ namespace Sitecore.Demo.Shared.Foundation.Accounts.Services
             }
 
             return new IdentifiedContactReference(id.Source, id.Identifier);
-        }
-
-        private void UpdateTracker()
-        {
-            if (Tracker.Current?.Session == null)
-            {
-                return;
-            }
-            Tracker.Current.Session.Contact = this.contactManager.LoadContact(Tracker.Current.Session.Contact.ContactId);
         }
     }
 }

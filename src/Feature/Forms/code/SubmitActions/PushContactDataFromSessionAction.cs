@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Web;
 using Sitecore.Analytics;
-using Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Services;
 using Sitecore.Diagnostics;
 using Sitecore.ExperienceForms.Models;
 using Sitecore.ExperienceForms.Processing;
@@ -10,11 +10,8 @@ namespace Sitecore.Demo.Shared.Feature.Forms.SubmitActions
 {
     public class PushContactDataFromSessionAction : SubmitActionBase<string>
     {
-        private readonly UpdateXdbContactFromSessionService _updateXdbContactService;
-
         public PushContactDataFromSessionAction(ISubmitActionData submitActionData) : base(submitActionData)
         {
-            _updateXdbContactService = new UpdateXdbContactFromSessionService();
         }
 
         protected override bool TryParse(string value, out string target)
@@ -32,7 +29,7 @@ namespace Sitecore.Demo.Shared.Feature.Forms.SubmitActions
                     Tracker.StartTracking();
                 }
 
-                _updateXdbContactService.SaveContactToCollectionDb(Tracker.Current.Contact);
+                HttpContext.Current.Session?.Abandon();
             }
             catch (Exception ex)
             {
