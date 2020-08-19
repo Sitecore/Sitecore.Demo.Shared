@@ -10,6 +10,8 @@ using Sitecore.ExperienceExplorer.Core.State;
 using Sitecore.Mvc.Controllers;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Sites;
+using Sitecore.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Sitecore.Demo.Shared.Feature.Demo.Controllers
 {
@@ -19,10 +21,12 @@ namespace Sitecore.Demo.Shared.Feature.Demo.Controllers
         private IDemoStateService DemoStateService { get; }
         private IExperienceDataFactory ExperienceDataFactory { get; }
 
-        public DemoController(IDemoStateService demoStateService, IExperienceDataFactory experienceDataFactory)
+        public DemoController(IDemoStateService demoStateService)
         {
+            var role = System.Configuration.ConfigurationManager.AppSettings["role:define"];
+            if (!role.Contains("ContentManagement"))
+                this.ExperienceDataFactory = ServiceLocator.ServiceProvider.GetService<IExperienceDataFactory>();
             this.DemoStateService = demoStateService;
-            this.ExperienceDataFactory = experienceDataFactory;
         }
 
         public ActionResult ExperienceData()
@@ -38,12 +42,18 @@ namespace Sitecore.Demo.Shared.Feature.Demo.Controllers
                 return new EmptyResult();
             }
 
+            if (this.ExperienceDataFactory == null)
+                return new EmptyResult();
+
             var experienceData = this.ExperienceDataFactory.Get();
             return this.View(experienceData);
         }
 
         public ActionResult ExperienceDataContent()
         {
+            if (this.ExperienceDataFactory == null)
+                return new EmptyResult();
+
             var experienceData = this.ExperienceDataFactory.Get();
             return this.View("_ExperienceDataContent", experienceData);
         }

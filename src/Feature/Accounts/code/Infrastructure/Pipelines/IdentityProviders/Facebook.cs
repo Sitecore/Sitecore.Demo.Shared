@@ -4,6 +4,7 @@ using Microsoft.Owin.Infrastructure;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Facebook;
 using Sitecore.Abstractions;
+using Sitecore.Annotations;
 using Sitecore.Diagnostics;
 using Sitecore.Owin.Authentication.Configuration;
 using Sitecore.Owin.Authentication.Extensions;

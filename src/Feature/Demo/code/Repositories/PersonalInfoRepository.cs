@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Sitecore.Analytics.Model;
 using Sitecore.Analytics.Model.Entities;
+using Sitecore.Annotations;
 using Sitecore.Demo.Shared.Feature.Demo.Models;
 using Sitecore.Demo.Shared.Foundation.Accounts.Providers;
 using Sitecore.Demo.Shared.Foundation.DependencyInjection;

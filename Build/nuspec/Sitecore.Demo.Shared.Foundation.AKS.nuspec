@@ -9,7 +9,7 @@
             <files include="any/any/transforms/**/*.xdt" buildAction="Content" copyToOutput="true"/>
         </contentFiles>
         <dependencies>
-            <dependency id="Sitecore.Demo.Shared.Foundation.DependencyInjection" version="9.3.0.*"/>
+            <dependency id="Sitecore.Demo.Shared.Foundation.DependencyInjection" version="10.0.0.*"/>
             <dependency id="Newtonsoft.Json" version="11.0.2"/>
         </dependencies>
     </metadata>

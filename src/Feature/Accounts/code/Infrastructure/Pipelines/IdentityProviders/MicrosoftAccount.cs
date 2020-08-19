@@ -3,6 +3,7 @@ using Microsoft.Owin.Infrastructure;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.MicrosoftAccount;
 using Sitecore.Abstractions;
+using Sitecore.Annotations;
 using Sitecore.Diagnostics;
 using Sitecore.Owin.Authentication.Configuration;
 using Sitecore.Owin.Authentication.Extensions;
