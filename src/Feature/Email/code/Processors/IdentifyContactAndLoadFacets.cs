@@ -43,8 +43,6 @@ namespace Sitecore.Demo.Shared.Feature.Email.Processors
                Condition.Requires<ContactIdentifier>(contactIdentifier, nameof(contactIdentifier)).IsNotNull<ContactIdentifier>();
                Condition.Requires<ITracker>(Tracker.Current, "Current").IsNotNull<ITracker>();
                Tracker.Current.Session.IdentifyAs(contactIdentifier.Source, contactIdentifier.Identifier);
-               var manager = Configuration.Factory.CreateObject("tracking/contactManager", true) as Analytics.Tracking.ContactManager;
-               Tracker.Current.Session.Contact = manager.LoadContact(Tracker.Current.Contact.ContactId);
           }
     }
 }

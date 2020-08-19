@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Globalization;
 using Sitecore.Analytics;
-using Sitecore.Analytics.Tracking;
-using Sitecore.Configuration;
 using Sitecore.Demo.Shared.Foundation.DependencyInjection;
 using Sitecore.Diagnostics;
 using Sitecore.Marketing.Definitions;
@@ -20,11 +18,9 @@ namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Services
             this.PageEventDefinitionManager = pageEventDefinitionManager;
             this.OutcomeDefinitionManager = outcomeDefinitionManager;
             this.GoalDefinitionManager = goalDefinitionManager;
-            this.ContactManager = Factory.CreateObject("tracking/contactManager", true) as ContactManager;
         }
 
         public IDefinitionManager<IGoalDefinition> GoalDefinitionManager { get; }
-        public ContactManager ContactManager { get; }
         public IDefinitionManager<IPageEventDefinition> PageEventDefinitionManager { get; }
         public IDefinitionManager<IOutcomeDefinition> OutcomeDefinitionManager { get; }
 
@@ -140,11 +136,6 @@ namespace Sitecore.Demo.Shared.Foundation.SitecoreExtensions.Services
             }
 
             Tracker.Current.Session.IdentifyAs(source, identifier);
-
-            var manager = Factory.CreateObject("tracking/contactManager", true) as ContactManager;
-            manager.RemoveFromSession(Sitecore.Analytics.Tracker.Current.Contact.ContactId);
-            Tracker.Current.Session.Contact = manager.LoadContact(Tracker.Current.Contact.ContactId, false);
-
-  }
- }
+        }
+    }
 }
