@@ -2,7 +2,7 @@ param(
   [string] $nugetPath = ".\tools\nuget.exe",
   [string] $nuspecPath = ".\nuspec",
   [string] $outputPath = "C:\\sc_demo",
-  [string] $version = "930.9.999",
+  [string] $version = "1000.9.999",
   [switch] $pushLocalNuget
 )
 Push-Location $PSScriptRoot

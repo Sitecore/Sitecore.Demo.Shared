@@ -31,6 +31,7 @@ steps:
     restoreSolution: '**/*.sln'
     feedsToUse: 'config'
     nugetConfigPath: 'nuget.config'
+    externalFeedCredentials: 'nuget-internal'
   condition: eq(variables['prerelease'], false)
 - task: VSBuild@1
   displayName: 'Building Shared Solution'
