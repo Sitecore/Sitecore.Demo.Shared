@@ -22,7 +22,6 @@ Setup(context =>
 Task("Default")
 .WithCriteria(configuration != null)
 .IsDependentOn("CleanBuildFolders")
-.IsDependentOn("Copy-Sitecore-Lib")
 .IsDependentOn("Build-Solution")
 .IsDependentOn("Publish-Local-Nuget");
 
@@ -32,19 +31,9 @@ Task("CleanBuildFolders").Does(() => {
   CleanDirectories($"{configuration.SourceFolder}/**/bin");
 });
 
-Task("Copy-Sitecore-Lib")
-  .WithCriteria(()=>(configuration.BuildConfiguration == "Local"))
-  .Does(()=> {
-    var files = GetFiles($"{configuration.SitecoreLibFolder}/Sitecore*.dll");
-    var destination = "./lib";
-    EnsureDirectoryExists(destination);
-    CopyFiles(files, destination);
-});
-
 Task("Build-Solution")
-.IsDependentOn("Copy-Sitecore-Lib")
 .Does(() => {
-  var solutionFiles = new string[] {"Sitecore.Demo.Shared.sln", "Cake.SitecoreDemo.sln"};
+  var solutionFiles = new string[] {"Cake.SitecoreDemo.sln"};
 
   foreach (var solution in solutionFiles) {
     Information($"Building :{solution}");

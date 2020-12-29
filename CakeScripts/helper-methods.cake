@@ -6,7 +6,6 @@ public class Configuration
 	public string ProjectFolder {get;set;}
 	public string BuildConfiguration {get;set;}
 	public bool RunCleanBuilds {get;set;}
-	public string SitecoreLibFolder {get;set;}
 
 	public string BuildToolVersions
 	{
